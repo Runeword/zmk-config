@@ -15,7 +15,7 @@
 
     combo_esc {
       timeout-ms = <20>;
-      key-positions = <11 12>;
+      key-positions = <16 17>;
       bindings = <&kp ESC>;
     };
 
@@ -25,32 +25,38 @@
       bindings = <&kp TAB>;
     };
 
-    combo_enter {
-      timeout-ms = <50>;
-      key-positions = <11 12 13>;
-      bindings = <&kp ENTER>;
+    combo_space_l {
+      timeout-ms = <20>;
+      key-positions = <12 13>;
+      bindings = <&kp SPACE>;
     };
 
-    combo_lcaps {
-      timeout-ms = <50>;
-      key-positions = <21 22 23>;
-      bindings = <&kp LCAPS>;
-    };
-
-    combo_space {
+    combo_space_r {
       timeout-ms = <20>;
       key-positions = <16 17>;
       bindings = <&kp SPACE>;
     };
 
-    combo_redo {
-      timeout-ms = <20>;
-      key-positions = <17 18>;
-      bindings = <&kp C_AC_REDO>;
+    combo_enter {
+      timeout-ms = <60>;
+      key-positions = <11 12 13>;
+      bindings = <&kp ENTER>;
+    };
+
+    combo_lcaps {
+      timeout-ms = <60>;
+      key-positions = <21 22 23>;
+      bindings = <&kp LCAPS>;
+    };
+
+    combo_lctrl {
+      timeout-ms = <30>;
+      key-positions = <31>;
+      bindings = <&sk LCTRL>;
     };
 
     combo_bspc {
-      timeout-ms = <50>;
+      timeout-ms = <60>;
       key-positions = <16 17 18>;
       bindings = <&kp BSPC>;
     };
