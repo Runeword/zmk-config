@@ -43,12 +43,30 @@
       bindings = <&kp LCAPS>;
     };
 
-    // sticky modifiers
+    // sticky modifiers left
 
     combo_ctrl_l {
       timeout-ms = <30>;
       key-positions = <31 13>;
       bindings = <&sk LCTRL>;
+    };
+
+    combo_ctrl_shft_l {
+      timeout-ms = <30>;
+      key-positions = <31 12 13>;
+      bindings = <&sk LC(LSHFT)>;
+    };
+
+    combo_ctrl_alt_l {
+      timeout-ms = <30>;
+      key-positions = <31 10 13>;
+      bindings = <&sk LC(LALT)>;
+    };
+
+    combo_gui_shft_l {
+      timeout-ms = <30>;
+      key-positions = <31 11 12>;
+      bindings = <&sk LG(LSHFT)>;
     };
 
     combo_shft_l {
@@ -68,6 +86,8 @@
       key-positions = <31 10>;
       bindings = <&sk LALT>;
     };
+
+    // sticky modifiers right
 
     combo_ctrl_r {
       timeout-ms = <30>;
