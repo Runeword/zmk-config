@@ -13,105 +13,32 @@
   combos {
     compatible = "zmk,combos";
 
-    combo_esc {
-      timeout-ms = <20>;
-      key-positions = <17 18>;
-      bindings = <&kp ESC>;
-    };
-
-    combo_tab {
-      timeout-ms = <20>;
-      key-positions = <12 13>;
-      bindings = <&kp TAB>;
-    };
-
-    combo_enter {
-      timeout-ms = <60>;
-      key-positions = <11 12 13>;
-      bindings = <&kp ENTER>;
-    };
-
-    combo_bspc {
-      timeout-ms = <60>;
-      key-positions = <16 17 18>;
-      bindings = <&kp BSPC>;
-    };
-
-    combo_lcaps {
-      timeout-ms = <60>;
-      key-positions = <21 22 23>;
-      bindings = <&kp LCAPS>;
-    };
+    combo_esc { timeout-ms = <20>; key-positions = <17 18>; bindings = <&kp ESC>; };
+    combo_tab { timeout-ms = <20>; key-positions = <12 13>; bindings = <&kp TAB>; };
+    combo_enter { timeout-ms = <60>; key-positions = <11 12 13>; bindings = <&kp ENTER>; };
+    combo_bspc { timeout-ms = <60>; key-positions = <16 17 18>; bindings = <&kp BSPC>; };
+    combo_del { timeout-ms = <60>; key-positions = <26 27 28>; bindings = <&kp DEL>; };
+    combo_lcaps { timeout-ms = <60>; key-positions = <21 22 23>; bindings = <&kp LCAPS>; };
 
     // sticky modifiers left
 
-    combo_ctrl_l {
-      timeout-ms = <30>;
-      key-positions = <31 13>;
-      bindings = <&sk LCTRL>;
-    };
-
-    combo_ctrl_shft_l {
-      timeout-ms = <30>;
-      key-positions = <31 12 13>;
-      bindings = <&sk LC(LSHFT)>;
-    };
-
-    combo_ctrl_alt_l {
-      timeout-ms = <30>;
-      key-positions = <31 10 13>;
-      bindings = <&sk LC(LALT)>;
-    };
-
-    combo_gui_shft_l {
-      timeout-ms = <30>;
-      key-positions = <31 11 12>;
-      bindings = <&sk LG(LSHFT)>;
-    };
-
-    combo_shft_l {
-      timeout-ms = <30>;
-      key-positions = <31 12>;
-      bindings = <&sk LSHFT>;
-    };
-
-    combo_gui_l {
-      timeout-ms = <30>;
-      key-positions = <31 11>;
-      bindings = <&sk LGUI>;
-    };
-
-    combo_alt_l {
-      timeout-ms = <30>;
-      key-positions = <31 10>;
-      bindings = <&sk LALT>;
-    };
+    combo_ctrl_l { timeout-ms = <30>; key-positions = <31 13>; bindings = <&sk LCTRL>; };
+    combo_ctrl_shft_l { timeout-ms = <30>; key-positions = <31 12 13>; bindings = <&sk LC(LSHFT)>; };
+    combo_ctrl_alt_l { timeout-ms = <30>; key-positions = <31 10 13>; bindings = <&sk LC(LALT)>; };
+    combo_gui_shft_l { timeout-ms = <30>; key-positions = <31 11 12>; bindings = <&sk LG(LSHFT)>; };
+    combo_shft_l { timeout-ms = <30>; key-positions = <31 12>; bindings = <&sk LSHFT>; };
+    combo_gui_l { timeout-ms = <30>; key-positions = <31 11>; bindings = <&sk LGUI>; };
+    combo_alt_l { timeout-ms = <30>; key-positions = <31 10>; bindings = <&sk LALT>; };
 
     // sticky modifiers right
 
-    combo_ctrl_r {
-      timeout-ms = <30>;
-      key-positions = <32 16>;
-      bindings = <&sk RCTRL>;
-    };
-
-    combo_shft_r {
-      timeout-ms = <30>;
-      key-positions = <32 17>;
-      bindings = <&sk RSHFT>;
-    };
-
-    combo_gui_r {
-      timeout-ms = <30>;
-      key-positions = <32 18>;
-      bindings = <&sk RGUI>;
-    };
-
-    combo_alt_r {
-      timeout-ms = <30>;
-      key-positions = <32 19>;
-      bindings = <&sk RALT>;
-    };
+    combo_ctrl_r { timeout-ms = <30>; key-positions = <32 16>; bindings = <&sk RCTRL>; };
+    combo_ctrl_shft_r { timeout-ms = <30>; key-positions = <32 17 18>; bindings = <&sk RC(RSHFT)>; };
+    combo_ctrl_alt_r { timeout-ms = <30>; key-positions = <32 17 20>; bindings = <&sk RC(RALT)>; };
+    combo_gui_shft_r { timeout-ms = <30>; key-positions = <32 18 19>; bindings = <&sk RG(RSHFT)>; };
+    combo_shft_r { timeout-ms = <30>; key-positions = <32 17>; bindings = <&sk RSHFT>; };
+    combo_gui_r { timeout-ms = <30>; key-positions = <32 18>; bindings = <&sk RGUI>; };
+    combo_alt_r { timeout-ms = <30>; key-positions = <32 19>; bindings = <&sk RALT>; };
   };
 
   keymap {
