@@ -17,9 +17,9 @@
 
     combo_esc { timeout-ms = <20>; key-positions = <11 12>; bindings = <&kp ESC>; };
     combo_tab { timeout-ms = <20>; key-positions = <12 13>; bindings = <&kp TAB>; };
-    combo_enter { timeout-ms = <60>; key-positions = <11 12 13>; bindings = <&kp ENTER>; };
+    combo_bspc { timeout-ms = <20>; key-positions = <17 18>; bindings = <&kp BSPC>; };
     /* combo_repeat { timeout-ms = <20>; key-positions = <11 12>; bindings = <&key_repeat>; }; */
-    combo_bspc { timeout-ms = <60>; key-positions = <17 18>; bindings = <&kp BSPC>; };
+    combo_enter { timeout-ms = <60>; key-positions = <11 12 13>; bindings = <&kp ENTER>; };
     combo_del { timeout-ms = <60>; key-positions = <16 17 18>; bindings = <&kp DEL>; };
     combo_lcaps { timeout-ms = <60>; key-positions = <21 22 23>; bindings = <&kp LCAPS>; };
 
@@ -56,13 +56,13 @@
       >;
     };
 
-    /* layer_numbers { */
-    /*     bindings = < */
-    /*     &none &none &none &none &none            &kp NUM_9 &kp NUM_5 &kp NUM_6 & &kp NUM_7 &kp NUM_8 */
-    /*     &none &none &none &none &none            &kp NUM_0 &kp NUM_1 &kp NUM_2 & &kp NUM_3 &kp NUM_4 */
-    /*     &none &none &none &none &none            &none &none &none &none &none */
-    /*     &trans &trans &trans &trans */
-    /*     >; */
-    /*     }; */
+    layer_numbers {
+        bindings = <
+        &none &none &none &none &none            &kp N9 &kp N5 &kp N6 & &kp N7 &kp N8
+        &none &none &none &none &none            &kp N0 &kp N1 &kp N2 & &kp N3 &kp N4
+        &none &none &none &none &none            &none &none &none &none &none
+        &trans &trans &trans &trans
+        >;
+        };
   };
 };
