@@ -21,20 +21,8 @@
 
     combo_tab {
       timeout-ms = <20>;
-      key-positions = <10 11>;
-      bindings = <&kp TAB>;
-    };
-
-    combo_space_l {
-      timeout-ms = <20>;
       key-positions = <12 13>;
-      bindings = <&kp SPACE>;
-    };
-
-    combo_space_r {
-      timeout-ms = <20>;
-      key-positions = <16 17>;
-      bindings = <&kp SPACE>;
+      bindings = <&kp TAB>;
     };
 
     combo_enter {
@@ -57,49 +45,49 @@
 
     // sticky modifiers
 
-    combo_lctrl {
+    combo_ctrl_l {
       timeout-ms = <30>;
       key-positions = <31 13>;
       bindings = <&sk LCTRL>;
     };
 
-    combo_lshft {
+    combo_shft_l {
       timeout-ms = <30>;
       key-positions = <31 12>;
       bindings = <&sk LSHFT>;
     };
 
-    combo_lgui {
+    combo_gui_l {
       timeout-ms = <30>;
       key-positions = <31 11>;
       bindings = <&sk LGUI>;
     };
 
-    combo_lalt {
+    combo_alt_l {
       timeout-ms = <30>;
       key-positions = <31 10>;
       bindings = <&sk LALT>;
     };
 
-    combo_rctrl {
+    combo_ctrl_r {
       timeout-ms = <30>;
       key-positions = <32 16>;
       bindings = <&sk RCTRL>;
     };
 
-    combo_rshft {
+    combo_shft_r {
       timeout-ms = <30>;
       key-positions = <32 17>;
       bindings = <&sk RSHFT>;
     };
 
-    combo_rgui {
+    combo_gui_r {
       timeout-ms = <30>;
       key-positions = <32 18>;
       bindings = <&sk RGUI>;
     };
 
-    combo_ralt {
+    combo_alt_r {
       timeout-ms = <30>;
       key-positions = <32 19>;
       bindings = <&sk RALT>;
@@ -114,7 +102,17 @@
       &kp SQT &kp COMMA &kp DOT &kp P &kp Y            &kp F &kp G &kp C &kp R &kp L
       &kp A &kp O &kp E &kp U &kp I                    &kp D &kp H &kp T &kp N &kp S
       &kp COLON &kp Q &kp J &kp K &kp X                &kp B &kp M &kp W &kp V &kp Z
+      &sl 1 &sl 2 &sl 3 &kp SPACE
       >;
     };
+
+    numbers_layer {
+        bindings = <
+        &none &none &none &none &none            &kp NUM_9 &kp NUM_5 &kp NUM_6 & &kp NUM_7 &kp NUM_8
+        &none &none &none &none &none            &kp NUM_0 &kp NUM_1 &kp NUM_2 & &kp NUM_3 &kp NUM_4
+        &none &none &none &none &none            &none &none &none &none &none
+        &trans &trans &trans &trans
+        >;
+        };
   };
 };
