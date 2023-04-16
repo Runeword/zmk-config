@@ -21,19 +21,19 @@
 
     combo_tab {
       timeout-ms = <20>;
-      key-positions = <12 13>;
+      key-positions = <10 11>;
       bindings = <&kp TAB>;
     };
 
     combo_space_l {
       timeout-ms = <20>;
-      key-positions = <12 13>;
+      key-positions = <11 12>;
       bindings = <&kp SPACE>;
     };
 
     combo_space_r {
       timeout-ms = <20>;
-      key-positions = <16 17>;
+      key-positions = <15 16>;
       bindings = <&kp SPACE>;
     };
 
@@ -51,8 +51,26 @@
 
     combo_lctrl {
       timeout-ms = <30>;
-      key-positions = <31>;
+      key-positions = <31 13>;
       bindings = <&sk LCTRL>;
+    };
+
+    combo_lshft {
+      timeout-ms = <30>;
+      key-positions = <31 12>;
+      bindings = <&sk LSHFT>;
+    };
+
+    combo_lgui {
+      timeout-ms = <30>;
+      key-positions = <31 11>;
+      bindings = <&sk LGUI>;
+    };
+
+    combo_alt {
+      timeout-ms = <30>;
+      key-positions = <31 10>;
+      bindings = <&sk LALT>;
     };
 
     combo_bspc {
