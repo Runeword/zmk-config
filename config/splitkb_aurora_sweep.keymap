@@ -7,9 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#define layer_default 0
-#define layer_numbers 1
-#define layer_nav 3
 
 / {
 
