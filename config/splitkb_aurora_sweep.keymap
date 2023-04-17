@@ -73,14 +73,14 @@
         >;
     };
 
-    /* layer_nav { */
-    /*   bindings = < */
-    /*     &kp HOME &kp END &kp PG_DOWN &kp PG_UP &none   &none &none &none &none &none */
-    /*     &kp LEFT &kp RIGHT &kp DOWN &kp UP &none       &none &kp RCTRL &kp RSHFT &kp RGUI &kp RALT */
-    /*     &none &none &none &none &none                  &none &none &none &none &none */
-    /*     &trans &trans &trans &trans */
-    /*     >; */
-    /* }; */
+    layer_nav {
+      bindings = <
+        &kp HOME &kp END &kp PG_DOWN &kp PG_UP &none   &none &none &none &none &none
+        &kp LEFT &kp RIGHT &kp DOWN &kp UP &none       &none &kp RCTRL &kp RSHFT &kp RGUI &kp RALT
+        &none &none &none &none &none                  &none &none &none &none &none
+        &trans &trans &trans &trans
+        >;
+    };
 
   };
 };
