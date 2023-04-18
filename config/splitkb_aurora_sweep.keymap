@@ -10,15 +10,17 @@
 
 / {
 
+  conditional_layers {
+    compatible = "zmk,conditional-layers";
+    tri_layer {
+      if-layers = <2 3>;
+      then-layer = <3>;
+    };
+  };
+
   combos {
     compatible = "zmk,combos";
 
-    /* combo_tab { layers = <0>; timeout-ms = <20>; key-positions = <11 12>; bindings = <&kp TAB>; }; */
-    /* combo_esc { layers = <0>; timeout-ms = <20>; key-positions = <17 18>; bindings = <&kp ESC>; }; */
-    /* combo_bspc { layers = <0>; timeout-ms = <50>; key-positions = <16 17 18>; bindings = <&kp BSPC>; }; */
-    /* combo_enter { layers = <0>; timeout-ms = <50>; key-positions = <11 12 13>; bindings = <&kp ENTER>; }; */
-    /* combo_del { layers = <0>; timeout-ms = <50>; key-positions = <26 27 28>; bindings = <&kp DEL>; }; */
-    /* combo_caps { layers = <0>; timeout-ms = <50>; key-positions = <21 22 23>; bindings = <&kp CAPS>; }; */
     combo_tab { layers = <0>; timeout-ms = <20>; key-positions = <17 18>; bindings = <&kp TAB>; };
     combo_esc { layers = <0>; timeout-ms = <20>; key-positions = <11 12>; bindings = <&kp ESC>; };
     combo_repeat { layers = <0>; timeout-ms = <20>; key-positions = <12 13>; bindings = <&key_repeat>; };
