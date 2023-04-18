@@ -31,7 +31,7 @@
 
     // sticky modifiers left
 
-    combo_ctrl_l { layers = <0>; timeout-ms = <30>; key-positions = <31 13>; bindings = <&sk LCTRL>; };
+    combo_ctrl_l { layers = <0>; timeout-ms = <30>; key-positions = <31 13>; bindings = <&sk LCTRL &sl 5; };
     combo_shft_l { layers = <0>; timeout-ms = <30>; key-positions = <31 12>; bindings = <&sk LSHFT>; };
     combo_gui_l { layers = <0>; timeout-ms = <30>; key-positions = <31 11>; bindings = <&sk LGUI>; };
     combo_alt_l { layers = <0>; timeout-ms = <30>; key-positions = <31 10>; bindings = <&sk LALT>; };
