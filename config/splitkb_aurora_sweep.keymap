@@ -14,7 +14,7 @@
     compatible = "zmk,conditional-layers";
     tri_layer {
       if-layers = <2 3>;
-      then-layer = <3>;
+      then-layer = <4>;
     };
   };
 
@@ -71,7 +71,16 @@
         >;
     };
 
-    layer_symbols {
+    layer_symbols_left {
+      bindings = <
+        &none &none &none &none &none                  &kp AT &kp LBKT &kp RBKT &kp SLASH &kp BSLH
+        &kp LALT &kp LGUI &kp LSHFT &kp LCTRL &none    &kp TILDE &kp LPAR &kp RPAR &kp CARET &kp DLLR
+        &none &none &none &none &none                  &none &kp LBRC &kp RBRC &none &none
+        &trans &trans &trans &trans
+        >;
+    };
+
+    layer_symbols_right {
       bindings = <
         &kp GRAVE &kp MINUS &kp EQUAL &kp PLUS &none     &none &none &none &none &none
         &kp EXCL &kp QMARK &kp HASH &kp STAR &none       &none &kp RCTRL &kp RSHFT &kp RGUI &kp RALT
@@ -88,6 +97,5 @@
         &trans &trans &trans &trans
         >;
     };
-
   };
 };
