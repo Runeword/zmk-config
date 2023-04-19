@@ -10,13 +10,13 @@
 
 / {
 
-  /* conditional_layers { */
-  /*   compatible = "zmk,conditional-layers"; */
-  /*   tri_layer { */
-  /*     if-layers = <2 3>; */
-  /*     then-layer = <4>; */
-  /*   }; */
-  /* }; */
+  conditional_layers {
+    compatible = "zmk,conditional-layers";
+    tri_layer {
+      if-layers = <2 3>;
+      then-layer = <6>;
+    };
+  };
 
 macros {
         zed_em_kay: zed_em_kay {
@@ -46,7 +46,6 @@ macros {
     // sticky modifiers left
 
     combo_ctrl_l { layers = <0>; timeout-ms = <30>; key-positions = <31 13>; bindings = <&zed_em_kay>; };
-    /* combo_ctrl_l { layers = <0>; timeout-ms = <30>; key-positions = <31 13>; bindings = <&sk LCTRL>; }; */
     combo_shft_l { layers = <0>; timeout-ms = <30>; key-positions = <31 12>; bindings = <&sk LSHFT>; };
     combo_gui_l { layers = <0>; timeout-ms = <30>; key-positions = <31 11>; bindings = <&sk LGUI>; };
     combo_alt_l { layers = <0>; timeout-ms = <30>; key-positions = <31 10>; bindings = <&sk LALT>; };
@@ -113,14 +112,23 @@ macros {
         >;
     };
 
-    /* &kp HOME &kp END &kp PG_DN &kp PG_UP &none     &none &none &none &none &none */
-
-    layer_nav {
+    layer_mods_right {
       bindings = <
-        &none &none &none &none &none     &none &none &none &none &none
-        &none &none &none &none &none     &none &kp C_BRI_UP &kp C_BRI_DN &kp C_VOL_UP &kp C_VOL_DN
-        &trans &trans &trans &trans       &none &none &none &none &none
+        &trans &trans &trans &trans &trans             &none &none &none &none &none
+        &trans &trans &trans &trans &trans             &none &kp RCTRL &kp RSHFT &kp RGUI &kp RALT
+        &trans &trans &trans &trans &trans             &none &none &none &none &none
+        &trans &trans &trans &trans
         >;
     };
+
+    layer_controls {
+      bindings = <
+        &none &none &none &none &none                  &none &none &none &none &none
+        &none &none &none &none &none                  &none &kp C_BRI_UP &kp C_BRI_DN &kp C_VOL_UP &kp C_VOL_DN
+        &trans &trans &trans &trans                    &none &none &none &none &none
+        >;
+    };
+
+    /* &kp HOME &kp END &kp PG_DN &kp PG_UP &none */
   };
 };
