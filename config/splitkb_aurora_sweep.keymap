@@ -18,7 +18,7 @@
     };
   };
 
-  macros {
+  /* macros { */
     /* macro_l5: macro_l5 { */
     /*     label = "macro_l5"; */
     /*     compatible = "zmk,behavior-macro"; */
@@ -28,7 +28,7 @@
     /*       , <&macro_pause_for_release> */
     /*       , <&macro_release &lt 5 &kp LCTRL>; */
     /* }; */
-  };
+  /* }; */
 
   combos {
     compatible = "zmk,combos";
@@ -101,22 +101,22 @@
         >;
     };
 
-    layer_nav {
-      bindings = <
-        &kp HOME &kp END &kp PG_DN &kp PG_UP &none     &none &none &none &none &none
-        &kp LEFT &kp RIGHT &kp DOWN &kp UP &none       &none &kp RCTRL &kp RSHFT &kp RGUI &kp RALT
-        &none &none &none &none &none                  &none &kp C_BRI_UP &kp C_BRI_DN &kp C_VOL_UP &kp C_VOL_DN
-        &trans &trans &trans &trans
-        >;
-    };
-
-    layer_mods_left {
-      bindings = <
-        &none &none &none &none &none                  &none &none &none &none &none
-        &kp LALT &kp LGUI &kp LSHFT &kp LCTRL &none    &none &none &none &none &none
-        &none &none &none &none &none                  &none &none &none &none &none
-        &trans &trans &trans &trans
-        >;
-    };
+    /* layer_nav { */
+    /*   bindings = < */
+    /*     &kp HOME &kp END &kp PG_DN &kp PG_UP &none     &none &none &none &none &none */
+    /*     &kp LEFT &kp RIGHT &kp DOWN &kp UP &none       &none &kp RCTRL &kp RSHFT &kp RGUI &kp RALT */
+    /*     &none &none &none &none &none                  &none &kp C_BRI_UP &kp C_BRI_DN &kp C_VOL_UP &kp C_VOL_DN */
+    /*     &trans &trans &trans &trans */
+    /*     >; */
+    /* }; */
+    /**/
+    /* layer_mods_left { */
+    /*   bindings = < */
+    /*     &none &none &none &none &none                  &none &none &none &none &none */
+    /*     &kp LALT &kp LGUI &kp LSHFT &kp LCTRL &none    &none &none &none &none &none */
+    /*     &none &none &none &none &none                  &none &none &none &none &none */
+    /*     &trans &trans &trans &trans */
+    /*     >; */
+    /* }; */
   };
 };
