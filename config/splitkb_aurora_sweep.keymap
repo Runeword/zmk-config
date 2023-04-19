@@ -78,12 +78,12 @@
       bindings = <
         &none &none &none &none &none                  &kp NUMBER_9 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8
         &kp LALT &kp LGUI &kp LSHFT &kp LCTRL &none    &kp NUMBER_0 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4
-        &none &none &none &none &none                  &none &none &none &none &none
+        &none &none &none &none &none                  &kp EQUAL &kp PLUS &kp MINUS &kp SLASH &kp STAR
         &trans &trans &trans &trans
         >;
     };
 
-    layer_symbols_left {
+    layer_symbols_right {
       bindings = <
         &none &none &none &none &none                  &kp AT &kp LBKT &kp RBKT &kp SLASH &kp BSLH
         &kp LALT &kp LGUI &kp LSHFT &kp LCTRL &none    &kp TILDE &kp LPAR &kp RPAR &kp CARET &kp DLLR
@@ -92,11 +92,11 @@
         >;
     };
 
-    layer_symbols_right {
+    layer_symbols_left {
       bindings = <
-        &kp GRAVE &kp MINUS &kp EQUAL &kp PLUS &none   &none &none &none &none &none
-        &kp EXCL &kp QMARK &kp HASH &kp STAR &none     &none &kp RCTRL &kp RSHFT &kp RGUI &kp RALT
-        &kp AMPS &kp PIPE &kp UNDER &kp PRCNT &none    &none &none &none &none &none
+        &kp GRAVE &kp EXCL &kp QMARK &kp PIPE &kp AMPS   &none &none &none &none &none
+        &kp LEFT &kp RIGHT &kp DOWN &kp UP &kp PRCNT     &none &kp RCTRL &kp RSHFT &kp RGUI &kp RALT
+        &none  &kp UNDER &kp HASH &kp STAR &none         &none &none &none &none &none
         &trans &trans &trans &trans
         >;
     };
