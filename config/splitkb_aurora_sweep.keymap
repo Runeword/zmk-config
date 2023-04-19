@@ -18,19 +18,9 @@
     };
   };
 
-macros {
-        zed_em_kay: zed_em_kay {
-            label = "ZM_zed_em_kay";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            bindings
-              = <&macro_press &mo 4 &kp LCTRL>
-              , <&macro_tap &sk LCTRL>
-              , <&macro_pause_for_release>
-              , <&macro_release &mo 4 &kp LCTRL>;
-        };
-    };
+  macros {
+    ZMK_MACRO(macro_ctrl_left, wait-ms = <30>; tap-ms = <40>; bindings = <&macro_press &mo 4 &kp LCTRL> , <&macro_pause_for_release> , <&macro_release &mo 4 &kp LCTRL>, <&macro_tap &sk LCTRL>;)
+  };
 
   combos {
     compatible = "zmk,combos";
@@ -45,7 +35,7 @@ macros {
 
     // sticky modifiers left
 
-    combo_ctrl_l { layers = <0>; timeout-ms = <30>; key-positions = <31 13>; bindings = <&zed_em_kay>; };
+    combo_ctrl_l { layers = <0>; timeout-ms = <30>; key-positions = <31 13>; bindings = <&macro_ctrl_left>; };
     combo_shft_l { layers = <0>; timeout-ms = <30>; key-positions = <31 12>; bindings = <&sk LSHFT>; };
     combo_gui_l { layers = <0>; timeout-ms = <30>; key-positions = <31 11>; bindings = <&sk LGUI>; };
     combo_alt_l { layers = <0>; timeout-ms = <30>; key-positions = <31 10>; bindings = <&sk LALT>; };
