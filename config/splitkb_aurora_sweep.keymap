@@ -25,7 +25,8 @@
 
   macros {
     // hold : modifiers layer,  tap : sticky modifier
-    ZMK_MACRO(macro_ctrl_left, bindings = <&macro_press &mo 4 &kp LCTRL>, <&macro_pause_for_release> , <&macro_release &mo 4 &kp LCTRL>, <&macro_tap &sk LCTRL>;)
+    ZMK_MACRO(m_lmod_ctrl, bindings = <&macro_press &mo 4 &kp LCTRL>, <&macro_pause_for_release> , <&macro_release &mo 4 &kp LCTRL>, <&macro_tap &sk LCTRL>;)
+    ZMK_MACRO(m_rmod_ctrl, bindings = <&macro_press &mo 5 &kp RCTRL>, <&macro_pause_for_release> , <&macro_release &mo 5 &kp RCTRL>, <&macro_tap &sk RCTRL>;)
 
     // hold : numbers layer + modifier
     ZMK_MACRO(m_num_ctrl, bindings = <&macro_press &mo 1 &kp LCTRL>, <&macro_pause_for_release> , <&macro_release &mo 1 &kp LCTRL>;)
