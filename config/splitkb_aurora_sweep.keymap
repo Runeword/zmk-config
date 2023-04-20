@@ -45,7 +45,7 @@
     combo_shft_l { layers = <0>; timeout-ms = <30>; key-positions = <31 12>; bindings = <&sk LSHFT>; };
     combo_gui_l { layers = <0>; timeout-ms = <30>; key-positions = <31 11>; bindings = <&sk LGUI>; };
     combo_alt_l { layers = <0>; timeout-ms = <30>; key-positions = <31 10>; bindings = <&sk LALT>; };
-    combo_ctrl_shft_l { layers = <0>; timeout-ms = <30>; key-positions = <31 13 12>; bindings = <&sk LC(LSHFT)>; };
+    combo_ctrl_shft_l { layers = <0>; timeout-ms = <30>; key-positions = <31 12 13>; bindings = <&sk LC(LSHFT)>; };
     combo_ctrl_alt_l { layers = <0>; timeout-ms = <30>; key-positions = <31 13 10>; bindings = <&sk LC(LALT)>; };
     combo_gui_shft_l { layers = <0>; timeout-ms = <30>; key-positions = <31 12 11>; bindings = <&sk LG(LSHFT)>; };
 
@@ -60,7 +60,7 @@
     combo_gui_shft_r { layers = <0>; timeout-ms = <30>; key-positions = <32 18 19>; bindings = <&sk RG(RSHFT)>; };
 
     // modifiers numbers
-    combo_ctrl_numbers { layers = <0>; timeout-ms = <30>; key-positions = <31 16>; bindings = <&macro_ctrl_numbers>; };
+    combo_ctrl_numbers { layers = <0>; timeout-ms = <30>; key-positions = <30 13>; bindings = <&macro_ctrl_numbers>; };
   };
 
   keymap {
