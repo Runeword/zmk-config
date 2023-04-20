@@ -75,20 +75,20 @@
         >;
     };
 
-    layer_symbols_right {
+    layer_symbols {
       bindings = <
-        &kp GRAVE &kp EXCL &kp QMARK &kp PIPE &kp AMPS    &kp AT &kp LBKT &kp RBKT &kp SLASH &kp BSLH
-        &kp LEFT &kp RIGHT &kp DOWN &kp UP &kp PRCNT      &kp TILDE &kp LPAR &kp RPAR &kp CARET &kp DLLR
-        &kp COLON &kp UNDER &kp HASH &kp STAR &none       &none &kp LBRC &kp RBRC &none &none
+        &kp GRAVE &kp MINUS &kp EQUAL &kp PLUS &none    &kp AT &kp LBKT &kp RBKT &kp SLASH &kp BSLH
+        &kp EXCL &kp QUESTION &kp HASH &kp STAR &none      &kp TILDE &kp LPAR &kp RPAR &kp CARET &kp DLLR
+        &kp AMPS &kp PIPE &kp UNDER &kp PRCNT &none       &none &kp LBRC &kp RBRC &none &none
         &trans &trans &trans &trans
         >;
     };
 
-    layer_symbols_left {
+    layer_nav {
       bindings = <
         &kp HOME &kp END &kp PG_DN &kp PG_UP &none       &none &none &none &none &none
         &kp LEFT &kp RIGHT &kp DOWN &kp UP &kp PRCNT     &none &kp RCTRL &kp RSHFT &kp RGUI &kp RALT
-        &none &none &none &none &none                    &none &none &none &none &none
+        &none &none &none &none &none                    &kp C_BRI_UP &kp C_BRI_DN &kp C_VOL_UP &kp C_VOL_DN
         &trans &trans &trans &trans
         >;
     };
@@ -111,10 +111,10 @@
         >;
     };
 
-    layer_controls {
+    layer_tri {
       bindings = <
         &none &none &none &none &none                  &none &none &none &none &none
-        &none &none &none &none &none                  &none &kp C_BRI_UP &kp C_BRI_DN &kp C_VOL_UP &kp C_VOL_DN
+        &none &none &none &none &none                  &none &none &none &none &none
         &trans &trans &trans &trans                    &none &none &none &none &none
         >;
     };
