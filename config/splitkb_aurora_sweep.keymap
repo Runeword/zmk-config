@@ -19,6 +19,7 @@
     tri_layer {
       if-layers = <2 3>;
       then-layer = <6>;
+      /delete-property/ ignore-modifiers;
     };
   };
 
