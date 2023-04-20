@@ -8,11 +8,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-/ {
+l&sk {
+  quick-release;
+};
 
-  &sk {
-    quick-release;
-  };
+/ {
 
   conditional_layers {
     compatible = "zmk,conditional-layers";
