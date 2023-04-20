@@ -10,6 +10,7 @@
 
 &sk {
   quick-release;
+  /delete-property/ ignore-modifiers;
 };
 
 / {
