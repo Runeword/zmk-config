@@ -33,7 +33,7 @@
 
     combo_tab { layers = <0>; timeout-ms = <30>; key-positions = <12 13>; bindings = <&kp TAB>; };
     combo_esc { layers = <0>; timeout-ms = <30>; key-positions = <11 12>; bindings = <&kp ESC>; };
-    /* combo_repeat { layers = <0>; timeout-ms = <30>; key-positions = <17 18>; bindings = <&key_repeat>; }; */
+    combo_repeat { layers = <0>; timeout-ms = <30>; key-positions = <2 3>; bindings = <&key_repeat>; };
     combo_bspc { layers = <0 3>; timeout-ms = <50>; key-positions = <11 12 13>; bindings = <&kp BSPC>; };
     combo_enter { layers = <0>; timeout-ms = <50>; key-positions = <16 17 18>; bindings = <&kp ENTER>; };
     combo_del { layers = <0 3>; timeout-ms = <50>; key-positions = <21 22 23>; bindings = <&kp DEL>; };
@@ -66,6 +66,7 @@
   keymap {
     compatible = "zmk,keymap";
 
+    // 0
     layer_default {
       bindings = <
       &kp SQT &kp COMMA &kp DOT &kp P &kp Y              &kp F &kp G &kp C &kp R &kp L
@@ -75,15 +76,17 @@
       >;
     };
 
+    // 1
     layer_numbers {
       bindings = <
         &none &none &none &none &none                    &kp NUMBER_9 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8
         &kp LALT &kp LGUI &kp LSHFT &kp LCTRL &none      &kp NUMBER_0 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4
         &none &none &none &none &none                    &kp EQUAL &kp PLUS &kp MINUS &kp SLASH &kp STAR
-        &trans &trans &trans &trans
+        &sl 7 &trans &trans &trans
         >;
     };
 
+    // 2
     layer_symbols {
       bindings = <
         &kp GRAVE &kp MINUS &kp EQUAL &kp PLUS &none     &kp AT &kp LBKT &kp RBKT &kp SLASH &kp BSLH
@@ -93,6 +96,7 @@
         >;
     };
 
+    // 3
     layer_nav {
       bindings = <
         &kp HOME &kp END &kp PG_DN &kp PG_UP &none       &none &none &none &none &none
@@ -102,6 +106,7 @@
         >;
     };
 
+    // 4
     layer_mods_left {
       bindings = <
         &none &none &none &none &none                    &trans &trans &trans &trans &trans
@@ -111,6 +116,7 @@
         >;
     };
 
+    // 5
     layer_mods_right {
       bindings = <
         &trans &trans &trans &trans &trans               &none &none &none &none &none
@@ -120,11 +126,21 @@
         >;
     };
 
+    // 6
     layer_tri {
       bindings = <
         &none &none &none &none &none                    &none &none &none &none &none
         &none &none &none &none &none                    &none &none &none &none &none
         &trans &trans &trans &trans                      &none &none &none &none &none
+        >;
+    };
+
+    // 7
+    layer_functions {
+      bindings = <
+        &none &none &none &none &none                    &none &kp F5 &kp F6 &kp F7 &kp F8
+        &kp LALT &kp LGUI &kp LSHFT &kp LCTRL &none      &none &kp F1 &kp F2 &kp F3 &kp F4
+        &trans &trans &trans &trans                      &none &kp F9 &kp F10 &kp F11 &kp F12
         >;
     };
   };
