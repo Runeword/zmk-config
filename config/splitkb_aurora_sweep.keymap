@@ -9,6 +9,17 @@
 
 / {
 
+#define str(s) #s
+#define HT(NAME, BINDINGS) \
+ht_##NAME: ht_##NAME { \
+    compatible = "zmk,behavior-hold-tap"; \
+    label = str(ht_##NAME); \
+    #binding-cells = <2>; \
+    flavor = "tap-preferred"; \
+    tapping-term-ms = <200>; \
+    bindings = <BINDINGS>; \
+};
+
   behaviors {
     skq: sticky_key_quick_release {
       compatible = "zmk,behavior-sticky-key";
@@ -28,6 +39,8 @@
          tapping-term-ms = <200>;
          bindings = <&mc_lctrl>, <&skq>;
      };
+
+     HT(rctrl, &mc_rctrl &skq)
   };
 
   conditional_layers {
