@@ -29,18 +29,14 @@
          bindings = <&mc_lctrl>, <&skq>;
      };
 
-#define str(s) #s
-#define HT(NAME, BINDINGS) \
-ht_##NAME: ht_##NAME { \
-    compatible = "zmk,behavior-hold-tap"; \
-    label = str(ht_##NAME); \
-    #binding-cells = <2>; \
-    flavor = "tap-preferred"; \
-    tapping-term-ms = <200>; \
-    bindings = <BINDINGS>; \
-};
-
-     HT(rctrl, &mc_rctrl &skq)
+     ht_rctrl: behavior_mo_skq {
+         compatible = "zmk,behavior-hold-tap";
+         label = "ht_rctrl";
+         #binding-cells = <2>;
+         flavor = "tap-preferred";
+         tapping-term-ms = <200>;
+         bindings = <&mc_rctrl>, <&skq>;
+     };
   };
 
   conditional_layers {
@@ -85,7 +81,6 @@ ht_##NAME: ht_##NAME { \
     combo_gui_shft_l { layers = <0>; timeout-ms = <30>; key-positions = <31 12 11>; bindings = <&sk LG(LSHFT)>; };
 
     // sticky modifiers right
-    # combo_ctrl_r { layers = <0>; timeout-ms = <30>; key-positions = <32 16>; bindings = <&skq RCTRL>; };
     combo_ctrl_r { layers = <0>; timeout-ms = <30>; key-positions = <32 16>; bindings = <&ht_rctrl 0 RCTRL>; };
     combo_shft_r { layers = <0>; timeout-ms = <30>; key-positions = <32 17>; bindings = <&sk RSHFT>; };
     combo_gui_r { layers = <0>; timeout-ms = <30>; key-positions = <32 18>; bindings = <&sk RGUI>; };
