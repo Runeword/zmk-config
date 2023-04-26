@@ -86,7 +86,7 @@ ht_##NAME: ht_##NAME { \
 
     // sticky modifiers right
     # combo_ctrl_r { layers = <0>; timeout-ms = <30>; key-positions = <32 16>; bindings = <&skq RCTRL>; };
-    combo_ctrl_r { layers = <0>; timeout-ms = <30>; key-positions = <32 16>; bindings = <&ht_rctrl 0 RCTRL>;; };
+    combo_ctrl_r { layers = <0>; timeout-ms = <30>; key-positions = <32 16>; bindings = <&ht_rctrl 0 RCTRL>; };
     combo_shft_r { layers = <0>; timeout-ms = <30>; key-positions = <32 17>; bindings = <&sk RSHFT>; };
     combo_gui_r { layers = <0>; timeout-ms = <30>; key-positions = <32 18>; bindings = <&sk RGUI>; };
     combo_alt_r { layers = <0>; timeout-ms = <30>; key-positions = <32 19>; bindings = <&sk RALT>; };
