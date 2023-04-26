@@ -20,7 +20,7 @@
       ignore-modifiers;
      };
 
-     ht_lctrl: behavior_mo_skq {
+     ht_lctrl: ht_lctrl {
          compatible = "zmk,behavior-hold-tap";
          label = "ht_lctrl";
          #binding-cells = <2>;
@@ -29,7 +29,7 @@
          bindings = <&mc_lctrl>, <&skq>;
      };
 
-     ht_rctrl: behavior_mo_skq {
+     ht_rctrl: ht_rctrl {
          compatible = "zmk,behavior-hold-tap";
          label = "ht_rctrl";
          #binding-cells = <2>;
