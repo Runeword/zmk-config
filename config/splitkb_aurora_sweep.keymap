@@ -46,14 +46,14 @@ name: name { \
          bindings = <&mc_lctrl>, <&skq>;
      };
 
-     # ht_rctrl: ht_rctrl {
-     #     compatible = "zmk,behavior-hold-tap";
-     #     label = "ht_rctrl";
-     #     #binding-cells = <2>;
-     #     flavor = "tap-preferred";
-     #     tapping-term-ms = <200>;
-     #     bindings = <&mc_rctrl>, <&skq>;
-     # };
+     // ht_rctrl: ht_rctrl {
+     //     compatible = "zmk,behavior-hold-tap";
+     //     label = "ht_rctrl";
+     //     #binding-cells = <2>;
+     //     flavor = "tap-preferred";
+     //     tapping-term-ms = <200>;
+     //     bindings = <&mc_rctrl>, <&skq>;
+     // };
 
      HT(ht_rctrl, &mc_rctrl, &skq)
   };
