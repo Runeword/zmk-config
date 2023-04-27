@@ -7,6 +7,17 @@
 #define NAV 3
 #define MOD_L 4
 #define MOD_R 5
+#define FUN 7
+
+#define HT(name, macro, skq) \
+name: name { \
+  label = #name; \
+  compatible = "zmk,behavior-hold-tap"; \
+  #binding-cells = <2>; \
+  flavor = "tap-preferred"; \
+  tapping-term-ms = <200>; \
+  bindings = <macro>, <skq>; \
+};
 
 &sk {
   quick-release;
@@ -35,14 +46,16 @@
          bindings = <&mc_lctrl>, <&skq>;
      };
 
-     ht_rctrl: ht_rctrl {
-         compatible = "zmk,behavior-hold-tap";
-         label = "ht_rctrl";
-         #binding-cells = <2>;
-         flavor = "tap-preferred";
-         tapping-term-ms = <200>;
-         bindings = <&mc_rctrl>, <&skq>;
-     };
+     # ht_rctrl: ht_rctrl {
+     #     compatible = "zmk,behavior-hold-tap";
+     #     label = "ht_rctrl";
+     #     #binding-cells = <2>;
+     #     flavor = "tap-preferred";
+     #     tapping-term-ms = <200>;
+     #     bindings = <&mc_rctrl>, <&skq>;
+     # };
+
+     HT(ht_rctrl, &mc_rctrl, &skq)
   };
 
   conditional_layers {
@@ -71,10 +84,10 @@
     combo_tab { layers = <0 MOD_R>; timeout-ms = <30>; key-positions = <12 13>; bindings = <&kp TAB>; };
     combo_esc { layers = <0>; timeout-ms = <30>; key-positions = <11 12>; bindings = <&kp ESC>; };
     combo_repeat { layers = <0>; timeout-ms = <30>; key-positions = <2 3>; bindings = <&key_repeat>; };
-    combo_bspc { layers = <0 NAV>; timeout-ms = <60>; key-positions = <11 12 13>; bindings = <&kp BSPC>; };
+    combo_bspc { layers = <0 NAV MOD_R>; timeout-ms = <60>; key-positions = <11 12 13>; bindings = <&kp BSPC>; };
     combo_enter { layers = <0>; timeout-ms = <60>; key-positions = <16 17 18>; bindings = <&kp ENTER>; };
-    combo_del_l { layers = <0 NAV>; timeout-ms = <60>; key-positions = <21 22 23>; bindings = <&kp DEL>; };
-    combo_del_r { layers = <0 NAV>; timeout-ms = <60>; key-positions = <26 27 28>; bindings = <&kp DEL>; };
+    combo_del_l { layers = <0 NAV MOD_R>; timeout-ms = <60>; key-positions = <21 22 23>; bindings = <&kp DEL>; };
+    combo_del_r { layers = <0 NAV MOD_L>; timeout-ms = <60>; key-positions = <26 27 28>; bindings = <&kp DEL>; };
     combo_caps { layers = <0>; timeout-ms = <40>; key-positions = <26 27>; bindings = <&caps_word>; };
 
     // sticky modifiers left
@@ -116,7 +129,7 @@
         &none &none &none &none &none                    &kp NUMBER_9 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8
         &kp LALT &kp LGUI &kp LSHFT &kp LCTRL &none      &kp NUMBER_0 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4
         &none &none &none &none &none                    &kp EQUAL &kp PLUS &kp MINUS &kp SLASH &kp STAR
-        &sl 7 &trans &trans &trans
+        &sl FUN &trans &trans &trans
         >;
     };
 
@@ -156,8 +169,7 @@
         >;
     };
 
-    // 6
-    layer_tri {
+    tri {
       bindings = <
         &none &none &none &none &none                    &none &none &none &none &none
         &none &none &none &none &none                    &none &none &none &none &none
@@ -165,8 +177,7 @@
         >;
     };
 
-    // 7
-    layer_functions {
+    functions {
       bindings = <
         &none &none &none &none &none                    &none &kp F5 &kp F6 &kp F7 &kp F8
         &kp LALT &kp LGUI &kp LSHFT &kp LCTRL &none      &none &kp F1 &kp F2 &kp F3 &kp F4
