@@ -86,7 +86,7 @@ NAME { \
 
     // sticky modifiers left
     C_MOD(combo_ctrl_l, 31 13, &ht_lctrl, LCTRL)
-    # combo_ctrl_l { layers = <0>; timeout-ms = <30>; slow-release; key-positions = <31 13>; bindings = <&ht_lctrl 0 LCTRL>; };
+    // combo_ctrl_l { layers = <0>; timeout-ms = <30>; slow-release; key-positions = <31 13>; bindings = <&ht_lctrl 0 LCTRL>; };
     combo_shft_l { layers = <0>; timeout-ms = <30>; key-positions = <31 12>; bindings = <&sk LSHFT>; };
     combo_gui_l { layers = <0>; timeout-ms = <30>; key-positions = <31 11>; bindings = <&sk LGUI>; };
     combo_alt_l { layers = <0>; timeout-ms = <30>; key-positions = <31 10>; bindings = <&sk LALT>; };
