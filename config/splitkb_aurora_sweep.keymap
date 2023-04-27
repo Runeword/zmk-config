@@ -29,6 +29,15 @@ NAME: NAME { \
   bindings = <&macro_press &mo MO &kp MOD>, <&macro_pause_for_release> , <&macro_release &mo MO &kp MOD>; \
 };
 
+#define C_MOD(NAME, POS, HT, MOD) \
+NAME { \
+  layers = <0>; \
+  timeout-ms = <30>; \
+  slow-release; \
+  key-positions = <POS>; \
+  bindings = <HT 0 MOD>; \
+};
+
 &sk {
   quick-release;
   /delete-property/ ignore-modifiers;
@@ -49,14 +58,6 @@ NAME: NAME { \
 
      HT(ht_lctrl, &mc_lctrl, &skq)
      HT(ht_rctrl, &mc_rctrl, &skq)
-  };
-
-  conditional_layers {
-    compatible = "zmk,conditional-layers";
-    tri_layer {
-      if-layers = <SYM NAV>;
-      then-layer = <6>;
-    };
   };
 
   macros {
@@ -84,7 +85,8 @@ NAME: NAME { \
     combo_caps { layers = <0>; timeout-ms = <40>; key-positions = <26 27>; bindings = <&caps_word>; };
 
     // sticky modifiers left
-    combo_ctrl_l { layers = <0>; timeout-ms = <30>; slow-release; key-positions = <31 13>; bindings = <&ht_lctrl 0 LCTRL>; };
+    C_MOD(combo_ctrl_l, 31 13, &ht_lctrl, LCTRL)
+    # combo_ctrl_l { layers = <0>; timeout-ms = <30>; slow-release; key-positions = <31 13>; bindings = <&ht_lctrl 0 LCTRL>; };
     combo_shft_l { layers = <0>; timeout-ms = <30>; key-positions = <31 12>; bindings = <&sk LSHFT>; };
     combo_gui_l { layers = <0>; timeout-ms = <30>; key-positions = <31 11>; bindings = <&sk LGUI>; };
     combo_alt_l { layers = <0>; timeout-ms = <30>; key-positions = <31 10>; bindings = <&sk LALT>; };
@@ -103,6 +105,14 @@ NAME: NAME { \
 
     // modifiers numbers
     combo_ctrl_numbers { layers = <0>; timeout-ms = <30>; key-positions = <30 13>; bindings = <&m_num_ctrl>; };
+  };
+
+  conditional_layers {
+    compatible = "zmk,conditional-layers";
+    tri_layer {
+      if-layers = <SYM NAV>;
+      then-layer = <6>;
+    };
   };
 
   keymap {
