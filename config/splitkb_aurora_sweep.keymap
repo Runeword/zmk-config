@@ -89,7 +89,7 @@ NAME { \
     // sticky modifiers
 
     // COMBO_MOD(NAME, POS, HT, MOD)
-    COMBO_MOD(combo_lctrl, 31 13, ht_lctrl)
+    COMBO_MOD(combo_lctrl, 31 13, ht_lctrl, LCTRL)
     COMBO_MOD(combo_rctrl, 32 16, ht_rctrl, RCTRL)
 
     combo_lshft { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 12>; bindings = <&sk LSHFT>; };
