@@ -36,7 +36,7 @@ NAME { \
   timeout-ms = <30>; \
   slow-release; \
   key-positions = <POS>; \
-  bindings = <&HT 0 MOD>; \
+  bindings = <&HT 0 0>; \
 };
 
 &sk {
@@ -89,8 +89,8 @@ NAME { \
     // sticky modifiers
 
     // COMBO_MOD(NAME, POS, HT, MOD)
-    COMBO_MOD(combo_lctrl, 31 13, ht_lctrl, LCTRL)
-    COMBO_MOD(combo_rctrl, 32 16, ht_rctrl, RCTRL)
+    COMBO_MOD(combo_lctrl, 31 13, ht_lctrl)
+    COMBO_MOD(combo_rctrl, 32 16, ht_rctrl)
 
     combo_lshft { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 12>; bindings = <&sk LSHFT>; };
     combo_lgui { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 11>; bindings = <&sk LGUI>; };
