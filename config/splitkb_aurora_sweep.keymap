@@ -84,25 +84,27 @@ NAME { \
     combo_del_r { layers = <LAYER_DEF LAYER_NAV LAYER_LMOD>; timeout-ms = <60>; key-positions = <26 27 28>; bindings = <&kp DEL>; };
     combo_caps { layers = <LAYER_DEF>; timeout-ms = <40>; key-positions = <26 27>; bindings = <&caps_word>; };
 
-    // sticky modifiers left
+    // sticky modifiers
+
     // COMBO_MOD(NAME, POS, HT, MOD)
     COMBO_MOD(combo_lctrl, 31 13, ht_lctrl, LCTRL)
-    // combo_ctrl_l { layers = <LAYER_DEF>; timeout-ms = <30>; slow-release; key-positions = <31 13>; bindings = <&ht_lctrl 0 LCTRL>; };
-    combo_shft_l { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 12>; bindings = <&sk LSHFT>; };
-    combo_gui_l { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 11>; bindings = <&sk LGUI>; };
-    combo_alt_l { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 10>; bindings = <&sk LALT>; };
-    combo_ctrl_shft_l { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 12 13>; bindings = <&sk LC(LSHFT)>; };
-    combo_ctrl_alt_l { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 13 10>; bindings = <&sk LC(LALT)>; };
-    combo_gui_shft_l { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 12 11>; bindings = <&sk LG(LSHFT)>; };
+    COMBO_MOD(combo_rctrl, 32 16, ht_rctrl, RCTRL)
 
-    // sticky modifiers right
-    combo_ctrl_r { layers = <LAYER_DEF>; timeout-ms = <30>; slow-release; key-positions = <32 16>; bindings = <&ht_rctrl 0 RCTRL>; };
-    combo_shft_r { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <32 17>; bindings = <&sk RSHFT>; };
-    combo_gui_r { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <32 18>; bindings = <&sk RGUI>; };
-    combo_alt_r { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <32 19>; bindings = <&sk RALT>; };
-    combo_ctrl_shft_r { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <32 16 17>; bindings = <&sk RC(RSHFT)>; };
-    combo_ctrl_alt_r { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <32 16 19>; bindings = <&sk RC(RALT)>; };
-    combo_gui_shft_r { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <32 18 19>; bindings = <&sk RG(RSHFT)>; };
+    combo_lshft { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 12>; bindings = <&sk LSHFT>; };
+    combo_lgui { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 11>; bindings = <&sk LGUI>; };
+    combo_lalt { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 10>; bindings = <&sk LALT>; };
+    combo_lctrl_lshft { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 12 13>; bindings = <&sk LC(LSHFT)>; };
+    combo_lctrl_lalt { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 13 10>; bindings = <&sk LC(LALT)>; };
+    combo_lgui_lshft { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 12 11>; bindings = <&sk LG(LSHFT)>; };
+    combo_rshft { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <32 17>; bindings = <&sk RSHFT>; };
+    combo_rgui { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <32 18>; bindings = <&sk RGUI>; };
+    combo_ralt { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <32 19>; bindings = <&sk RALT>; };
+    combo_rctrl_rshft { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <32 16 17>; bindings = <&sk RC(RSHFT)>; };
+    combo_rctrl_ralt { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <32 16 19>; bindings = <&sk RC(RALT)>; };
+    combo_rgui_rshft { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <32 18 19>; bindings = <&sk RG(RSHFT)>; };
+
+    // combo_lctrl { layers = <LAYER_DEF>; timeout-ms = <30>; slow-release; key-positions = <31 13>; bindings = <&ht_lctrl 0 LCTRL>; };
+    // combo_rctrl { layers = <LAYER_DEF>; timeout-ms = <30>; slow-release; key-positions = <32 16>; bindings = <&ht_rctrl 0 RCTRL>; };
 
     // modifiers numbers
     combo_ctrl_numbers { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <30 13>; bindings = <&mc_num_ctrl>; };
