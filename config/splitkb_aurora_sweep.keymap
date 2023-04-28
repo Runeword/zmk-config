@@ -61,13 +61,13 @@ NAME { \
   };
 
   macros {
-    // MACRO_MOD(TAP, MO, MOD)
+    // MACRO_MOD(NAME, MO, MOD)
     MACRO_MOD(mc_lctrl, LAYER_LMOD, LCTRL)
     MACRO_MOD(mc_rctrl, LAYER_RMOD, RCTRL)
-    MACRO_MOD(m_num_ctrl, LAYER_NUM, LCTRL)
-    MACRO_MOD(m_num_shft, LAYER_NUM, LSHFT)
-    MACRO_MOD(m_num_gui, LAYER_NUM, LGUI)
-    MACRO_MOD(m_num_alt, LAYER_NUM, LALT)
+    MACRO_MOD(mc_num_ctrl, LAYER_NUM, LCTRL)
+    MACRO_MOD(mc_num_shft, LAYER_NUM, LSHFT)
+    MACRO_MOD(mc_num_gui, LAYER_NUM, LGUI)
+    MACRO_MOD(mc_num_alt, LAYER_NUM, LALT)
   };
 
   combos {
@@ -102,7 +102,7 @@ NAME { \
     combo_gui_shft_r { layers = <0>; timeout-ms = <30>; key-positions = <32 18 19>; bindings = <&sk RG(RSHFT)>; };
 
     // modifiers numbers
-    combo_ctrl_numbers { layers = <0>; timeout-ms = <30>; key-positions = <30 13>; bindings = <&m_num_ctrl>; };
+    combo_ctrl_numbers { layers = <0>; timeout-ms = <30>; key-positions = <30 13>; bindings = <&mc_num_ctrl>; };
   };
 
   conditional_layers {
