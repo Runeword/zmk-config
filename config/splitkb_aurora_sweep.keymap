@@ -89,8 +89,8 @@ NAME { \
     // sticky modifiers
 
     // COMBO_MOD(NAME, POS, HT, MOD)
-    COMBO_MOD(combo_lctrl, 31 13, ht_lctrl, LCTRL)
-    COMBO_MOD(combo_rctrl, 32 16, ht_rctrl, RCTRL)
+    // COMBO_MOD(combo_lctrl, 31 13, ht_lctrl, LCTRL)
+    // COMBO_MOD(combo_rctrl, 32 16, ht_rctrl, RCTRL)
 
     combo_lshft { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 12>; bindings = <&sk LSHFT>; };
     combo_lgui { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 11>; bindings = <&sk LGUI>; };
@@ -105,8 +105,8 @@ NAME { \
     combo_rctrl_ralt { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <32 16 19>; bindings = <&sk RC(RALT)>; };
     combo_rgui_rshft { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <32 18 19>; bindings = <&sk RG(RSHFT)>; };
 
-    // combo_lctrl { layers = <LAYER_DEF>; timeout-ms = <30>; slow-release; key-positions = <31 13>; bindings = <&ht_lctrl 0 LCTRL>; };
-    // combo_rctrl { layers = <LAYER_DEF>; timeout-ms = <30>; slow-release; key-positions = <32 16>; bindings = <&ht_rctrl 0 RCTRL>; };
+    combo_lctrl { layers = <LAYER_DEF>; timeout-ms = <30>; slow-release; key-positions = <31 13>; bindings = <&ht_lctrl 0 LCTRL>; };
+    combo_rctrl { layers = <LAYER_DEF>; timeout-ms = <30>; slow-release; key-positions = <32 16>; bindings = <&ht_rctrl 0 RCTRL>; };
 
     // modifiers numbers
     combo_ctrl_numbers { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <30 13>; bindings = <&ht_num_ctrl 0 LCTRL>; };
