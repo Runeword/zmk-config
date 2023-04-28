@@ -10,14 +10,14 @@
 #define LAYER_RMOD 5
 #define LAYER_FUN 7
 
-#define HOLDTAP_MOD(NAME, HOLD) \
+#define HOLDTAP_MOD(NAME, MACRO) \
 NAME: NAME { \
   label = #NAME; \
   compatible = "zmk,behavior-hold-tap"; \
   #binding-cells = <2>; \
   flavor = "tap-preferred"; \
   tapping-term-ms = <200>; \
-  bindings = <&HOLD>, <&skq>; \
+  bindings = <&MACRO>, <&skq>; \
 };
 
 #define MACRO_MOD(NAME, MO, MOD) \
@@ -57,6 +57,7 @@ NAME { \
       ignore-modifiers;
      };
 
+     // HOLDTAP_MOD(NAME, MACRO)
      HOLDTAP_MOD(ht_lctrl, mc_lctrl)
      HOLDTAP_MOD(ht_rctrl, mc_rctrl)
   };
@@ -84,6 +85,7 @@ NAME { \
     combo_caps { layers = <LAYER_DEF>; timeout-ms = <40>; key-positions = <26 27>; bindings = <&caps_word>; };
 
     // sticky modifiers left
+    // COMBO_MOD(NAME, POS, HT, MOD)
     COMBO_MOD(combo_lctrl, 31 13, ht_lctrl, LCTRL)
     // combo_ctrl_l { layers = <LAYER_DEF>; timeout-ms = <30>; slow-release; key-positions = <31 13>; bindings = <&ht_lctrl 0 LCTRL>; };
     combo_shft_l { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 12>; bindings = <&sk LSHFT>; };
