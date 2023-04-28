@@ -41,7 +41,7 @@ NAME { \
 
 &sk {
   quick-release;
-//   /delete-property/ ignore-modifiers;
+  // /delete-property/ ignore-modifiers;
 };
 
 / {
@@ -106,6 +106,9 @@ NAME { \
 
     // modifiers numbers
     combo_ctrl_numbers { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <30 13>; bindings = <&mc_num_ctrl>; };
+    combo_shft_numbers { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <30 12>; bindings = <&mc_num_shft>; };
+    combo_gui_numbers { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <30 11>; bindings = <&mc_num_gui>; };
+    combo_alt_numbers { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <30 10>; bindings = <&mc_num_alt>; };
   };
 
   conditional_layers {
