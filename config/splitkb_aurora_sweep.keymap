@@ -41,7 +41,7 @@ NAME { \
 
 &sk {
   quick-release;
-  // /delete-property/ ignore-modifiers;
+  /delete-property/ ignore-modifiers;
 };
 
 / {
