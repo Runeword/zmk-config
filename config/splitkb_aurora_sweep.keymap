@@ -39,10 +39,10 @@ NAME { \
   bindings = <&HT 0 MOD>; \
 };
 
-&sk {
-  quick-release;
-  /delete-property/ ignore-modifiers;
-};
+// &sk {
+//   quick-release;
+//   /delete-property/ ignore-modifiers;
+// };
 
 / {
 
