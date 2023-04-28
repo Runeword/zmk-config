@@ -61,15 +61,13 @@ NAME { \
   };
 
   macros {
-    // hold : modifiers layer,  tap : sticky modifier
+    // MACRO_MOD(TAP, MO, MOD)
     MACRO_MOD(mc_lctrl, LAYER_LMOD, LCTRL)
     MACRO_MOD(mc_rctrl, LAYER_RMOD, RCTRL)
-
-    // hold : numbers layer + modifier
-    ZMK_MACRO(m_num_ctrl, bindings = <&macro_press &mo LAYER_NUM &kp LCTRL>, <&macro_pause_for_release> , <&macro_release &mo LAYER_NUM &kp LCTRL>;)
-    ZMK_MACRO(m_num_shft, bindings = <&macro_press &mo LAYER_NUM &kp LSHFT>, <&macro_pause_for_release> , <&macro_release &mo LAYER_NUM &kp LSHFT>;)
-    ZMK_MACRO(m_num_gui, bindings = <&macro_press &mo LAYER_NUM &kp LGUI>, <&macro_pause_for_release> , <&macro_release &mo LAYER_NUM &kp LGUI>;)
-    ZMK_MACRO(m_num_alt, bindings = <&macro_press &mo LAYER_NUM &kp LALT>, <&macro_pause_for_release> , <&macro_release &mo LAYER_NUM &kp LALT>;)
+    MACRO_MOD(m_num_ctrl, LAYER_NUM, LCTRL)
+    MACRO_MOD(m_num_shft, LAYER_NUM, LSHFT)
+    MACRO_MOD(m_num_gui, LAYER_NUM, LGUI)
+    MACRO_MOD(m_num_alt, LAYER_NUM, LALT)
   };
 
   combos {
