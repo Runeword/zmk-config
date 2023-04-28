@@ -17,7 +17,7 @@ NAME: NAME { \
   #binding-cells = <2>; \
   flavor = "tap-preferred"; \
   tapping-term-ms = <200>; \
-  bindings = <MACRO>, <TAP>; \
+  bindings = <MACRO>, TAP; \
 };
 
 #define MACRO_MOD(NAME, MO, MOD) \
@@ -58,7 +58,7 @@ NAME { \
      };
 
      // HOLDTAP_MOD(NAME, MACRO)
-     HOLDTAP_MOD(ht_lctrl, &mc_lctrl, &skq LCTRL)
+     HOLDTAP_MOD(ht_lctrl, &mc_lctrl, <&skq LCTRL>)
      // HOLDTAP_MOD(ht_lctrl, &mc_lctrl, &mc_lctrl)
      // HOLDTAP_MOD(ht_rctrl, &mc_rctrl)
      // HOLDTAP_MOD(ht_num_ctrl, &mc_num_ctrl)
