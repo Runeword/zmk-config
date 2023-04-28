@@ -9,17 +9,17 @@
 #define MOD_R 5
 #define FUN 7
 
-#define HT(NAME, B1, B2) \
+#define HOLDTAP(NAME, HOLD, TAP) \
 NAME: NAME { \
   label = #NAME; \
   compatible = "zmk,behavior-hold-tap"; \
   #binding-cells = <2>; \
   flavor = "tap-preferred"; \
   tapping-term-ms = <200>; \
-  bindings = <B1>, <B2>; \
+  bindings = <HOLD>, <TAP>; \
 };
 
-#define M_MOD(NAME, MO, MOD) \
+#define MACRO_MOD(NAME, MO, MOD) \
 NAME: NAME { \
   label = #NAME; \
   compatible = "zmk,behavior-macro"; \
@@ -29,7 +29,7 @@ NAME: NAME { \
   bindings = <&macro_press &mo MO &kp MOD>, <&macro_pause_for_release> , <&macro_release &mo MO &kp MOD>; \
 };
 
-#define C_MOD(NAME, POS, HT, MOD) \
+#define COMBO_MOD(NAME, POS, HT, MOD) \
 NAME { \
   layers = <0>; \
   timeout-ms = <30>; \
@@ -56,14 +56,14 @@ NAME { \
       ignore-modifiers;
      };
 
-     HT(ht_lctrl, &mc_lctrl, &skq)
-     HT(ht_rctrl, &mc_rctrl, &skq)
+     HOLDTAP(ht_lctrl, &mc_lctrl, &skq)
+     HOLDTAP(ht_rctrl, &mc_rctrl, &skq)
   };
 
   macros {
     // hold : modifiers layer,  tap : sticky modifier
-    M_MOD(mc_lctrl, MOD_L, LCTRL)
-    M_MOD(mc_rctrl, MOD_R, RCTRL)
+    MACRO_MOD(mc_lctrl, MOD_L, LCTRL)
+    MACRO_MOD(mc_rctrl, MOD_R, RCTRL)
 
     // hold : numbers layer + modifier
     ZMK_MACRO(m_num_ctrl, bindings = <&macro_press &mo NUM &kp LCTRL>, <&macro_pause_for_release> , <&macro_release &mo NUM &kp LCTRL>;)
@@ -85,7 +85,7 @@ NAME { \
     combo_caps { layers = <0>; timeout-ms = <40>; key-positions = <26 27>; bindings = <&caps_word>; };
 
     // sticky modifiers left
-    C_MOD(combo_ctrl_l, 31 13, &ht_lctrl, LCTRL)
+    COMBO_MOD(combo_ctrl_l, 31 13, &ht_lctrl, LCTRL)
     // combo_ctrl_l { layers = <0>; timeout-ms = <30>; slow-release; key-positions = <31 13>; bindings = <&ht_lctrl 0 LCTRL>; };
     combo_shft_l { layers = <0>; timeout-ms = <30>; key-positions = <31 12>; bindings = <&sk LSHFT>; };
     combo_gui_l { layers = <0>; timeout-ms = <30>; key-positions = <31 11>; bindings = <&sk LGUI>; };
