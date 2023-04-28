@@ -60,6 +60,8 @@ NAME { \
      // HOLDTAP_MOD(NAME, MACRO)
      HOLDTAP_MOD(ht_lctrl, mc_lctrl)
      HOLDTAP_MOD(ht_rctrl, mc_rctrl)
+     HOLDTAP_MOD(ht_num_ctrl, mc_num_ctrl)
+     HOLDTAP_MOD(ht_num_gui, mc_num_gui)
   };
 
   macros {
@@ -107,9 +109,9 @@ NAME { \
     // combo_rctrl { layers = <LAYER_DEF>; timeout-ms = <30>; slow-release; key-positions = <32 16>; bindings = <&ht_rctrl 0 RCTRL>; };
 
     // modifiers numbers
-    combo_ctrl_numbers { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <30 13>; bindings = <&mc_num_ctrl>; };
+    combo_ctrl_numbers { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <30 13>; bindings = <&ht_num_ctrl 0 LCTRL>; };
     combo_shft_numbers { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <30 12>; bindings = <&mc_num_shft>; };
-    combo_gui_numbers { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <30 11>; bindings = <&mc_num_gui>; };
+    combo_gui_numbers { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <30 11>; bindings = <&ht_num_gui 0 LGUI>; };
     combo_alt_numbers { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <30 10>; bindings = <&mc_num_alt>; };
   };
 
