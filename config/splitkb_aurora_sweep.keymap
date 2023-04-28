@@ -60,8 +60,8 @@ NAME { \
      // HOLDTAP_MOD(NAME, MACRO)
      HOLDTAP_MOD(ht_lctrl, &mc_lctrl, &skq LCTRL)
      HOLDTAP_MOD(ht_rctrl, &mc_rctrl, &skq RCTRL)
-     HOLDTAP_MOD(ht_num_ctrl, &mc_num_ctrl, &sl LAYER_NUM &skq LCTRL)
-     HOLDTAP_MOD(ht_num_gui, &mc_num_gui, &sl LAYER_NUM &skq LGUI)
+     HOLDTAP_MOD(ht_num_ctrl, &mc_num_ctrl, &skq LCTRL)
+     HOLDTAP_MOD(ht_num_gui, &mc_num_gui, &skq LGUI)
   };
 
   macros {
