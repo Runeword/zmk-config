@@ -62,7 +62,7 @@ NAME { \
       label = "STICKY_KEY_QUICK_RELEASE";
       #binding-cells = <1>;
       bindings = <&kp>;
-      release-after-ms = <1000>;
+      release-after-ms = <100>;
       quick-release;
       ignore-modifiers;
      };
