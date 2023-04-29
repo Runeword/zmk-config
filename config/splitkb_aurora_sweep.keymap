@@ -30,20 +30,20 @@ NAME: NAME { \
   bindings = <&macro_press &mo MO &kp MOD>, <&macro_pause_for_release> , <&macro_release &mo MO &kp MOD>; \
 };
 
-#define MACRO_SKQ(NAME, SKQ) \
+#define MACRO_SKQ(NAME, KEY) \
 NAME: NAME { \
   label = #NAME; \
   compatible = "zmk,behavior-macro"; \
   #binding-cells = <0>; \
   wait-ms = <30>; \
   tap-ms = <40>; \
-  bindings = <&skq SKQ>; \
+  bindings = <&skq KEY>; \
 };
 
-#define COMBO_MOD(NAME, POS, HT) \
+#define COMBO_MOD(NAME, TIME, POS, HT) \
 NAME { \
   layers = <LAYER_DEF>; \
-  timeout-ms = <30>; \
+  timeout-ms = <TIME>; \
   slow-release; \
   key-positions = <POS>; \
   bindings = <&HT 0 0>; \
@@ -104,9 +104,9 @@ NAME { \
 
     // sticky modifiers
 
-    // COMBO_MOD(NAME, POS, HT, MOD)
-    COMBO_MOD(combo_lctrl, 31 13, ht_lctrl)
-    COMBO_MOD(combo_rctrl, 32 16, ht_rctrl)
+    // COMBO_MOD(NAME, TIME, POS, HT)
+    COMBO_MOD(combo_lctrl, 30, 31 13, ht_lctrl)
+    COMBO_MOD(combo_rctrl, 30, 32 16, ht_rctrl)
 
     combo_lshft { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 12>; bindings = <&sk LSHFT>; };
     combo_lgui { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 11>; bindings = <&sk LGUI>; };
