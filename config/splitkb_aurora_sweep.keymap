@@ -40,7 +40,7 @@ NAME: NAME { \
   bindings = <&skq KEY>; \
 };
 
-#define COMBO_MOD(NAME, TIME, POS, HT) \
+#define COMBO_HT(NAME, TIME, POS, HT) \
 NAME { \
   layers = <LAYER_DEF>; \
   timeout-ms = <TIME>; \
@@ -125,19 +125,19 @@ NAME { \
     combo_caps { layers = <LAYER_DEF>; timeout-ms = <40>; key-positions = <26 27>; bindings = <&caps_word>; };
 
     // sticky modifiers
-    // COMBO_MOD(NAME, TIME, POS, HT)
-    COMBO_MOD(combo_lctrl, 30, 31 13, ht_lctrl)
-    COMBO_MOD(combo_rctrl, 30, 32 16, ht_rctrl)
-    COMBO_MOD(combo_lshft, 30, 31 12, ht_lshft)
-    COMBO_MOD(combo_rshft, 30, 32 17, ht_rshft)
-    COMBO_MOD(combo_lgui, 30, 31 11, ht_lgui)
-    COMBO_MOD(combo_rgui, 30, 32 18, ht_rgui)
-    COMBO_MOD(combo_lalt, 30, 31 10, ht_lalt)
-    COMBO_MOD(combo_ralt, 30, 32 19, ht_ralt)
-    COMBO_MOD(combo_num_lctrl, 30, 30 13, ht_num_lctrl)
-    COMBO_MOD(combo_num_lshft, 30, 30 12, ht_num_lshft)
-    COMBO_MOD(combo_num_lgui, 30, 30 11, ht_num_lgui)
-    COMBO_MOD(combo_num_lalt, 30, 30 10, ht_num_lalt)
+    // COMBO_HT(NAME, TIME, POS, HT)
+    COMBO_HT(combo_lctrl, 30, 31 13, ht_lctrl)
+    COMBO_HT(combo_rctrl, 30, 32 16, ht_rctrl)
+    COMBO_HT(combo_lshft, 30, 31 12, ht_lshft)
+    COMBO_HT(combo_rshft, 30, 32 17, ht_rshft)
+    COMBO_HT(combo_lgui, 30, 31 11, ht_lgui)
+    COMBO_HT(combo_rgui, 30, 32 18, ht_rgui)
+    COMBO_HT(combo_lalt, 30, 31 10, ht_lalt)
+    COMBO_HT(combo_ralt, 30, 32 19, ht_ralt)
+    COMBO_HT(combo_num_lctrl, 30, 30 13, ht_num_lctrl)
+    COMBO_HT(combo_num_lshft, 30, 30 12, ht_num_lshft)
+    COMBO_HT(combo_num_lgui, 30, 30 11, ht_num_lgui)
+    COMBO_HT(combo_num_lalt, 30, 30 10, ht_num_lalt)
 
     combo_lctrl_lshft { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 12 13>; bindings = <&sk LC(LSHFT)>; };
     combo_lctrl_lalt { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 13 10>; bindings = <&sk LC(LALT)>; };
