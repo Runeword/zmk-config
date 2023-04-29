@@ -30,6 +30,16 @@ NAME: NAME { \
   bindings = <&macro_press &mo MO &kp MOD>, <&macro_pause_for_release> , <&macro_release &mo MO &kp MOD>; \
 };
 
+#define MACRO_SL_SK(NAME, SL, SK) \
+NAME: NAME { \
+  label = #NAME; \
+  compatible = "zmk,behavior-macro"; \
+  #binding-cells = <0>; \
+  wait-ms = <30>; \
+  tap-ms = <40>; \
+  bindings = <&sl SL>, <&sk SK> \
+};
+
 #define COMBO_MOD(NAME, POS, HT, MOD) \
 NAME { \
   layers = <LAYER_DEF>; \
