@@ -70,6 +70,8 @@ NAME { \
      // HOLDTAP_MOD(NAME, MACRO)
      HOLDTAP_MOD(ht_lctrl, &mc_hold_lctrl, &mc_tap_lctrl)
      HOLDTAP_MOD(ht_rctrl, &mc_hold_rctrl, &mc_tap_rctrl)
+     HOLDTAP_MOD(ht_lshft, &mc_hold_lshft, &mc_tap_lshft)
+     HOLDTAP_MOD(ht_rshft, &mc_hold_rshft, &mc_tap_rshft)
 
      // HOLDTAP_MOD(ht_num_ctrl, &mc_num_ctrl)
      // HOLDTAP_MOD(ht_num_gui, &mc_num_gui)
@@ -79,10 +81,14 @@ NAME { \
     // MACRO_MOD(NAME, MO, MOD)
     MACRO_MOD(mc_hold_lctrl, LAYER_LMOD, LCTRL)
     MACRO_MOD(mc_hold_rctrl, LAYER_RMOD, RCTRL)
+    MACRO_MOD(mc_hold_lshft, LAYER_LMOD, LSHFT)
+    MACRO_MOD(mc_hold_rshft, LAYER_RMOD, RSHFT)
 
     // MACRO_SKQ(NAME, KEY)
     MACRO_SKQ(mc_tap_lctrl, LCTRL)
     MACRO_SKQ(mc_tap_rctrl, RCTRL)
+    MACRO_SKQ(mc_tap_lshft, LSHFT)
+    MACRO_SKQ(mc_tap_rshft, RSHFT)
 
     MACRO_MOD(mc_num_ctrl, LAYER_NUM, LCTRL)
     MACRO_MOD(mc_num_shft, LAYER_NUM, LSHFT)
@@ -107,14 +113,14 @@ NAME { \
     // COMBO_MOD(NAME, TIME, POS, HT)
     COMBO_MOD(combo_lctrl, 30, 31 13, ht_lctrl)
     COMBO_MOD(combo_rctrl, 30, 32 16, ht_rctrl)
+    COMBO_MOD(combo_lshft, 30, 31 12, ht_lshft)
+    COMBO_MOD(combo_rshft, 30, 32 17, ht_rshft)
 
-    combo_lshft { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 12>; bindings = <&sk LSHFT>; };
     combo_lgui { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 11>; bindings = <&sk LGUI>; };
     combo_lalt { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 10>; bindings = <&sk LALT>; };
     combo_lctrl_lshft { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 12 13>; bindings = <&sk LC(LSHFT)>; };
     combo_lctrl_lalt { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 13 10>; bindings = <&sk LC(LALT)>; };
     combo_lgui_lshft { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 12 11>; bindings = <&sk LG(LSHFT)>; };
-    combo_rshft { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <32 17>; bindings = <&sk RSHFT>; };
     combo_rgui { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <32 18>; bindings = <&sk RGUI>; };
     combo_ralt { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <32 19>; bindings = <&sk RALT>; };
     combo_rctrl_rshft { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <32 16 17>; bindings = <&sk RC(RSHFT)>; };
