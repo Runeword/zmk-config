@@ -30,14 +30,14 @@ NAME: NAME { \
   bindings = <&macro_press &mo MO &kp MOD>, <&macro_pause_for_release> , <&macro_release &mo MO &kp MOD>; \
 };
 
-#define MACRO_SL_SK(NAME, SK) \
+#define MACRO_SKQ(NAME, SKQ) \
 NAME: NAME { \
   label = #NAME; \
   compatible = "zmk,behavior-macro"; \
   #binding-cells = <0>; \
   wait-ms = <30>; \
   tap-ms = <40>; \
-  bindings = <&sk SK>; \
+  bindings = <&skq SKQ>; \
 };
 
 #define COMBO_MOD(NAME, POS, HT) \
@@ -80,7 +80,7 @@ NAME { \
     MACRO_MOD(mc_lctrl, LAYER_LMOD, LCTRL)
     MACRO_MOD(mc_rctrl, LAYER_RMOD, RCTRL)
 
-    MACRO_SL_SK(mc_lctrl_skq, LCTRL)
+    MACRO_SKQ(mc_lctrl_skq, LCTRL)
 
     MACRO_MOD(mc_num_ctrl, LAYER_NUM, LCTRL)
     MACRO_MOD(mc_num_shft, LAYER_NUM, LSHFT)
