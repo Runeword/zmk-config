@@ -76,6 +76,8 @@ NAME { \
      HOLDTAP_MOD(ht_rgui, &mc_hold_rgui, &mc_tap_rgui)
      HOLDTAP_MOD(ht_lalt, &mc_hold_lalt, &mc_tap_lalt)
      HOLDTAP_MOD(ht_ralt, &mc_hold_ralt, &mc_tap_ralt)
+     HOLDTAP_MOD(ht_num_lctrl, &mc_hold_num_lctrl, &mc_tap_num_lctrl)
+     HOLDTAP_MOD(ht_num_lshft, &mc_hold_num_lshft, &mc_tap_num_lshft)
   };
 
   macros {
@@ -88,6 +90,8 @@ NAME { \
     MACRO_MOD(mc_hold_rgui, LAYER_RMOD, RGUI)
     MACRO_MOD(mc_hold_lalt, LAYER_LMOD, LALT)
     MACRO_MOD(mc_hold_ralt, LAYER_RMOD, RALT)
+    MACRO_MOD(mc_hold_num_lctrl, LAYER_NUM, LCTRL)
+    MACRO_MOD(mc_hold_num_lshft, LAYER_NUM, LSHFT)
 
     // MACRO_SKQ(NAME, KEY)
     MACRO_SKQ(mc_tap_lctrl, LCTRL)
@@ -98,6 +102,8 @@ NAME { \
     MACRO_SKQ(mc_tap_rgui, RGUI)
     MACRO_SKQ(mc_tap_lalt, LALT)
     MACRO_SKQ(mc_tap_ralt, RALT)
+    MACRO_SKQ(mc_tap_num_lctrl, LCTRL) // TODO chain skq + sl
+    MACRO_SKQ(mc_tap_num_lshft, LSHFT) // TODO chain skq + sl
   };
 
   combos {
@@ -113,7 +119,6 @@ NAME { \
     combo_caps { layers = <LAYER_DEF>; timeout-ms = <40>; key-positions = <26 27>; bindings = <&caps_word>; };
 
     // sticky modifiers
-
     // COMBO_MOD(NAME, TIME, POS, HT)
     COMBO_MOD(combo_lctrl, 30, 31 13, ht_lctrl)
     COMBO_MOD(combo_rctrl, 30, 32 16, ht_rctrl)
@@ -123,6 +128,8 @@ NAME { \
     COMBO_MOD(combo_rgui, 30, 32 18, ht_rgui)
     COMBO_MOD(combo_lalt, 30, 31 10, ht_lalt)
     COMBO_MOD(combo_ralt, 30, 32 19, ht_ralt)
+    COMBO_MOD(combo_num_lctrl, 30, 30 13, ht_num_lctrl)
+    COMBO_MOD(combo_num_lshft, 30, 30 12, ht_num_lshft)
 
     combo_lctrl_lshft { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 12 13>; bindings = <&sk LC(LSHFT)>; };
     combo_lctrl_lalt { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 13 10>; bindings = <&sk LC(LALT)>; };
@@ -132,9 +139,7 @@ NAME { \
     combo_rgui_rshft { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <32 18 19>; bindings = <&sk RG(RSHFT)>; };
 
     // modifiers numbers
-    // combo_ctrl_numbers { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <30 13>; bindings = <&ht_num_ctrl 0 LCTRL>; };
     // combo_gui_numbers { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <30 11>; bindings = <&ht_num_gui 0 LGUI>; };
-    // combo_shft_numbers { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <30 12>; bindings = <&mc_num_shft>; };
     // combo_alt_numbers { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <30 10>; bindings = <&mc_num_alt>; };
   };
 
