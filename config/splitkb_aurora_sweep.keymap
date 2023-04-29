@@ -68,19 +68,21 @@ NAME { \
      };
 
      // HOLDTAP_MOD(NAME, MACRO)
-     HOLDTAP_MOD(ht_lctrl, &mc_lctrl, &mc_lctrl_skq)
-     // HOLDTAP_MOD(ht_lctrl, &mc_lctrl, &mc_num_tap_ctrl)
-     // HOLDTAP_MOD(ht_rctrl, &mc_rctrl)
+     HOLDTAP_MOD(ht_lctrl, &mc_hold_lctrl, &mc_tap_lctrl)
+     HOLDTAP_MOD(ht_rctrl, &mc_hold_rctrl, &mc_tap_rctrl)
+
      // HOLDTAP_MOD(ht_num_ctrl, &mc_num_ctrl)
      // HOLDTAP_MOD(ht_num_gui, &mc_num_gui)
   };
 
   macros {
     // MACRO_MOD(NAME, MO, MOD)
-    MACRO_MOD(mc_lctrl, LAYER_LMOD, LCTRL)
-    MACRO_MOD(mc_rctrl, LAYER_RMOD, RCTRL)
+    MACRO_MOD(mc_hold_lctrl, LAYER_LMOD, LCTRL)
+    MACRO_MOD(mc_hold_rctrl, LAYER_RMOD, RCTRL)
 
-    MACRO_SKQ(mc_lctrl_skq, LCTRL)
+    // MACRO_SKQ(NAME, KEY)
+    MACRO_SKQ(mc_tap_lctrl, LCTRL)
+    MACRO_SKQ(mc_tap_rctrl, RCTRL)
 
     MACRO_MOD(mc_num_ctrl, LAYER_NUM, LCTRL)
     MACRO_MOD(mc_num_shft, LAYER_NUM, LSHFT)
@@ -104,7 +106,7 @@ NAME { \
 
     // COMBO_MOD(NAME, POS, HT, MOD)
     COMBO_MOD(combo_lctrl, 31 13, ht_lctrl)
-    // COMBO_MOD(combo_rctrl, 32 16, ht_rctrl, RCTRL)
+    COMBO_MOD(combo_rctrl, 32 16, ht_rctrl)
 
     combo_lshft { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 12>; bindings = <&sk LSHFT>; };
     combo_lgui { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 11>; bindings = <&sk LGUI>; };
