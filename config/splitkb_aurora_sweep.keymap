@@ -69,7 +69,7 @@ NAME { \
 
      // HOLDTAP_MOD(NAME, MACRO)
      // HOLDTAP_MOD(ht_lctrl, &mc_lctrl, &skq LCTRL)
-     HOLDTAP_MOD(ht_lctrl, &mc_lctrl, &mc_lctrl)
+     HOLDTAP_MOD(ht_lctrl, &mc_lctrl, &mc_num_tap_ctrl)
      // HOLDTAP_MOD(ht_rctrl, &mc_rctrl)
      // HOLDTAP_MOD(ht_num_ctrl, &mc_num_ctrl)
      // HOLDTAP_MOD(ht_num_gui, &mc_num_gui)
@@ -79,7 +79,10 @@ NAME { \
     // MACRO_MOD(NAME, MO, MOD)
     MACRO_MOD(mc_lctrl, LAYER_LMOD, LCTRL)
     MACRO_MOD(mc_rctrl, LAYER_RMOD, RCTRL)
+
     MACRO_MOD(mc_num_ctrl, LAYER_NUM, LCTRL)
+    MACRO_SL_SK(mc_num_tap_ctrl, LAYER_NUM, LCTRL)
+
     MACRO_MOD(mc_num_shft, LAYER_NUM, LSHFT)
     MACRO_MOD(mc_num_gui, LAYER_NUM, LGUI)
     MACRO_MOD(mc_num_alt, LAYER_NUM, LALT)
