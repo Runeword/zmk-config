@@ -40,7 +40,7 @@ NAME: NAME { \
   bindings = <&sk SK>; \
 };
 
-#define COMBO_MOD(NAME, POS, HT, MOD) \
+#define COMBO_MOD(NAME, POS, HT) \
 NAME { \
   layers = <LAYER_DEF>; \
   timeout-ms = <30>; \
