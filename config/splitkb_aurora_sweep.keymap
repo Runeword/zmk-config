@@ -77,9 +77,9 @@ NAME { \
       ignore-modifiers;
      };
 
-    skqm: skq_combine_modifiers {
+    skqm: skq_multiple_modifiers {
       compatible = "zmk,behavior-sticky-key";
-      label = "skq_combine_modifiers";
+      label = "skq_multiple_modifiers";
       #binding-cells = <1>;
       bindings = <&kp>;
       release-after-ms = <200>;
@@ -121,7 +121,7 @@ NAME { \
 
     // MACRO_SKQ(NAME, KEY)
     MACRO_SKQ(mc_tap_lctrl, LCTRL)
-    MACRO_SKQM(mc_tap_lctrl_lshft, LC(LSHFT))
+    MACRO_SKQM(mc_tap_lctrl_lshft, LC(LSHFT)) // multiple modifiers require ignore-modifiers enabled
     MACRO_SKQ(mc_tap_rctrl, RCTRL)
     MACRO_SKQ(mc_tap_lshft, LSHFT)
     MACRO_SKQ(mc_tap_rshft, RSHFT)
