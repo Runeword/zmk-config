@@ -99,6 +99,7 @@ NAME { \
      HOLDTAP_MOD(ht_lalt, &mc_hold_lalt, &mc_tap_lalt)
      HOLDTAP_MOD(ht_lalt_lshft, &mc_hold_lalt_lshft, &mc_tap_lalt_lshft)
      HOLDTAP_MOD(ht_ralt, &mc_hold_ralt, &mc_tap_ralt)
+     HOLDTAP_MOD(ht_ralt_rshft, &mc_hold_ralt_rshft, &mc_tap_ralt_rshft)
      HOLDTAP_MOD(ht_lshft, &mc_hold_lshft, &mc_tap_lshft)
      HOLDTAP_MOD(ht_rshft, &mc_hold_rshft, &mc_tap_rshft)
      HOLDTAP_MOD(ht_num_lctrl, &mc_hold_num_lctrl, &mc_tap_num_lctrl)
@@ -120,6 +121,7 @@ NAME { \
     MACRO_MOD(mc_hold_lalt, LAYER_LMOD, LALT)
     MACRO_MOD(mc_hold_lalt_lshft, LAYER_LMOD, LA(LSHFT))
     MACRO_MOD(mc_hold_ralt, LAYER_RMOD, RALT)
+    MACRO_MOD(mc_hold_ralt_rshft, LAYER_RMOD, RA(RSHFT))
     MACRO_MOD(mc_hold_lshft, LAYER_LMOD, LSHFT)
     MACRO_MOD(mc_hold_rshft, LAYER_RMOD, RSHFT)
     MACRO_MOD(mc_hold_num_lctrl, LAYER_NUM, LCTRL)
@@ -140,6 +142,7 @@ NAME { \
     MACRO_SKQ(mc_tap_lalt, LALT)
     MACRO_SKQM(mc_tap_lalt_lshft, LA(LSHFT))
     MACRO_SKQ(mc_tap_ralt, RALT)
+    MACRO_SKQM(mc_tap_ralt_rshft, RA(RSHFT))
     MACRO_SKQ(mc_tap_lshft, LSHFT)
     MACRO_SKQ(mc_tap_rshft, RSHFT)
     MACRO_SKQ(mc_tap_num_lctrl, LCTRL) // TODO chain skq + sl
@@ -169,19 +172,17 @@ NAME { \
     COMBO_HT(combo_lgui, 30, 31 11, ht_lgui)
     COMBO_HT(combo_lgui_lshft, 30, 31 12 11, ht_lgui_lshft)
     COMBO_HT(combo_rgui, 30, 32 18, ht_rgui)
-    COMBO_HT(combo_rgui_rshft, 30, 32 18 19, ht_rgui_rshft)
+    COMBO_HT(combo_rgui_rshft, 30, 32 17 18, ht_rgui_rshft)
     COMBO_HT(combo_lalt, 30, 31 10, ht_lalt)
     COMBO_HT(combo_lalt_lshft, 30, 31 10 12, ht_lalt_lshft)
     COMBO_HT(combo_ralt, 30, 32 19, ht_ralt)
+    COMBO_HT(combo_ralt_rshft, 30, 32 17 19, ht_ralt_rshft)
     COMBO_HT(combo_lshft, 30, 31 12, ht_lshft)
     COMBO_HT(combo_rshft, 30, 32 17, ht_rshft)
     COMBO_HT(combo_num_lctrl, 30, 30 13, ht_num_lctrl)
     COMBO_HT(combo_num_lshft, 30, 30 12, ht_num_lshft)
     COMBO_HT(combo_num_lgui, 30, 30 11, ht_num_lgui)
     COMBO_HT(combo_num_lalt, 30, 30 10, ht_num_lalt)
-
-    combo_lctrl_lalt { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 13 10>; bindings = <&sk LC(LALT)>; };
-    combo_rctrl_ralt { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <32 16 19>; bindings = <&sk RC(RALT)>; };
   };
 
   conditional_layers {
