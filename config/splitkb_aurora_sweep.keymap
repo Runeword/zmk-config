@@ -40,6 +40,16 @@ NAME: NAME { \
   bindings = <&skq KEY>; \
 };
 
+#define MACRO_SKQM(NAME, KEY) \
+NAME: NAME { \
+  label = #NAME; \
+  compatible = "zmk,behavior-macro"; \
+  #binding-cells = <0>; \
+  wait-ms = <0>; \
+  tap-ms = <0>; \
+  bindings = <&skqm KEY>; \
+};
+
 #define COMBO_HT(NAME, TIME, POS, HT) \
 NAME { \
   layers = <LAYER_DEF>; \
@@ -111,7 +121,7 @@ NAME { \
 
     // MACRO_SKQ(NAME, KEY)
     MACRO_SKQ(mc_tap_lctrl, LCTRL)
-    MACRO_SKQ(mc_tap_lctrl_lshft, LC(LSHFT)) // skqm
+    MACRO_SKQM(mc_tap_lctrl_lshft, LC(LSHFT))
     MACRO_SKQ(mc_tap_rctrl, RCTRL)
     MACRO_SKQ(mc_tap_lshft, LSHFT)
     MACRO_SKQ(mc_tap_rshft, RSHFT)
