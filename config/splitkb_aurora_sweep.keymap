@@ -172,6 +172,7 @@ NAME { \
     cb_del_l { layers = <LAYER_DEF LAYER_NAV LAYER_RMOD>; timeout-ms = <70>; key-positions = <21 22 23>; bindings = <&kp DEL>; };
     cb_del_r { layers = <LAYER_DEF LAYER_NAV LAYER_LMOD>; timeout-ms = <70>; key-positions = <26 27 28>; bindings = <&kp DEL>; };
     cb_caps { layers = <LAYER_DEF>; timeout-ms = <40>; key-positions = <26 27>; bindings = <&caps_word>; };
+    cb_grav_e { layers = <LAYER_DEF>; timeout-ms = <80>; key-positions = <12 2>; bindings = <&kp RA(GRAVE) &kp A>; };
 
     // sticky modifiers
     // COMBO_HOLDTAP(NAME, TIME, POS, HT)
