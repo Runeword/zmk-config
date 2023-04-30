@@ -47,7 +47,7 @@ NAME: NAME { \
   #binding-cells = <0>; \
   wait-ms = <0>; \
   tap-ms = <0>; \
-  bindings = <&skqm KEY>; \
+  bindings = <&sk KEY>; \
 };
 
 #define COMBO_HT(NAME, TIME, POS, HT) \
