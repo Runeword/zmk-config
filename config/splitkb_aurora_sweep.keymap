@@ -57,14 +57,24 @@ NAME { \
 / {
 
   behaviors {
-    skq: sticky_key_quick_release {
+    skq: sk_quick_release {
       compatible = "zmk,behavior-sticky-key";
-      label = "STICKY_KEY_QUICK_RELEASE";
+      label = "sk_quick_release";
       #binding-cells = <1>;
       bindings = <&kp>;
       release-after-ms = <100>;
       quick-release;
       ignore-modifiers;
+     };
+
+    skqm: skq_combine_modifiers {
+      compatible = "zmk,behavior-sticky-key";
+      label = "skq_combine_modifiers";
+      #binding-cells = <1>;
+      bindings = <&kp>;
+      release-after-ms = <100>;
+      quick-release;
+      /delete-property/ ignore-modifiers;
      };
 
      // HOLDTAP_MOD(NAME, HOLD, TAP)
