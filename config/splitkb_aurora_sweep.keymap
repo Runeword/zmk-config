@@ -47,7 +47,7 @@ NAME: NAME { \
   #binding-cells = <0>; \
   wait-ms = <0>; \
   tap-ms = <0>; \
-  bindings = <&sk KEY>; \
+  bindings = <&skqm KEY>; \
 };
 
 #define COMBO_HT(NAME, TIME, POS, HT) \
@@ -84,7 +84,8 @@ NAME { \
       bindings = <&kp>;
       release-after-ms = <200>;
       quick-release;
-      /delete-property/ ignore-modifiers;
+      ignore-modifiers;
+      // /delete-property/ ignore-modifiers;
      };
 
      // HOLDTAP_MOD(NAME, HOLD, TAP)
