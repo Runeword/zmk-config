@@ -10,10 +10,7 @@
 #define LAYER_RMOD 5
 #define LAYER_FUN 7
 
-#define P_LCTRL 13
-#define P_LSHFT 12
-#define P_LGUI 11
-#define P_LALT 10
+#define P_LCTRL 13, P_LSHFT 12, P_LGUI 11, P_LALT 10
 
 #define P_RCTRL 16
 #define P_RSHFT 17
