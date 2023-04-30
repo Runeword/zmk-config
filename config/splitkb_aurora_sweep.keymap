@@ -10,13 +10,8 @@
 #define LAYER_RMOD 5
 #define LAYER_FUN 7
 
-#define HOLDTAP_MACRO(NAME, MACRO_HOLD, MACRO_TAP) \
-NAME: NAME { \
-  label = #NAME; \
-  compatible = "zmk,behavior-hold-tap"; \
-  #binding-cells = <2>; \
-  flavor = "tap-preferred"; \
-  tapping-term-ms = <200>; \
+#define HOLDTAP_MACRO(NAME, MACRO_HOLD, MACRO_TAP) NAME: NAME { \
+  label = #NAME; compatible = "zmk,behavior-hold-tap"; binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <200>; \
   bindings = <MACRO_HOLD>, <MACRO_TAP>; \
 };
 
@@ -154,35 +149,35 @@ NAME { \
   combos {
     compatible = "zmk,combos";
 
-    combo_tab { layers = <LAYER_DEF LAYER_RMOD>; timeout-ms = <30>; key-positions = <12 13>; bindings = <&kp TAB>; };
-    combo_esc { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <11 12>; bindings = <&kp ESC>; };
-    combo_repeat { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <2 3>; bindings = <&key_repeat>; };
-    combo_bspc { layers = <LAYER_DEF LAYER_NAV LAYER_RMOD>; timeout-ms = <70>; key-positions = <11 12 13>; bindings = <&kp BSPC>; };
-    combo_enter { layers = <LAYER_DEF>; timeout-ms = <70>; key-positions = <16 17 18>; bindings = <&kp ENTER>; };
-    combo_del_l { layers = <LAYER_DEF LAYER_NAV LAYER_RMOD>; timeout-ms = <70>; key-positions = <21 22 23>; bindings = <&kp DEL>; };
-    combo_del_r { layers = <LAYER_DEF LAYER_NAV LAYER_LMOD>; timeout-ms = <70>; key-positions = <26 27 28>; bindings = <&kp DEL>; };
-    combo_caps { layers = <LAYER_DEF>; timeout-ms = <40>; key-positions = <26 27>; bindings = <&caps_word>; };
+    cb_tab { layers = <LAYER_DEF LAYER_RMOD>; timeout-ms = <30>; key-positions = <12 13>; bindings = <&kp TAB>; };
+    cb_esc { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <11 12>; bindings = <&kp ESC>; };
+    cb_repeat { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <2 3>; bindings = <&key_repeat>; };
+    cb_bspc { layers = <LAYER_DEF LAYER_NAV LAYER_RMOD>; timeout-ms = <70>; key-positions = <11 12 13>; bindings = <&kp BSPC>; };
+    cb_enter { layers = <LAYER_DEF>; timeout-ms = <70>; key-positions = <16 17 18>; bindings = <&kp ENTER>; };
+    cb_del_l { layers = <LAYER_DEF LAYER_NAV LAYER_RMOD>; timeout-ms = <70>; key-positions = <21 22 23>; bindings = <&kp DEL>; };
+    cb_del_r { layers = <LAYER_DEF LAYER_NAV LAYER_LMOD>; timeout-ms = <70>; key-positions = <26 27 28>; bindings = <&kp DEL>; };
+    cb_caps { layers = <LAYER_DEF>; timeout-ms = <40>; key-positions = <26 27>; bindings = <&caps_word>; };
 
     // sticky modifiers
     // COMBO_HOLDTAP(NAME, TIME, POS, HT)
-    COMBO_HOLDTAP(combo_lctrl, 30, 31 13, ht_lctrl)
-    COMBO_HOLDTAP(combo_lctrl_lshft, 30, 31 12 13, ht_lctrl_lshft)
-    COMBO_HOLDTAP(combo_rctrl, 30, 32 16, ht_rctrl)
-    COMBO_HOLDTAP(combo_rctrl_rshft, 30, 32 16 17, ht_rctrl_rshft)
-    COMBO_HOLDTAP(combo_lgui, 30, 31 11, ht_lgui)
-    COMBO_HOLDTAP(combo_lgui_lshft, 30, 31 12 11, ht_lgui_lshft)
-    COMBO_HOLDTAP(combo_rgui, 30, 32 18, ht_rgui)
-    COMBO_HOLDTAP(combo_rgui_rshft, 30, 32 17 18, ht_rgui_rshft)
-    COMBO_HOLDTAP(combo_lalt, 30, 31 10, ht_lalt)
-    COMBO_HOLDTAP(combo_lalt_lshft, 30, 31 10 12, ht_lalt_lshft)
-    COMBO_HOLDTAP(combo_ralt, 30, 32 19, ht_ralt)
-    COMBO_HOLDTAP(combo_ralt_rshft, 30, 32 17 19, ht_ralt_rshft)
-    COMBO_HOLDTAP(combo_lshft, 30, 31 12, ht_lshft)
-    COMBO_HOLDTAP(combo_rshft, 30, 32 17, ht_rshft)
-    COMBO_HOLDTAP(combo_num_lctrl, 30, 30 13, ht_num_lctrl)
-    COMBO_HOLDTAP(combo_num_lshft, 30, 30 12, ht_num_lshft)
-    COMBO_HOLDTAP(combo_num_lgui, 30, 30 11, ht_num_lgui)
-    COMBO_HOLDTAP(combo_num_lalt, 30, 30 10, ht_num_lalt)
+    COMBO_HOLDTAP(cb_lctrl, 30, 31 13, ht_lctrl)
+    COMBO_HOLDTAP(cb_lctrl_lshft, 30, 31 12 13, ht_lctrl_lshft)
+    COMBO_HOLDTAP(cb_rctrl, 30, 32 16, ht_rctrl)
+    COMBO_HOLDTAP(cb_rctrl_rshft, 30, 32 16 17, ht_rctrl_rshft)
+    COMBO_HOLDTAP(cb_lgui, 30, 31 11, ht_lgui)
+    COMBO_HOLDTAP(cb_lgui_lshft, 30, 31 12 11, ht_lgui_lshft)
+    COMBO_HOLDTAP(cb_rgui, 30, 32 18, ht_rgui)
+    COMBO_HOLDTAP(cb_rgui_rshft, 30, 32 17 18, ht_rgui_rshft)
+    COMBO_HOLDTAP(cb_lalt, 30, 31 10, ht_lalt)
+    COMBO_HOLDTAP(cb_lalt_lshft, 30, 31 10 12, ht_lalt_lshft)
+    COMBO_HOLDTAP(cb_ralt, 30, 32 19, ht_ralt)
+    COMBO_HOLDTAP(cb_ralt_rshft, 30, 32 17 19, ht_ralt_rshft)
+    COMBO_HOLDTAP(cb_lshft, 30, 31 12, ht_lshft)
+    COMBO_HOLDTAP(cb_rshft, 30, 32 17, ht_rshft)
+    COMBO_HOLDTAP(cb_num_lctrl, 30, 30 13, ht_num_lctrl)
+    COMBO_HOLDTAP(cb_num_lshft, 30, 30 12, ht_num_lshft)
+    COMBO_HOLDTAP(cb_num_lgui, 30, 30 11, ht_num_lgui)
+    COMBO_HOLDTAP(cb_num_lalt, 30, 30 10, ht_num_lalt)
   };
 
   conditional_layers {
