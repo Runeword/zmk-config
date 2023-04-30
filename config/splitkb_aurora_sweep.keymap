@@ -74,7 +74,7 @@ NAME { \
       bindings = <&kp>;
       release-after-ms = <200>;
       quick-release;
-      ignore-modifiers;
+      /delete-property/ ignore-modifiers;
      };
 
     skqm: skq_multiple_modifiers {
@@ -85,7 +85,6 @@ NAME { \
       release-after-ms = <200>;
       quick-release;
       ignore-modifiers;
-      // /delete-property/ ignore-modifiers;
      };
 
      // HOLDTAP_MOD(NAME, HOLD, TAP)
