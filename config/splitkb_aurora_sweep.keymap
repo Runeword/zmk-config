@@ -62,7 +62,7 @@ NAME { \
       label = "sk_quick_release";
       #binding-cells = <1>;
       bindings = <&kp>;
-      release-after-ms = <100>;
+      release-after-ms = <200>;
       quick-release;
       ignore-modifiers;
      };
@@ -72,13 +72,14 @@ NAME { \
       label = "skq_combine_modifiers";
       #binding-cells = <1>;
       bindings = <&kp>;
-      release-after-ms = <100>;
+      release-after-ms = <200>;
       quick-release;
       /delete-property/ ignore-modifiers;
      };
 
      // HOLDTAP_MOD(NAME, HOLD, TAP)
      HOLDTAP_MOD(ht_lctrl, &mc_hold_lctrl, &mc_tap_lctrl)
+     HOLDTAP_MOD(ht_lctrl_lshft, &mc_hold_lctrl_lshft, &mc_tap_lctrl_lshft)
      HOLDTAP_MOD(ht_rctrl, &mc_hold_rctrl, &mc_tap_rctrl)
      HOLDTAP_MOD(ht_lshft, &mc_hold_lshft, &mc_tap_lshft)
      HOLDTAP_MOD(ht_rshft, &mc_hold_rshft, &mc_tap_rshft)
@@ -95,6 +96,7 @@ NAME { \
   macros {
     // MACRO_MOD(NAME, MO, MOD)
     MACRO_MOD(mc_hold_lctrl, LAYER_LMOD, LCTRL)
+    MACRO_MOD(mc_hold_lctrl_lshft, LAYER_LMOD, LC(LSHFT))
     MACRO_MOD(mc_hold_rctrl, LAYER_RMOD, RCTRL)
     MACRO_MOD(mc_hold_lshft, LAYER_LMOD, LSHFT)
     MACRO_MOD(mc_hold_rshft, LAYER_RMOD, RSHFT)
@@ -109,6 +111,7 @@ NAME { \
 
     // MACRO_SKQ(NAME, KEY)
     MACRO_SKQ(mc_tap_lctrl, LCTRL)
+    MACRO_SKQ(mc_tap_lctrl_lshft, LC(LSHFT))
     MACRO_SKQ(mc_tap_rctrl, RCTRL)
     MACRO_SKQ(mc_tap_lshft, LSHFT)
     MACRO_SKQ(mc_tap_rshft, RSHFT)
@@ -137,6 +140,7 @@ NAME { \
     // sticky modifiers
     // COMBO_HT(NAME, TIME, POS, HT)
     COMBO_HT(combo_lctrl, 30, 31 13, ht_lctrl)
+    COMBO_HT(combo_lctrl_lshft, 30, 31 12 13, ht_lctrl_lshft)
     COMBO_HT(combo_rctrl, 30, 32 16, ht_rctrl)
     COMBO_HT(combo_lshft, 30, 31 12, ht_lshft)
     COMBO_HT(combo_rshft, 30, 32 17, ht_rshft)
