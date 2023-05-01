@@ -174,8 +174,10 @@ NAME { \
     MACRO_SKQ(mc_tap_num_lgui, LGUI)
     MACRO_SKQ(mc_tap_num_lalt, LALT)
 
-    // french special characters
-    MACRO(mc_grav_e, <&kp RA(GRAVE) &kp A>)
+    MACRO(NAME, BINDINGS)
+    MACRO(mc_grav_a, <&kp RA(GRAVE) &kp A>)
+    MACRO(mc_grav_e, <&kp RA(GRAVE) &kp E>)
+    MACRO(mc_grav_u, <&kp RA(GRAVE) &kp U>)
   };
 
   combos {
@@ -189,7 +191,11 @@ NAME { \
     cb_del_l { layers = <LAYER_DEF LAYER_NAV LAYER_RMOD>; timeout-ms = <70>; key-positions = <21 22 23>; bindings = <&kp DEL>; };
     cb_del_r { layers = <LAYER_DEF LAYER_NAV LAYER_LMOD>; timeout-ms = <70>; key-positions = <26 27 28>; bindings = <&kp DEL>; };
     cb_caps { layers = <LAYER_DEF>; timeout-ms = <40>; key-positions = <26 27>; bindings = <&caps_word>; };
-    cb_grav_e { layers = <LAYER_DEF>; timeout-ms = <80>; key-positions = <12 2>; bindings = <&mc_grav_e>; };
+
+    // french special characters
+    cb_grav_a { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <11 1>; bindings = <&mc_grav_a>; };
+    cb_grav_e { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <12 2>; bindings = <&mc_grav_e>; };
+    cb_grav_u { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <13 3>; bindings = <&mc_grav_u>; };
 
     // sticky modifiers
     // COMBO_HOLDTAP(NAME, TIME, POS, HT)
