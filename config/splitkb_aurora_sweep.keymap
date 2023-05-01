@@ -178,6 +178,8 @@ NAME { \
     MACRO(mc_grav_a, <&kp RA(GRAVE) &kp A>)
     MACRO(mc_grav_e, <&kp RA(GRAVE) &kp E>)
     MACRO(mc_grav_u, <&kp RA(GRAVE) &kp U>)
+    MACRO(mc_acute_e, <&kp RA(E)>)
+    MACRO(mc_cedilla_c, <&kp RA(COMMA)>)
   };
 
   combos {
@@ -196,6 +198,8 @@ NAME { \
     cb_grav_a { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <11 1>; bindings = <&mc_grav_a>; };
     cb_grav_e { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <12 2>; bindings = <&mc_grav_e>; };
     cb_grav_u { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <13 3>; bindings = <&mc_grav_u>; };
+    cb_acute_e { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <22 12>; bindings = <&mc_acute_e>; };
+    cb_cedilla_c { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <17 7>; bindings = <&mc_cedilla_c>; };
 
     // sticky modifiers
     // COMBO_HOLDTAP(NAME, TIME, POS, HT)
