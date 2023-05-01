@@ -174,7 +174,7 @@ NAME { \
     MACRO_SKQ(mc_tap_num_lgui, LGUI)
     MACRO_SKQ(mc_tap_num_lalt, LALT)
 
-    MACRO(NAME, BINDINGS)
+    // MACRO(NAME, BINDINGS)
     MACRO(mc_grav_a, <&kp RA(GRAVE) &kp A>)
     MACRO(mc_grav_e, <&kp RA(GRAVE) &kp E>)
     MACRO(mc_grav_u, <&kp RA(GRAVE) &kp U>)
