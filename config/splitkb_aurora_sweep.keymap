@@ -75,7 +75,7 @@ NAME: NAME { \
   compatible = "zmk,behavior-tap-dance"; \
   label = #NAME; \
   #binding-cells = <0>; \
-  tapping-term-ms = <200>; \
+  tapping-term-ms = <100>; \
   bindings = <B1>, <B2>; \
 };
 
@@ -84,7 +84,7 @@ NAME: NAME { \
   compatible = "zmk,behavior-tap-dance"; \
   label = #NAME; \
   #binding-cells = <0>; \
-  tapping-term-ms = <200>; \
+  tapping-term-ms = <100>; \
   bindings = <B1>, <B2>, <B3>; \
 };
 
@@ -207,9 +207,9 @@ NAME { \
     MACRO(mc_circumflex_e, <&kp RA(NUMBER_6) &kp E>)
     MACRO(mc_circumflex_u, <&kp RA(NUMBER_6) &kp U>)
     MACRO(mc_circumflex_i, <&kp RA(NUMBER_6) &kp I>)
-    MACRO(mc_trema_e, <&kp RS(GRAVE) &kp E>)
-    MACRO(mc_trema_u, <&kp RS(GRAVE) &kp U>)
-    MACRO(mc_trema_i, <&kp RS(GRAVE) &kp I>)
+    MACRO(mc_trema_e, <&kp RS(SQT) &kp E>)
+    MACRO(mc_trema_u, <&kp RS(SQT) &kp U>)
+    MACRO(mc_trema_i, <&kp RS(SQT) &kp I>)
     MACRO(mc_acute_e, <&kp RA(E)>)
     MACRO(mc_cedilla_c, <&kp RA(COMMA)>)
   };
