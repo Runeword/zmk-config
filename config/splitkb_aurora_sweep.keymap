@@ -118,7 +118,7 @@ NAME { \
 
      // TAPDANCE(NAME, BINDING1, BINDING2)
      TAPDANCE(td_special_a, &mc_grave_a, &mc_circumflex_a)
-     // TAPDANCE(td_special_u, &mc_grave_u, &mc_circumflex_u)
+     TAPDANCE(td_special_u, &mc_grave_u, &mc_circumflex_u)
      // TAPDANCE(td_special_i, &mc_circumflex_i, &mc_)
      // TAPDANCE(td_special_e, &mc_circumflex_e, &mc_)
 
@@ -215,10 +215,13 @@ NAME { \
     cb_caps { layers = <LAYER_DEF>; timeout-ms = <40>; key-positions = <26 27>; bindings = <&caps_word>; };
 
     // french special characters
-    cb_grave_a { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <11 1>; bindings = <&td_special_a>; };
+    cb_special_a { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <11 1>; bindings = <&td_special_a>; };
     cb_acute_e { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <12 2>; bindings = <&mc_acute_e>; };
-    cb_grave_u { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <13 3>; bindings = <&td_special_u>; };
-    cb_grave_e { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <22 12>; bindings = <&mc_grave_e>; };
+    cb_grave_e { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <13 3>; bindings = <&mc_grave_e>; };
+    cb_circumflex_o { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <21 11>; bindings = <&mc_circumflex_o>; };
+    // cb_special_e { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <22 12>; bindings = <&td_special_e>; };
+    cb_special_u { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <23 13>; bindings = <&td_special_u>; };
+    // cb_special_i { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <24 14>; bindings = <&td_special_i>; };
     cb_cedilla_c { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <17 7>; bindings = <&mc_cedilla_c>; };
 
     // sticky modifiers
