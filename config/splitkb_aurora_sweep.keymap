@@ -207,9 +207,9 @@ NAME { \
     MACRO(mc_circumflex_e, <&kp RA(6) &kp E>)
     MACRO(mc_circumflex_u, <&kp RA(6) &kp U>)
     MACRO(mc_circumflex_i, <&kp RA(6) &kp I>)
-    MACRO(mc_trema_e, <&kp RSHFT(GRAVE) &kp E>)
-    MACRO(mc_trema_u, <&kp RSHFT(GRAVE) &kp U>)
-    MACRO(mc_trema_i, <&kp RSHFT(GRAVE) &kp I>)
+    MACRO(mc_trema_e, <&kp RS(GRAVE) &kp E>)
+    MACRO(mc_trema_u, <&kp RS(GRAVE) &kp U>)
+    MACRO(mc_trema_i, <&kp RS(GRAVE) &kp I>)
     MACRO(mc_acute_e, <&kp RA(E)>)
     MACRO(mc_cedilla_c, <&kp RA(COMMA)>)
   };
