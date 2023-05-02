@@ -127,7 +127,7 @@ NAME { \
 
      // TAPDANCE(NAME, BINDING1, BINDING2)
      TAPDANCE(td_special_a, &mc_grave_a, &mc_circumflex_a)
-     TAPDANCE_3(td_special_u, &mc_grave_u, &mc_circumflex_u, mc_trema_u)
+     TAPDANCE_3(td_special_u, &mc_grave_u, &mc_circumflex_u, &mc_trema_u)
      TAPDANCE(td_special_i, &mc_circumflex_i, &mc_trema_i)
      TAPDANCE(td_special_e, &mc_circumflex_e, &mc_trema_e)
 
