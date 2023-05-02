@@ -71,7 +71,7 @@ NAME: NAME { \
 };
 
 #define TAPDANCE(NAME, B1, B2) \
-NAME: NAME {
+NAME: NAME { \
   compatible = "zmk,behavior-tap-dance"; \
   label = #NAME; \
   #binding-cells = <0>; \
