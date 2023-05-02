@@ -75,7 +75,7 @@ NAME: NAME { \
   compatible = "zmk,behavior-tap-dance"; \
   label = #NAME; \
   #binding-cells = <0>; \
-  tapping-term-ms = <100>; \
+  tapping-term-ms = <200>; \
   bindings = <B1>, <B2>; \
 };
 
@@ -84,7 +84,7 @@ NAME: NAME { \
   compatible = "zmk,behavior-tap-dance"; \
   label = #NAME; \
   #binding-cells = <0>; \
-  tapping-term-ms = <100>; \
+  tapping-term-ms = <200>; \
   bindings = <B1>, <B2>, <B3>; \
 };
 
