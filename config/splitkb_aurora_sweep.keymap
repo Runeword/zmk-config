@@ -70,6 +70,15 @@ NAME: NAME { \
   bindings = <&skqm KEY>; \
 };
 
+#define TAPDANCE(NAME, B1, B2) \
+NAME: NAME {
+  compatible = "zmk,behavior-tap-dance"; \
+  label = #NAME; \
+  #binding-cells = <0>; \
+  tapping-term-ms = <200>; \
+  bindings = <B1>, <B2>; \
+};
+
 #define COMBO_HOLDTAP(NAME, TIME, POS, HT) \
 NAME { \
   layers = <LAYER_DEF>; \
