@@ -159,7 +159,7 @@ NAME { \
      HOLDTAP_MACRO(ht_ralt_rshft, &mc_hold_ralt_rshft, &mc_tap_ralt_rshft)
      HOLDTAP_MACRO(ht_lshft, &mc_hold_lshft, &mc_tap_lshft)
      HOLDTAP_MACRO(ht_rshft, &mc_hold_rshft, &mc_tap_rshft)
-     HOLDTAP_MACRO(ht_num_lctrl, &mc_hold_num_lctrl, &skqm_tap_num_lctrl 0)
+     // HOLDTAP_MACRO(ht_num_lctrl, &mc_hold_num_lctrl, &skqm_tap_num_lctrl 0)
      HOLDTAP_MACRO(ht_num_lshft, &mc_hold_num_lshft, &mc_tap_num_lshft)
      HOLDTAP_MACRO(ht_num_lgui, &mc_hold_num_lgui, &mc_tap_num_lgui)
      HOLDTAP_MACRO(ht_num_lalt, &mc_hold_num_lalt, &mc_tap_num_lalt)
