@@ -60,14 +60,25 @@ NAME: NAME { \
   bindings = <&skq KEY>; \
 };
 
-#define MACRO_SKQM(NAME, KEY) \
+#define MACRO_SKQX(NAME, KEY) \
 NAME: NAME { \
   label = #NAME; \
   compatible = "zmk,behavior-macro"; \
   #binding-cells = <0>; \
   wait-ms = <0>; \
   tap-ms = <0>; \
-  bindings = <&skqm KEY>; \
+  bindings = <&skqx KEY>; \
+};
+
+#define SKQM_MACRO(NAME, MACRO) \
+NAME: NAME { \
+  compatible = "zmk,behavior-sticky-key"; \
+  label = "skq_multiple_modifiers"; \
+  #binding-cells = <1>; \
+  bindings = <&MACRO>; \
+  release-after-ms = <200>; \
+  quick-release; \
+  ignore-modifiers; \
 };
 
 #define TAPDANCE(NAME, B1, B2) \
@@ -115,7 +126,7 @@ NAME { \
       /delete-property/ ignore-modifiers;
      };
 
-    skqm: skq_multiple_modifiers {
+    skqx: skq_multiple_modifiers {
       compatible = "zmk,behavior-sticky-key";
       label = "skq_multiple_modifiers";
       #binding-cells = <1>;
@@ -174,19 +185,19 @@ NAME { \
     MACRO_MOD(mc_hold_num_lalt, LAYER_NUM, LALT)
 
     // MACRO_SKQ(NAME, KEY)
-    // MACRO_SKQM(NAME, KEY) enable ignore-modifiers, for use with multiple modifiers like LC(LSHFT)
+    // MACRO_SKQX(NAME, KEY) enable ignore-modifiers, for use with multiple modifiers like LC(LSHFT)
     MACRO_SKQ(mc_tap_lctrl, LCTRL)
-    MACRO_SKQM(mc_tap_lctrl_lshft, LC(LSHFT))
+    MACRO_SKQX(mc_tap_lctrl_lshft, LC(LSHFT))
     MACRO_SKQ(mc_tap_rctrl, RCTRL)
-    MACRO_SKQM(mc_tap_rctrl_rshft, RC(RSHFT))
+    MACRO_SKQX(mc_tap_rctrl_rshft, RC(RSHFT))
     MACRO_SKQ(mc_tap_lgui, LGUI)
-    MACRO_SKQM(mc_tap_lgui_lshft, LG(LSHFT))
+    MACRO_SKQX(mc_tap_lgui_lshft, LG(LSHFT))
     MACRO_SKQ(mc_tap_rgui, RGUI)
-    MACRO_SKQM(mc_tap_rgui_rshft, RG(RSHFT))
+    MACRO_SKQX(mc_tap_rgui_rshft, RG(RSHFT))
     MACRO_SKQ(mc_tap_lalt, LALT)
-    MACRO_SKQM(mc_tap_lalt_lshft, LA(LSHFT))
+    MACRO_SKQX(mc_tap_lalt_lshft, LA(LSHFT))
     MACRO_SKQ(mc_tap_ralt, RALT)
-    MACRO_SKQM(mc_tap_ralt_rshft, RA(RSHFT))
+    MACRO_SKQX(mc_tap_ralt_rshft, RA(RSHFT))
     MACRO_SKQ(mc_tap_lshft, LSHFT)
     MACRO_SKQ(mc_tap_rshft, RSHFT)
 
