@@ -70,7 +70,7 @@ NAME: NAME { \
   bindings = <&skqx KEY>; \
 };
 
-#define SKQM_MACRO(NAME, MACRO) \
+#define SKQ_MACRO(NAME, MACRO) \
 NAME: NAME { \
   compatible = "zmk,behavior-sticky-key"; \
   label = "skq_macro"; \
@@ -136,7 +136,7 @@ NAME { \
       ignore-modifiers;
      };
 
-     SKQM_MACRO(skqm_tap_num_lctrl, &mc_hold_num_lctrl)
+     SKQ_MACRO(skqm_tap_num_lctrl, &mc_hold_num_lctrl)
 
      // TAPDANCE(NAME, BINDING1, BINDING2)
      TAPDANCE(td_special_a, &mc_grave_a, &mc_circumflex_a)
@@ -159,13 +159,15 @@ NAME { \
      HOLDTAP_MACRO(ht_ralt_rshft, &mc_hold_ralt_rshft, &mc_tap_ralt_rshft)
      HOLDTAP_MACRO(ht_lshft, &mc_hold_lshft, &mc_tap_lshft)
      HOLDTAP_MACRO(ht_rshft, &mc_hold_rshft, &mc_tap_rshft)
-     // HOLDTAP_MACRO(ht_num_lctrl, &mc_hold_num_lctrl, &skqm_tap_num_lctrl 0)
+     HOLDTAP_MACRO(ht_num_lctrl, &mc_hold_num_lctrl, &mc_skqm_tap_num_lctrl)
      HOLDTAP_MACRO(ht_num_lshft, &mc_hold_num_lshft, &mc_tap_num_lshft)
      HOLDTAP_MACRO(ht_num_lgui, &mc_hold_num_lgui, &mc_tap_num_lgui)
      HOLDTAP_MACRO(ht_num_lalt, &mc_hold_num_lalt, &mc_tap_num_lalt)
   };
 
   macros {
+    MACRO(mc_skqm_tap_num_lctrl, <&skqm_tap_num_lctrl 0>)
+
     // MACRO_MOD(NAME, MO, MOD)
     MACRO_MOD(mc_hold_lctrl, LAYER_LMOD, LCTRL)
     MACRO_MOD(mc_hold_lctrl_lshft, LAYER_LMOD, LC(LSHFT))
@@ -267,7 +269,7 @@ NAME { \
     COMBO_HOLDTAP(cb_ralt_rshft, 30, 32 P_RALT P_RSHFT, ht_ralt_rshft)
     COMBO_HOLDTAP(cb_lshft, 30, 31 P_LSHFT, ht_lshft)
     COMBO_HOLDTAP(cb_rshft, 30, 32 P_RSHFT, ht_rshft)
-    // COMBO_HOLDTAP(cb_num_lctrl, 30, 30 P_LCTRL, ht_num_lctrl)
+    COMBO_HOLDTAP(cb_num_lctrl, 30, 30 P_LCTRL, ht_num_lctrl)
     COMBO_HOLDTAP(cb_num_lshft, 30, 30 P_LSHFT, ht_num_lshft)
     COMBO_HOLDTAP(cb_num_lgui, 30, 30 P_LGUI, ht_num_lgui)
     COMBO_HOLDTAP(cb_num_lalt, 30, 30 P_LALT, ht_num_lalt)
