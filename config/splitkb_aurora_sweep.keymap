@@ -75,7 +75,7 @@ NAME: NAME { \
   compatible = "zmk,behavior-sticky-key"; \
   label = "skq_multiple_modifiers"; \
   #binding-cells = <1>; \
-  bindings = <&MACRO>; \
+  bindings = <MACRO>; \
   release-after-ms = <200>; \
   quick-release; \
   ignore-modifiers; \
