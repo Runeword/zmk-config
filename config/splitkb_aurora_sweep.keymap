@@ -225,6 +225,8 @@ NAME { \
     cb_del_l { layers = <LAYER_DEF LAYER_NAV LAYER_RMOD>; timeout-ms = <70>; key-positions = <21 22 23>; bindings = <&kp DEL>; };
     cb_del_r { layers = <LAYER_DEF LAYER_NAV LAYER_LMOD>; timeout-ms = <70>; key-positions = <26 27 28>; bindings = <&kp DEL>; };
     cb_caps { layers = <LAYER_DEF>; timeout-ms = <40>; key-positions = <26 27>; bindings = <&caps_word>; };
+    cb_boot_l { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <31 24>; bindings = <&bootloader>; };
+    cb_boot_r { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <32 25>; bindings = <&bootloader>; };
 
     // french special characters
     cb_special_a { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <11 1>; bindings = <&td_special_a>; };
