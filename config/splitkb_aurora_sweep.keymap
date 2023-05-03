@@ -267,7 +267,7 @@ NAME { \
     COMBO_HOLDTAP(cb_ralt_rshft, 30, 32 P_RALT P_RSHFT, ht_ralt_rshft)
     COMBO_HOLDTAP(cb_lshft, 30, 31 P_LSHFT, ht_lshft)
     COMBO_HOLDTAP(cb_rshft, 30, 32 P_RSHFT, ht_rshft)
-    COMBO_HOLDTAP(cb_num_lctrl, 30, 30 P_LCTRL, ht_num_lctrl)
+    // COMBO_HOLDTAP(cb_num_lctrl, 30, 30 P_LCTRL, ht_num_lctrl)
     COMBO_HOLDTAP(cb_num_lshft, 30, 30 P_LSHFT, ht_num_lshft)
     COMBO_HOLDTAP(cb_num_lgui, 30, 30 P_LGUI, ht_num_lgui)
     COMBO_HOLDTAP(cb_num_lalt, 30, 30 P_LALT, ht_num_lalt)
