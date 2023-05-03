@@ -73,7 +73,7 @@ NAME: NAME { \
 #define SKQM_MACRO(NAME, MACRO) \
 NAME: NAME { \
   compatible = "zmk,behavior-sticky-key"; \
-  label = "skq_multiple_modifiers"; \
+  label = "skq_macro"; \
   #binding-cells = <1>; \
   bindings = <MACRO>; \
   release-after-ms = <200>; \
@@ -136,7 +136,7 @@ NAME { \
       ignore-modifiers;
      };
 
-     SKQM_MACRO(skqm_tap_num_lctrl, mc_hold_num_lctrl)
+     SKQM_MACRO(skqm_tap_num_lctrl, &mc_hold_num_lctrl)
 
      // TAPDANCE(NAME, BINDING1, BINDING2)
      TAPDANCE(td_special_a, &mc_grave_a, &mc_circumflex_a)
