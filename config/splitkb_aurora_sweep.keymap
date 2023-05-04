@@ -82,9 +82,9 @@ NAME: NAME { \
 #define COMBO_HOLDTAP(NAME, TIMEOUT, POSITION, HOLDTAP) \
 NAME { \
   layers = <LAYER_DEF>; \
-  timeout-ms = <TIME>; \
+  timeout-ms = <TIMEOUT>; \
   slow-release; \
-  key-positions = <POS>; \
+  key-positions = <POSITION>; \
   bindings = <&HOLDTAP 0 0>; \
 };
 
@@ -144,15 +144,18 @@ NAME { \
      HOLDTAP_MACRO(ht_rshft, &mc_hold_rshft, &mc_tap_rshft)
 
      // sticky modifiers layer num
+     // can't use two sticky keys like sk and sl in a macro because they are indexed by key position
+     // https://github.com/zmkfirmware/zmk/issues/1421
+     // the workaround is to
      // HOLDTAP_MACRO(NAME, MACRO_HOLD, MACRO_TAP)
-     HOLDTAP_MACRO(ht_num_lctrl, &mc_hold_num_lctrl, &mc_skqm_tap_num_lctrl)
+     HOLDTAP_MACRO(ht_num_lctrl, &mc_hold_num_lctrl, &mc_tap_num_lctrl)
      HOLDTAP_MACRO(ht_num_lshft, &mc_hold_num_lshft, &mc_tap_num_lshft)
      HOLDTAP_MACRO(ht_num_lgui, &mc_hold_num_lgui, &mc_tap_num_lgui)
      HOLDTAP_MACRO(ht_num_lalt, &mc_hold_num_lalt, &mc_tap_num_lalt)
   };
 
   macros {
-    MACRO_TAP(mc_skqm_tap_num_lctrl, &skqm_tap_num_lctrl 0)
+    MACRO_TAP(mc_tap_num_lctrl, &skqm_tap_num_lctrl 0)
 
     // MACRO_HOLD(NAME, BINDINGS)
     MACRO_HOLD(mc_hold_lctrl, &mo LAYER_LMOD &kp LCTRL)
