@@ -53,7 +53,7 @@ NAME: NAME { \
 #define SKQ_MACRO(NAME, MACRO) \
 NAME: NAME { \
   compatible = "zmk,behavior-sticky-key"; \
-  label = "skq_macro"; \
+  label = #NAME; \
   #binding-cells = <1>; \
   bindings = <MACRO>; \
   release-after-ms = <200>; \
@@ -88,6 +88,7 @@ NAME { \
   bindings = <&HOLDTAP 0 0>; \
 };
 
+// default sticky key options
 &sk {
   quick-release;
   /delete-property/ ignore-modifiers;
@@ -193,7 +194,6 @@ NAME { \
     // can't use two sticky keys like sk and sl in a macro because they are indexed by key position
     // https://github.com/zmkfirmware/zmk/issues/1421
     // MACRO_TAP(NAME, BINDINGS)
-    MACRO_TAP(mc_tap_num_lctrl, &skq LCTRL)
     MACRO_TAP(mc_tap_num_lshft, &skq LSHFT)
     MACRO_TAP(mc_tap_num_lgui, &skq LGUI)
     MACRO_TAP(mc_tap_num_lalt, &skq LALT)
