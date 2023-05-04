@@ -30,14 +30,14 @@ NAME: NAME { \
   bindings = <MACRO_HOLD>, <MACRO_TAP>; \
 };
 
-#define MACRO_MOD(NAME, MO, MOD) \
+#define MACRO_HOLD(NAME, BINDINGS) \
 NAME: NAME { \
   label = #NAME; \
   compatible = "zmk,behavior-macro"; \
   #binding-cells = <0>; \
   wait-ms = <0>; \
   tap-ms = <0>; \
-  bindings = <&macro_press &mo MO &kp MOD>, <&macro_pause_for_release> , <&macro_release &mo MO &kp MOD>; \
+  bindings = <&macro_press BINDINGS>, <&macro_pause_for_release> , <&macro_release BINDINGS>; \
 };
 
 #define MACRO(NAME, BINDINGS) \
@@ -148,25 +148,25 @@ NAME { \
   macros {
     MACRO(mc_skqm_tap_num_lctrl, <&skqm_tap_num_lctrl 0>)
 
-    // MACRO_MOD(NAME, MO, MOD)
-    MACRO_MOD(mc_hold_lctrl, LAYER_LMOD, LCTRL)
-    MACRO_MOD(mc_hold_lctrl_lshft, LAYER_LMOD, LC(LSHFT))
-    MACRO_MOD(mc_hold_rctrl, LAYER_RMOD, RCTRL)
-    MACRO_MOD(mc_hold_rctrl_rshft, LAYER_RMOD, RC(RSHFT))
-    MACRO_MOD(mc_hold_lgui, LAYER_LMOD, LGUI)
-    MACRO_MOD(mc_hold_lgui_lshft, LAYER_LMOD, LG(LSHFT))
-    MACRO_MOD(mc_hold_rgui, LAYER_RMOD, RGUI)
-    MACRO_MOD(mc_hold_rgui_rshft, LAYER_RMOD, RG(RSHFT))
-    MACRO_MOD(mc_hold_lalt, LAYER_LMOD, LALT)
-    MACRO_MOD(mc_hold_lalt_lshft, LAYER_LMOD, LA(LSHFT))
-    MACRO_MOD(mc_hold_ralt, LAYER_RMOD, RALT)
-    MACRO_MOD(mc_hold_ralt_rshft, LAYER_RMOD, RA(RSHFT))
-    MACRO_MOD(mc_hold_lshft, LAYER_LMOD, LSHFT)
-    MACRO_MOD(mc_hold_rshft, LAYER_RMOD, RSHFT)
-    MACRO_MOD(mc_hold_num_lctrl, LAYER_NUM, LCTRL)
-    MACRO_MOD(mc_hold_num_lshft, LAYER_NUM, LSHFT)
-    MACRO_MOD(mc_hold_num_lgui, LAYER_NUM, LGUI)
-    MACRO_MOD(mc_hold_num_lalt, LAYER_NUM, LALT)
+    // MACRO_HOLD(NAME, BINDINGS)
+    MACRO_HOLD(mc_hold_lctrl, &mo LAYER_LMOD &kp LCTRL)
+    MACRO_HOLD(mc_hold_lctrl_lshft, &mo LAYER_LMOD &kp LC(LSHFT))
+    MACRO_HOLD(mc_hold_rctrl, &mo LAYER_RMOD &kp RCTRL)
+    MACRO_HOLD(mc_hold_rctrl_rshft, &mo LAYER_RMOD &kp RC(RSHFT))
+    MACRO_HOLD(mc_hold_lgui, &mo LAYER_LMOD &kp LGUI)
+    MACRO_HOLD(mc_hold_lgui_lshft, &mo LAYER_LMOD &kp LG(LSHFT))
+    MACRO_HOLD(mc_hold_rgui, &mo LAYER_RMOD &kp RGUI)
+    MACRO_HOLD(mc_hold_rgui_rshft, &mo LAYER_RMOD &kp RG(RSHFT))
+    MACRO_HOLD(mc_hold_lalt, &mo LAYER_LMOD &kp LALT)
+    MACRO_HOLD(mc_hold_lalt_lshft, &mo LAYER_LMOD &kp LA(LSHFT))
+    MACRO_HOLD(mc_hold_ralt, &mo LAYER_RMOD &kp RALT)
+    MACRO_HOLD(mc_hold_ralt_rshft, &mo LAYER_RMOD &kp RA(RSHFT))
+    MACRO_HOLD(mc_hold_lshft, &mo LAYER_LMOD &kp LSHFT)
+    MACRO_HOLD(mc_hold_rshft, &mo LAYER_RMOD &kp RSHFT)
+    MACRO_HOLD(mc_hold_num_lctrl, &mo LAYER_NUM &kp LCTRL)
+    MACRO_HOLD(mc_hold_num_lshft, &mo LAYER_NUM &kp LSHFT)
+    MACRO_HOLD(mc_hold_num_lgui, &mo LAYER_NUM &kp LGUI)
+    MACRO_HOLD(mc_hold_num_lalt, &mo LAYER_NUM &kp LALT)
 
     // MACRO(NAME, BINDINGS)
     // &skqx enable ignore-modifiers, for use with multiple modifiers like LC(LSHFT)
