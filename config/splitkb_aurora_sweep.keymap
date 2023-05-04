@@ -122,14 +122,13 @@ NAME { \
      SKQ_MACRO(skqm_tap_num_lgui, &mc_hold_num_lgui)
      SKQ_MACRO(skqm_tap_num_lalt, &mc_hold_num_lalt)
 
-     // french special characters
      // TAPDANCE(NAME, TAP_1, TAP_2)
      TAPDANCE(td_special_a, &mc_grave_a, &mc_circumflex_a)
      TAPDANCE(td_special_i, &mc_circumflex_i, &mc_trema_i)
      TAPDANCE(td_special_e, &mc_circumflex_e, &mc_trema_e)
      TAPDANCE_3(td_special_u, &mc_grave_u, &mc_circumflex_u, &mc_trema_u)
 
-     // sticky modifiers layer default
+     // hold-tap behaviors that take two macros, one activated on hold, one activated on tap
      // HOLDTAP_MACRO(NAME, MACRO_HOLD, MACRO_TAP)
      HOLDTAP_MACRO(ht_lctrl, &mc_hold_lctrl, &mc_tap_lctrl)
      HOLDTAP_MACRO(ht_lctrl_lshft, &mc_hold_lctrl_lshft, &mc_tap_lctrl_lshft)
@@ -145,9 +144,6 @@ NAME { \
      HOLDTAP_MACRO(ht_ralt_rshft, &mc_hold_ralt_rshft, &mc_tap_ralt_rshft)
      HOLDTAP_MACRO(ht_lshft, &mc_hold_lshft, &mc_tap_lshft)
      HOLDTAP_MACRO(ht_rshft, &mc_hold_rshft, &mc_tap_rshft)
-
-     // sticky modifiers layer num
-     // HOLDTAP_MACRO(NAME, MACRO_HOLD, MACRO_TAP)
      HOLDTAP_MACRO(ht_num_lctrl, &mc_hold_num_lctrl, &mc_tap_num_lctrl)
      HOLDTAP_MACRO(ht_num_lshft, &mc_hold_num_lshft, &mc_tap_num_lshft)
      HOLDTAP_MACRO(ht_num_lgui, &mc_hold_num_lgui, &mc_tap_num_lgui)
@@ -155,6 +151,7 @@ NAME { \
   };
 
   macros {
+    // macros behaviors that take multiple keys which are activated when the macro is hold
     // MACRO_HOLD(NAME, BINDINGS)
     MACRO_HOLD(mc_hold_lctrl, &mo LAYER_LMOD &kp LCTRL)
     MACRO_HOLD(mc_hold_lctrl_lshft, &mo LAYER_LMOD &kp LC(LSHFT))
@@ -175,10 +172,10 @@ NAME { \
     MACRO_HOLD(mc_hold_num_lgui, &mo LAYER_NUM &kp LGUI)
     MACRO_HOLD(mc_hold_num_lalt, &mo LAYER_NUM &kp LALT)
 
+    // macros behaviors that take multiple keys which are activated when the macro is tap
     // MACRO_TAP(NAME, BINDINGS)
-    // &skqx enable ignore-modifiers, for use with multiple modifiers like LC(LSHFT)
     MACRO_TAP(mc_tap_lctrl, &skq LCTRL)
-    MACRO_TAP(mc_tap_lctrl_lshft, &skqx LC(LSHFT))
+    MACRO_TAP(mc_tap_lctrl_lshft, &skqx LC(LSHFT)) // &skqx enable ignore-modifiers, for use with multiple modifiers like LC(LSHFT)
     MACRO_TAP(mc_tap_rctrl, &skq RCTRL)
     MACRO_TAP(mc_tap_rctrl_rshft, &skqx RC(RSHFT))
     MACRO_TAP(mc_tap_lgui, &skq LGUI)
@@ -240,7 +237,7 @@ NAME { \
     cb_special_i { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <24 14>; bindings = <&td_special_i>; };
     cb_cedilla_c { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <17 7>; bindings = <&mc_cedilla_c>; };
 
-    // sticky modifiers layer default
+    // sticky modifiers, layer default
     // COMBO_HOLDTAP(NAME, TIMEOUT, POSITION, HOLDTAP)
     COMBO_HOLDTAP(cb_lctrl, 30, 31 P_LCTRL, ht_lctrl)
     COMBO_HOLDTAP(cb_lctrl_lshft, 30, 31 P_LCTRL P_LSHFT, ht_lctrl_lshft)
@@ -257,7 +254,7 @@ NAME { \
     COMBO_HOLDTAP(cb_lshft, 30, 31 P_LSHFT, ht_lshft)
     COMBO_HOLDTAP(cb_rshft, 30, 32 P_RSHFT, ht_rshft)
 
-    // sticky modifiers layer num
+    // sticky modifiers, layer num
     // COMBO_HOLDTAP(NAME, TIME, POS, HT)
     COMBO_HOLDTAP(cb_num_lctrl, 30, 30 P_LCTRL, ht_num_lctrl)
     COMBO_HOLDTAP(cb_num_lshft, 30, 30 P_LSHFT, ht_num_lshft)
