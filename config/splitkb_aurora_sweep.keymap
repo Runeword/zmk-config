@@ -96,7 +96,7 @@ NAME: NAME { \
 / {
 
   behaviors {
-    // enable quick-release that deactivate the sticky key on the next key being pressed
+    // sticky key behavior with quick-release option that deactivate the sticky key on the next key being pressed
     skq: sk_quick_release {
       compatible = "zmk,behavior-sticky-key";
       label = "sk_quick_release";
@@ -107,7 +107,7 @@ NAME: NAME { \
       /delete-property/ ignore-modifiers;
      };
 
-    // enable ignore-modifiers, for use with multiple modifiers like LC(LSHFT)
+    // sticky key behavior with ignore-modifiers option for use with multiple modifiers like LC(LSHFT)
     skqx: skq_multiple_modifiers {
       compatible = "zmk,behavior-sticky-key";
       label = "skq_multiple_modifiers";
