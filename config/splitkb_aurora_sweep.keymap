@@ -50,16 +50,6 @@ NAME: NAME { \
   bindings = BINDINGS; \
 };
 
-#define MACRO_SKQX(NAME, KEY) \
-NAME: NAME { \
-  label = #NAME; \
-  compatible = "zmk,behavior-macro"; \
-  #binding-cells = <0>; \
-  wait-ms = <0>; \
-  tap-ms = <0>; \
-  bindings = <&skqx KEY>; \
-};
-
 #define SKQ_MACRO(NAME, MACRO) \
 NAME: NAME { \
   compatible = "zmk,behavior-sticky-key"; \
@@ -179,19 +169,19 @@ NAME { \
     MACRO_MOD(mc_hold_num_lalt, LAYER_NUM, LALT)
 
     // MACRO(NAME, BINDINGS)
-    // MACRO_SKQX(NAME, KEY) enable ignore-modifiers, for use with multiple modifiers like LC(LSHFT)
+    // &skqx enable ignore-modifiers, for use with multiple modifiers like LC(LSHFT)
     MACRO(mc_tap_lctrl, <&skq LCTRL>)
-    MACRO_SKQX(mc_tap_lctrl_lshft, LC(LSHFT))
+    MACRO(mc_tap_lctrl_lshft, <&skqx LC(LSHFT)>)
     MACRO(mc_tap_rctrl, <&skq RCTRL>)
-    MACRO_SKQX(mc_tap_rctrl_rshft, RC(RSHFT))
+    MACRO(mc_tap_rctrl_rshft, <&skqx RC(RSHFT)>)
     MACRO(mc_tap_lgui, <&skq LGUI>)
-    MACRO_SKQX(mc_tap_lgui_lshft, LG(LSHFT))
+    MACRO(mc_tap_lgui_lshft, <&skqx LG(LSHFT)>)
     MACRO(mc_tap_rgui, <&skq RGUI>)
-    MACRO_SKQX(mc_tap_rgui_rshft, RG(RSHFT))
+    MACRO(mc_tap_rgui_rshft, <&skqx RG(RSHFT)>)
     MACRO(mc_tap_lalt, <&skq LALT>)
-    MACRO_SKQX(mc_tap_lalt_lshft, LA(LSHFT))
+    MACRO(mc_tap_lalt_lshft, <&skqx LA(LSHFT)>)
     MACRO(mc_tap_ralt, <&skq RALT>)
-    MACRO_SKQX(mc_tap_ralt_rshft, RA(RSHFT))
+    MACRO(mc_tap_ralt_rshft, <&skqx RA(RSHFT)>)
     MACRO(mc_tap_lshft, <&skq LSHFT>)
     MACRO(mc_tap_rshft, <&skq RSHFT>)
 
