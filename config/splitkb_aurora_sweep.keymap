@@ -50,16 +50,6 @@ NAME: NAME { \
   bindings = BINDINGS; \
 };
 
-#define MACRO_SKQ(NAME, KEY) \
-NAME: NAME { \
-  label = #NAME; \
-  compatible = "zmk,behavior-macro"; \
-  #binding-cells = <0>; \
-  wait-ms = <0>; \
-  tap-ms = <0>; \
-  bindings = <&skq KEY>; \
-};
-
 #define MACRO_SKQX(NAME, KEY) \
 NAME: NAME { \
   label = #NAME; \
@@ -188,30 +178,30 @@ NAME { \
     MACRO_MOD(mc_hold_num_lgui, LAYER_NUM, LGUI)
     MACRO_MOD(mc_hold_num_lalt, LAYER_NUM, LALT)
 
-    // MACRO_SKQ(NAME, KEY)
+    // MACRO(NAME, BINDINGS)
     // MACRO_SKQX(NAME, KEY) enable ignore-modifiers, for use with multiple modifiers like LC(LSHFT)
-    MACRO_SKQ(mc_tap_lctrl, LCTRL)
+    MACRO(mc_tap_lctrl, <&skq LCTRL>)
     MACRO_SKQX(mc_tap_lctrl_lshft, LC(LSHFT))
-    MACRO_SKQ(mc_tap_rctrl, RCTRL)
+    MACRO(mc_tap_rctrl, <&skq RCTRL>)
     MACRO_SKQX(mc_tap_rctrl_rshft, RC(RSHFT))
-    MACRO_SKQ(mc_tap_lgui, LGUI)
+    MACRO(mc_tap_lgui, <&skq LGUI>)
     MACRO_SKQX(mc_tap_lgui_lshft, LG(LSHFT))
-    MACRO_SKQ(mc_tap_rgui, RGUI)
+    MACRO(mc_tap_rgui, <&skq RGUI>)
     MACRO_SKQX(mc_tap_rgui_rshft, RG(RSHFT))
-    MACRO_SKQ(mc_tap_lalt, LALT)
+    MACRO(mc_tap_lalt, <&skq LALT>)
     MACRO_SKQX(mc_tap_lalt_lshft, LA(LSHFT))
-    MACRO_SKQ(mc_tap_ralt, RALT)
+    MACRO(mc_tap_ralt, <&skq RALT>)
     MACRO_SKQX(mc_tap_ralt_rshft, RA(RSHFT))
-    MACRO_SKQ(mc_tap_lshft, LSHFT)
-    MACRO_SKQ(mc_tap_rshft, RSHFT)
+    MACRO(mc_tap_lshft, <&skq LSHFT>)
+    MACRO(mc_tap_rshft, <&skq RSHFT>)
 
     // can't use two sticky keys like sk and sl in a macro because they are indexed by key position
     // https://github.com/zmkfirmware/zmk/issues/1421
-    // MACRO_SKQ(NAME, KEY)
-    MACRO_SKQ(mc_tap_num_lctrl, LCTRL)
-    MACRO_SKQ(mc_tap_num_lshft, LSHFT)
-    MACRO_SKQ(mc_tap_num_lgui, LGUI)
-    MACRO_SKQ(mc_tap_num_lalt, LALT)
+    // MACRO(NAME, BINDINGS)
+    MACRO(mc_tap_num_lctrl, <&skq LCTRL>)
+    MACRO(mc_tap_num_lshft, <&skq LSHFT>)
+    MACRO(mc_tap_num_lgui, <&skq LGUI>)
+    MACRO(mc_tap_num_lalt, <&skq LALT>)
 
     // MACRO(NAME, BINDINGS)
     MACRO(mc_grave_a, <&kp RA(GRAVE) &kp A>)
@@ -253,7 +243,7 @@ NAME { \
     cb_special_i { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <24 14>; bindings = <&td_special_i>; };
     cb_cedilla_c { layers = <LAYER_DEF>; timeout-ms = <100>; key-positions = <17 7>; bindings = <&mc_cedilla_c>; };
 
-    // sticky modifiers
+    // sticky modifiers layer default
     // COMBO_HOLDTAP(NAME, TIME, POS, HT)
     COMBO_HOLDTAP(cb_lctrl, 30, 31 P_LCTRL, ht_lctrl)
     COMBO_HOLDTAP(cb_lctrl_lshft, 30, 31 P_LCTRL P_LSHFT, ht_lctrl_lshft)
@@ -269,6 +259,9 @@ NAME { \
     COMBO_HOLDTAP(cb_ralt_rshft, 30, 32 P_RALT P_RSHFT, ht_ralt_rshft)
     COMBO_HOLDTAP(cb_lshft, 30, 31 P_LSHFT, ht_lshft)
     COMBO_HOLDTAP(cb_rshft, 30, 32 P_RSHFT, ht_rshft)
+
+    // sticky modifiers layer num
+    // COMBO_HOLDTAP(NAME, TIME, POS, HT)
     COMBO_HOLDTAP(cb_num_lctrl, 30, 30 P_LCTRL, ht_num_lctrl)
     COMBO_HOLDTAP(cb_num_lshft, 30, 30 P_LSHFT, ht_num_lshft)
     COMBO_HOLDTAP(cb_num_lgui, 30, 30 P_LGUI, ht_num_lgui)
