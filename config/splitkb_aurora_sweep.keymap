@@ -118,6 +118,9 @@ NAME { \
      };
 
      SKQ_MACRO(skqm_tap_num_lctrl, &mc_hold_num_lctrl)
+     SKQ_MACRO(skqm_tap_num_lshft, &mc_hold_num_lshft)
+     SKQ_MACRO(skqm_tap_num_lgui, &mc_hold_num_lgui)
+     SKQ_MACRO(skqm_tap_num_lalt, &mc_hold_num_lalt)
 
      // french special characters
      // TAPDANCE(NAME, TAP_1, TAP_2)
@@ -156,6 +159,9 @@ NAME { \
 
   macros {
     MACRO_TAP(mc_tap_num_lctrl, &skqm_tap_num_lctrl 0)
+    MACRO_TAP(mc_tap_num_lshft, &skqm_tap_num_lshft 0)
+    MACRO_TAP(mc_tap_num_lgui, &skqm_tap_num_lgui 0)
+    MACRO_TAP(mc_tap_num_lalt, &skqm_tap_num_lalt 0)
 
     // MACRO_HOLD(NAME, BINDINGS)
     MACRO_HOLD(mc_hold_lctrl, &mo LAYER_LMOD &kp LCTRL)
@@ -193,13 +199,6 @@ NAME { \
     MACRO_TAP(mc_tap_ralt_rshft, &skqx RA(RSHFT))
     MACRO_TAP(mc_tap_lshft, &skq LSHFT)
     MACRO_TAP(mc_tap_rshft, &skq RSHFT)
-
-    // can't use two sticky keys like sk and sl in a macro because they are indexed by key position
-    // https://github.com/zmkfirmware/zmk/issues/1421
-    // MACRO_TAP(NAME, BINDINGS)
-    MACRO_TAP(mc_tap_num_lshft, &skq LSHFT)
-    MACRO_TAP(mc_tap_num_lgui, &skq LGUI)
-    MACRO_TAP(mc_tap_num_lalt, &skq LALT)
 
     // MACRO_TAP(NAME, BINDINGS)
     MACRO_TAP(mc_grave_a, &kp RA(GRAVE) &kp A)
