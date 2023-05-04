@@ -61,22 +61,22 @@ NAME: NAME { \
   ignore-modifiers; \
 };
 
-#define TAPDANCE(NAME, BINDINGS_1, BINDINGS_2) \
+#define TAPDANCE(NAME, TAP_1, TAP_2) \
 NAME: NAME { \
   compatible = "zmk,behavior-tap-dance"; \
   label = #NAME; \
   #binding-cells = <0>; \
   tapping-term-ms = <200>; \
-  bindings = <BINDINGS_1>, <BINDINGS_2>; \
+  bindings = <TAP_1>, <TAP_2>; \
 };
 
-#define TAPDANCE_3(NAME, B1, B2, B3) \
+#define TAPDANCE_3(NAME, TAP_1, TAP_2, TAP_3) \
 NAME: NAME { \
   compatible = "zmk,behavior-tap-dance"; \
   label = #NAME; \
   #binding-cells = <0>; \
   tapping-term-ms = <200>; \
-  bindings = <B1>, <B2>, <B3>; \
+  bindings = <TAP_1>, <TAP_2>, <TAP_3>; \
 };
 
 #define COMBO_HOLDTAP(NAME, TIMEOUT, POSITION, HOLDTAP) \
@@ -119,11 +119,11 @@ NAME { \
      SKQ_MACRO(skqm_tap_num_lctrl, &mc_hold_num_lctrl)
 
      // french special characters
-     // TAPDANCE(NAME, BINDINGS_1, BINDINGS_2)
+     // TAPDANCE(NAME, TAP_1, TAP_2)
      TAPDANCE(td_special_a, &mc_grave_a, &mc_circumflex_a)
-     TAPDANCE_3(td_special_u, &mc_grave_u, &mc_circumflex_u, &mc_trema_u)
      TAPDANCE(td_special_i, &mc_circumflex_i, &mc_trema_i)
      TAPDANCE(td_special_e, &mc_circumflex_e, &mc_trema_e)
+     TAPDANCE_3(td_special_u, &mc_grave_u, &mc_circumflex_u, &mc_trema_u)
 
      // sticky modifiers layer default
      // HOLDTAP_MACRO(NAME, MACRO_HOLD, MACRO_TAP)
