@@ -220,7 +220,8 @@ NAME: NAME { \
     compatible = "zmk,combos";
 
     cb_tab { layers = <LAYER_DEF LAYER_RMOD>; timeout-ms = <30>; key-positions = <12 13>; bindings = <&kp TAB>; };
-    cb_esc { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <1 2>; bindings = <&kp ESC>; };
+    l_cb_esc { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <21 22>; bindings = <&kp ESC>; };
+    r_cb_esc { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <27 28>; bindings = <&kp ESC>; };
     cb_bspc { layers = <LAYER_DEF LAYER_NAV LAYER_RMOD>; timeout-ms = <30>; key-positions = <11 12>; bindings = <&kp BSPC>; };
     cb_repeat { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <2 3>; bindings = <&key_repeat>; };
     cb_enter_l { layers = <LAYER_DEF LAYER_NAV LAYER_RMOD>; timeout-ms = <70>; key-positions = <11 12 13>; bindings = <&kp ENTER>; };
