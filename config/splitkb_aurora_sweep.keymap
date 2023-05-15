@@ -274,7 +274,7 @@ NAME: NAME { \
 
     COMBO(cb_lctrl_f, 50, 31 P_LCTRL 5, <&kp LC(F)>)
     COMBO(cb_lctrl_g, 50, 31 P_LCTRL 6, <&kp LC(G)>)
-    COMBO(cb_lctrl_C, 50, 31 P_LCTRL 7, <&kp LC(C)>)
+    COMBO(cb_lctrl_c, 50, 31 P_LCTRL 7, <&kp LC(C)>)
     COMBO(cb_lctrl_r, 50, 31 P_LCTRL 8, <&kp LC(R)>)
     COMBO(cb_lctrl_l, 50, 31 P_LCTRL 9, <&kp LC(L)>)
 
@@ -307,7 +307,7 @@ NAME: NAME { \
 
     COMBO(cb_lshft_f, 50, 31 P_LSHFT 5, <&kp LS(F)>)
     COMBO(cb_lshft_g, 50, 31 P_LSHFT 6, <&kp LS(G)>)
-    COMBO(cb_lshft_C, 50, 31 P_LSHFT 7, <&kp LS(C)>)
+    COMBO(cb_lshft_c, 50, 31 P_LSHFT 7, <&kp LS(C)>)
     COMBO(cb_lshft_r, 50, 31 P_LSHFT 8, <&kp LS(R)>)
     COMBO(cb_lshft_l, 50, 31 P_LSHFT 9, <&kp LS(L)>)
 
@@ -340,7 +340,7 @@ NAME: NAME { \
 
     COMBO(cb_lgui_f, 50, 31 P_LGUI 5, <&kp LG(F)>)
     COMBO(cb_lgui_g, 50, 31 P_LGUI 6, <&kp LG(G)>)
-    COMBO(cb_lgui_C, 50, 31 P_LGUI 7, <&kp LG(C)>)
+    COMBO(cb_lgui_c, 50, 31 P_LGUI 7, <&kp LG(C)>)
     COMBO(cb_lgui_r, 50, 31 P_LGUI 8, <&kp LG(R)>)
     COMBO(cb_lgui_l, 50, 31 P_LGUI 9, <&kp LG(L)>)
 
@@ -439,9 +439,9 @@ NAME: NAME { \
 
     navigation {
       bindings = <
-        &kp HOME &kp END &kp PG_DN &kp PG_UP &none       &bt BT_CLR &none &none &none &none
-        &kp LEFT &kp RIGHT &kp DOWN &kp UP &kp PRCNT     &bt BT_NXT &kp RCTRL &kp RSHFT &kp RGUI &kp RALT
-        &none &none &none &none &none                    &bt BT_PRV &kp C_BRI_UP &kp C_BRI_DN &kp C_VOL_UP &kp C_VOL_DN
+        &kp HOME &kp END &kp PG_DN &kp PG_UP &none       &none &none &none &none &none
+        &kp LEFT &kp RIGHT &kp DOWN &kp UP &kp PRCNT     &none &kp RCTRL &kp RSHFT &kp RGUI &kp RALT
+        &none &none &none &none &none                    &none &kp C_BRI_UP &kp C_BRI_DN &kp C_VOL_UP &kp C_VOL_DN
         &trans &trans &trans &trans
         >;
     };
@@ -467,8 +467,8 @@ NAME: NAME { \
     tri {
       bindings = <
         &none &none &none &none &none                    &none &none &none &none &none
-        &none &none &none &none &none                    &none &none &none &none &none
-        &trans &trans &trans &trans                      &none &none &none &none &none
+        &none &none &none &none &none                    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+        &trans &trans &trans &trans                      &none &bt BT_CLR &none &none &none
         >;
     };
 
