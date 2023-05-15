@@ -300,6 +300,17 @@ NAME: NAME { \
     COMBO(cb_lctrl_v, 50, 31 P_LCTRL 28, <&kp LC(V)>)
     COMBO(cb_lctrl_z, 50, 31 P_LCTRL 29, <&kp LC(Z)>)
 
+    COMBO(cb_lctrl_0, 50, 30 P_LCTRL 15, <&kp LC(0)>)
+    COMBO(cb_lctrl_1, 50, 30 P_LCTRL 16, <&kp LC(1)>)
+    COMBO(cb_lctrl_2, 50, 30 P_LCTRL 17, <&kp LC(2)>)
+    COMBO(cb_lctrl_3, 50, 30 P_LCTRL 18, <&kp LC(3)>)
+    COMBO(cb_lctrl_4, 50, 30 P_LCTRL 19, <&kp LC(4)>)
+    COMBO(cb_lctrl_5, 50, 30 P_LCTRL 5, <&kp LC(5)>)
+    COMBO(cb_lctrl_6, 50, 30 P_LCTRL 6, <&kp LC(6)>)
+    COMBO(cb_lctrl_7, 50, 30 P_LCTRL 7, <&kp LC(7)>)
+    COMBO(cb_lctrl_8, 50, 30 P_LCTRL 8, <&kp LC(8)>)
+    COMBO(cb_lctrl_9, 50, 30 P_LCTRL 9, <&kp LC(9)>)
+
     // sticky modifiers on layer num
     // COMBO_HOLDTAP(NAME, TIME, POS, HT)
     COMBO_HOLDTAP(cb_num_lctrl, 30, 30 P_LCTRL, ht_num_lctrl)
