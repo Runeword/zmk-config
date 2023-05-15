@@ -311,6 +311,17 @@ NAME: NAME { \
     COMBO(cb_lctrl_8, 50, 30 P_LCTRL 8, <&kp LC(NUMBER_8)>)
     COMBO(cb_lctrl_9, 50, 30 P_LCTRL 9, <&kp LC(NUMBER_9)>)
 
+    COMBO(cb_lgui_0, 50, 30 P_LGUI 15, <&kp LG(NUMBER_0)>)
+    COMBO(cb_lgui_1, 50, 30 P_LGUI 16, <&kp LG(NUMBER_1)>)
+    COMBO(cb_lgui_2, 50, 30 P_LGUI 17, <&kp LG(NUMBER_2)>)
+    COMBO(cb_lgui_3, 50, 30 P_LGUI 18, <&kp LG(NUMBER_3)>)
+    COMBO(cb_lgui_4, 50, 30 P_LGUI 19, <&kp LG(NUMBER_4)>)
+    COMBO(cb_lgui_5, 50, 30 P_LGUI 5, <&kp LG(NUMBER_5)>)
+    COMBO(cb_lgui_6, 50, 30 P_LGUI 6, <&kp LG(NUMBER_6)>)
+    COMBO(cb_lgui_7, 50, 30 P_LGUI 7, <&kp LG(NUMBER_7)>)
+    COMBO(cb_lgui_8, 50, 30 P_LGUI 8, <&kp LG(NUMBER_8)>)
+    COMBO(cb_lgui_9, 50, 30 P_LGUI 9, <&kp LG(NUMBER_9)>)
+
     // sticky modifiers on layer num
     // COMBO_HOLDTAP(NAME, TIME, POS, HT)
     COMBO_HOLDTAP(cb_num_lctrl, 30, 30 P_LCTRL, ht_num_lctrl)
