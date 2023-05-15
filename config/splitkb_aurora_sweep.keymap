@@ -268,8 +268,8 @@ NAME: NAME { \
     COMBO_HOLDTAP(cb_lshft, 30, 31 P_LSHFT, ht_lshft)
     COMBO_HOLDTAP(cb_rshft, 30, 32 P_RSHFT, ht_rshft)
 
-    COMBO(cb_rctrl_p, 50, 31 P_LCTRL 3, <&kp RC(P)>)
-    COMBO(cb_rctrl_y, 50, 31 P_LCTRL 4, <&kp RC(Y)>)
+    COMBO(cb_rctrl_p, 50, 32 P_LCTRL 3, <&kp RC(P)>)
+    COMBO(cb_rctrl_y, 50, 32 P_LCTRL 4, <&kp RC(Y)>)
 
     COMBO(cb_lctrl_f, 50, 31 P_LCTRL 5, <&kp LC(F)>)
     COMBO(cb_lctrl_g, 50, 31 P_LCTRL 6, <&kp LC(G)>)
@@ -277,11 +277,11 @@ NAME: NAME { \
     COMBO(cb_lctrl_r, 50, 31 P_LCTRL 8, <&kp LC(R)>)
     COMBO(cb_lctrl_l, 50, 31 P_LCTRL 9, <&kp LC(L)>)
 
-    COMBO(cb_rctrl_a, 50, 31 P_LCTRL 10, <&kp RC(A)>)
-    COMBO(cb_rctrl_o, 50, 31 P_LCTRL 11, <&kp RC(O)>)
-    COMBO(cb_rctrl_e, 50, 31 P_LCTRL 12, <&kp RC(E)>)
-    COMBO(cb_rctrl_u, 50, 31 P_LCTRL 13, <&kp RC(U)>)
-    COMBO(cb_rctrl_i, 50, 31 P_LCTRL 14, <&kp RC(I)>)
+    COMBO(cb_rctrl_a, 50, 32 P_LCTRL 10, <&kp RC(A)>)
+    COMBO(cb_rctrl_o, 50, 32 P_LCTRL 11, <&kp RC(O)>)
+    COMBO(cb_rctrl_e, 50, 32 P_LCTRL 12, <&kp RC(E)>)
+    COMBO(cb_rctrl_u, 50, 32 P_LCTRL 13, <&kp RC(U)>)
+    COMBO(cb_rctrl_i, 50, 32 P_LCTRL 14, <&kp RC(I)>)
 
     COMBO(cb_lctrl_d, 50, 31 P_LCTRL 15, <&kp LC(D)>)
     COMBO(cb_lctrl_h, 50, 31 P_LCTRL 16, <&kp LC(H)>)
@@ -289,10 +289,10 @@ NAME: NAME { \
     COMBO(cb_lctrl_n, 50, 31 P_LCTRL 18, <&kp LC(N)>)
     COMBO(cb_lctrl_s, 50, 31 P_LCTRL 19, <&kp LC(S)>)
 
-    COMBO(cb_rctrl_q, 50, 31 P_LCTRL 21, <&kp RC(Q)>)
-    COMBO(cb_rctrl_j, 50, 31 P_LCTRL 22, <&kp RC(J)>)
-    COMBO(cb_rctrl_k, 50, 31 P_LCTRL 23, <&kp RC(K)>)
-    COMBO(cb_rctrl_x, 50, 31 P_LCTRL 24, <&kp RC(X)>)
+    COMBO(cb_rctrl_q, 50, 32 P_LCTRL 21, <&kp RC(Q)>)
+    COMBO(cb_rctrl_j, 50, 32 P_LCTRL 22, <&kp RC(J)>)
+    COMBO(cb_rctrl_k, 50, 32 P_LCTRL 23, <&kp RC(K)>)
+    COMBO(cb_rctrl_x, 50, 32 P_LCTRL 24, <&kp RC(X)>)
 
     COMBO(cb_lctrl_b, 50, 31 P_LCTRL 25, <&kp LC(B)>)
     COMBO(cb_lctrl_m, 50, 31 P_LCTRL 26, <&kp LC(M)>)
