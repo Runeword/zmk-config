@@ -307,37 +307,37 @@ NAME: NAME { \
     COMBO(cb_lctrl_z, 50, 31 P_LCTRL 29, <&kp LC(Z)>)
 
     // LAYER_DEF SHFT
-    // COMBO(cb_rshft_p, 50, 32 P_RSHFT 3, <&kp RS(P)>)
-    // COMBO(cb_rshft_y, 50, 32 P_RSHFT 4, <&kp RS(Y)>)
-
-    // COMBO(cb_lshft_f, 50, 31 P_LSHFT 5, <&kp LS(F)>)
-    // COMBO(cb_lshft_g, 50, 31 P_LSHFT 6, <&kp LS(G)>)
-    // COMBO(cb_lshft_c, 50, 31 P_LSHFT 7, <&kp LS(C)>)
-    // COMBO(cb_lshft_r, 50, 31 P_LSHFT 8, <&kp LS(R)>)
-    // COMBO(cb_lshft_l, 50, 31 P_LSHFT 9, <&kp LS(L)>)
-
-    // COMBO(cb_rshft_a, 50, 32 P_RSHFT 10, <&kp RS(A)>)
-    // COMBO(cb_rshft_o, 50, 32 P_RSHFT 11, <&kp RS(O)>)
-    // COMBO(cb_rshft_e, 50, 32 P_RSHFT 12, <&kp RS(E)>)
-    // COMBO(cb_rshft_u, 50, 32 P_RSHFT 13, <&kp RS(U)>)
-    // COMBO(cb_rshft_i, 50, 32 P_RSHFT 14, <&kp RS(I)>)
-
-    // COMBO(cb_lshft_d, 50, 31 P_LSHFT 15, <&kp LS(D)>)
-    // COMBO(cb_lshft_h, 50, 31 P_LSHFT 16, <&kp LS(H)>)
-    // COMBO(cb_lshft_t, 50, 31 P_LSHFT 17, <&kp LS(T)>)
-    // COMBO(cb_lshft_n, 50, 31 P_LSHFT 18, <&kp LS(N)>)
-    // COMBO(cb_lshft_s, 50, 31 P_LSHFT 19, <&kp LS(S)>)
-
-    // COMBO(cb_rshft_q, 50, 32 P_RSHFT 21, <&kp RS(Q)>)
-    // COMBO(cb_rshft_j, 50, 32 P_RSHFT 22, <&kp RS(J)>)
-    // COMBO(cb_rshft_k, 50, 32 P_RSHFT 23, <&kp RS(K)>)
-    // COMBO(cb_rshft_x, 50, 32 P_RSHFT 24, <&kp RS(X)>)
-
-    // COMBO(cb_lshft_b, 50, 31 P_LSHFT 25, <&kp LS(B)>)
-    // COMBO(cb_lshft_m, 50, 31 P_LSHFT 26, <&kp LS(M)>)
-    // COMBO(cb_lshft_w, 50, 31 P_LSHFT 27, <&kp LS(W)>)
-    // COMBO(cb_lshft_v, 50, 31 P_LSHFT 28, <&kp LS(V)>)
     COMBO(cb_lshft_z, 50, 31 P_LSHFT 29, <&kp LS(Z)>)
+    COMBO(cb_rshft_p, 50, 32 P_RSHFT 3, <&kp RS(P)>)
+    COMBO(cb_rshft_y, 50, 32 P_RSHFT 4, <&kp RS(Y)>)
+
+    COMBO(cb_lshft_f, 50, 31 P_LSHFT 5, <&kp LS(F)>)
+    COMBO(cb_lshft_g, 50, 31 P_LSHFT 6, <&kp LS(G)>)
+    COMBO(cb_lshft_c, 50, 31 P_LSHFT 7, <&kp LS(C)>)
+    COMBO(cb_lshft_r, 50, 31 P_LSHFT 8, <&kp LS(R)>)
+    COMBO(cb_lshft_l, 50, 31 P_LSHFT 9, <&kp LS(L)>)
+
+    COMBO(cb_rshft_a, 50, 32 P_RSHFT 10, <&kp RS(A)>)
+    COMBO(cb_rshft_o, 50, 32 P_RSHFT 11, <&kp RS(O)>)
+    COMBO(cb_rshft_e, 50, 32 P_RSHFT 12, <&kp RS(E)>)
+    COMBO(cb_rshft_u, 50, 32 P_RSHFT 13, <&kp RS(U)>)
+    COMBO(cb_rshft_i, 50, 32 P_RSHFT 14, <&kp RS(I)>)
+
+    COMBO(cb_lshft_d, 50, 31 P_LSHFT 15, <&kp LS(D)>)
+    COMBO(cb_lshft_h, 50, 31 P_LSHFT 16, <&kp LS(H)>)
+    COMBO(cb_lshft_t, 50, 31 P_LSHFT 17, <&kp LS(T)>)
+    COMBO(cb_lshft_n, 50, 31 P_LSHFT 18, <&kp LS(N)>)
+    COMBO(cb_lshft_s, 50, 31 P_LSHFT 19, <&kp LS(S)>)
+
+    COMBO(cb_rshft_q, 50, 32 P_RSHFT 21, <&kp RS(Q)>)
+    COMBO(cb_rshft_j, 50, 32 P_RSHFT 22, <&kp RS(J)>)
+    COMBO(cb_rshft_k, 50, 32 P_RSHFT 23, <&kp RS(K)>)
+    COMBO(cb_rshft_x, 50, 32 P_RSHFT 24, <&kp RS(X)>)
+
+    COMBO(cb_lshft_b, 50, 31 P_LSHFT 25, <&kp LS(B)>)
+    COMBO(cb_lshft_m, 50, 31 P_LSHFT 26, <&kp LS(M)>)
+    COMBO(cb_lshft_w, 50, 31 P_LSHFT 27, <&kp LS(W)>)
+    COMBO(cb_lshft_v, 50, 31 P_LSHFT 28, <&kp LS(V)>)
 
     // LAYER_DEF GUI
     COMBO(cb_rgui_p, 50, 32 P_RGUI 3, <&kp RG(P)>)
