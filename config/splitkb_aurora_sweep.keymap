@@ -229,8 +229,8 @@ NAME: NAME { \
     compatible = "zmk,combos";
 
     cb_tab { layers = <LAYER_DEF LAYER_RMOD>; timeout-ms = <30>; key-positions = <12 13>; bindings = <&kp TAB>; };
-    l_cb_esc { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <21 22>; bindings = <&kp ESC>; };
-    r_cb_esc { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <27 28>; bindings = <&kp ESC>; };
+    cb_esc_l { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <21 22>; bindings = <&kp ESC>; };
+    cb_esc_r { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <27 28>; bindings = <&kp ESC>; };
     cb_bspc { layers = <LAYER_DEF LAYER_NAV LAYER_RMOD>; timeout-ms = <30>; key-positions = <11 12>; bindings = <&kp BSPC>; };
     cb_repeat { layers = <LAYER_DEF>; timeout-ms = <30>; key-positions = <2 3>; bindings = <&key_repeat>; };
     cb_enter_l { layers = <LAYER_DEF LAYER_RMOD LAYER_NAV>; timeout-ms = <70>; key-positions = <11 12 13>; bindings = <&kp ENTER>; };
@@ -396,7 +396,7 @@ NAME: NAME { \
     COMBO(cb_lgui_8, 50, 30 P_LGUI 8, <&kp LG(NUMBER_8)>)
     COMBO(cb_lgui_9, 50, 30 P_LGUI 9, <&kp LG(NUMBER_9)>)
 
-    // sticky modifiers on layer num
+    // LAYER_NUM STICKY MODIFIERS
     // COMBO_HOLDTAP(NAME, TIME, POS, HT)
     COMBO_HOLDTAP(cb_num_lctrl, 30, 30 P_LCTRL, ht_num_lctrl)
     COMBO_HOLDTAP(cb_num_lshft, 30, 30 P_LSHFT, ht_num_lshft)
