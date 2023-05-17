@@ -307,7 +307,6 @@ NAME: NAME { \
     COMBO(cb_lctrl_z, 50, 31 P_LCTRL 29, <&kp LC(Z)>)
 
     // LAYER_DEF SHFT
-    COMBO(cb_lshft_z, 50, 31 P_LSHFT 29, <&kp LS(Z)>)
     COMBO(cb_rshft_p, 50, 32 P_RSHFT 3, <&kp RS(P)>)
     COMBO(cb_rshft_y, 50, 32 P_RSHFT 4, <&kp RS(Y)>)
 
@@ -338,6 +337,7 @@ NAME: NAME { \
     COMBO(cb_lshft_m, 50, 31 P_LSHFT 26, <&kp LS(M)>)
     COMBO(cb_lshft_w, 50, 31 P_LSHFT 27, <&kp LS(W)>)
     COMBO(cb_lshft_v, 50, 31 P_LSHFT 28, <&kp LS(V)>)
+    COMBO(cb_lshft_z, 50, 31 P_LSHFT 29, <&kp LS(Z)>)
 
     // LAYER_DEF GUI
     COMBO(cb_rgui_p, 50, 32 P_RGUI 3, <&kp RG(P)>)
