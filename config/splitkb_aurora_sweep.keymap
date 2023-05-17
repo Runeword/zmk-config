@@ -103,9 +103,9 @@ NAME: NAME { \
 };
 
 #define COMBO_MOD(MOD) \
-COMBO(cb_R##MOD##_sqt, 50, 32 P_R##MOD 0, <&kp R##MOD(SQT)>) \
-COMBO(cb_R##MOD##_comma, 50, 32 P_R##MOD 1, <&kp R##MOD(COMMA)>) \
-COMBO(cb_R##MOD##_dot, 50, 32 P_R##MOD 2, <&kp R##MOD(DOT)>) \
+// COMBO(cb_R##MOD##_sqt, 50, 32 P_R##MOD 0, <&kp R##MOD(SQT)>) \
+// COMBO(cb_R##MOD##_comma, 50, 32 P_R##MOD 1, <&kp R##MOD(COMMA)>) \
+// COMBO(cb_R##MOD##_dot, 50, 32 P_R##MOD 2, <&kp R##MOD(DOT)>) \
 COMBO(cb_R##MOD##_p, 50, 32 P_R##MOD 3, <&kp R##MOD(P)>) \
 COMBO(cb_R##MOD##_y, 50, 32 P_R##MOD 4, <&kp R##MOD(Y)>) \
 \
@@ -127,7 +127,7 @@ COMBO(cb_L##MOD##_t, 50, 31 P_L##MOD 17, <&kp L##MOD(T)>) \
 COMBO(cb_L##MOD##_n, 50, 31 P_L##MOD 18, <&kp L##MOD(N)>) \
 COMBO(cb_L##MOD##_s, 50, 31 P_L##MOD 19, <&kp L##MOD(S)>) \
 \
-COMBO(cb_R##MOD##_semi, 50, 32 P_R##MOD 20, <&kp R##MOD(SEMI)>) \
+// COMBO(cb_R##MOD##_semi, 50, 32 P_R##MOD 20, <&kp R##MOD(SEMI)>) \
 COMBO(cb_R##MOD##_q, 50, 32 P_R##MOD 21, <&kp R##MOD(Q)>) \
 COMBO(cb_R##MOD##_j, 50, 32 P_R##MOD 22, <&kp R##MOD(J)>) \
 COMBO(cb_R##MOD##_k, 50, 32 P_R##MOD 23, <&kp R##MOD(K)>) \
