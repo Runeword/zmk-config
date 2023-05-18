@@ -107,8 +107,6 @@ NAME: NAME { \
   bindings = <TAP_1>, <TAP_2>, <TAP_3>; \
 };
 
-const int my_array[3] = {1, 2, 3};
-
 #define COMBO_MOD(MOD) \
 COMBO(cb_R##MOD##_SQT,   50, po_T2 po_R##MOD 0,  <&kp R##MOD(SQT)>)   \
 COMBO(cb_R##MOD##_COMMA, 50, po_T2 po_R##MOD 1,  <&kp R##MOD(COMMA)>) \
