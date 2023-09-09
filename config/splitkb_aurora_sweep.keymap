@@ -159,7 +159,7 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
 
     rh_pht: left_hand_positional_hold_tap {
       compatible = "zmk,behavior-hold-tap";
-      label = "LEFT_POSITIONAL_HOLD_TAP";
+      label = "RIGHT_POSITIONAL_HOLD_TAP";
       #binding-cells = <2>;
       tapping-term-ms = <200>;
       quick-tap-ms = <0>;
