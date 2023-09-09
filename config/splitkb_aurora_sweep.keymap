@@ -154,7 +154,7 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
       quick-tap-ms = <0>;
       flavor = "balanced";
       bindings = <&kp>, <&kp>;
-      hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 20 26 27 28 29 30>;
+      hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29>;
     };
 
     rh_pht: right_hand_positional_hold_tap {
