@@ -158,6 +158,7 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
       bindings = <&mo>, <&kp>;
     };
 
+    // &ht_mo_sk la_NAV RSFT
     ht_mo_sk: hold_tap_momentary_layer_sticky_modifier {
       compatible = "zmk,behavior-hold-tap";
       label = "ht_mo_sk";
@@ -415,7 +416,7 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
       &kp SQT &kp COMMA &kp DOT &kp P &kp Y                                       &kp F &kp G &kp C &kp R &kp L
       &ht_mod_l LALT A &ht_mod_l LGUI O &ht_mod_l LSFT E &ht_mod_l LCTL U &kp I   &kp D &ht_mod_r RCTL H &ht_mod_r RSFT T &ht_mod_r RGUI N &ht_mod_r RALT S
       &kp SEMI &kp Q &kp J &kp K &kp X                                            &kp B &kp M &kp W &kp V &kp Z
-      &sl la_NUM &sl la_SYM &ht_mo_sk la_NAV RSFT &kp SPACE
+      &sl la_NUM &sl la_SYM &sl la_NAV kp SPACE
       >;
     };
 
