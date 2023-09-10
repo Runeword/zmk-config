@@ -176,7 +176,7 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
       global-quick-tap;
       flavor = "balanced";
       bindings = <&kp>, <&kp>;
-      hold-trigger-key-positions = <po_LEFT>;
+      hold-trigger-key-positions = <po_RIGHT>;
       hold-trigger-on-release;
     };
 
@@ -189,7 +189,7 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
       global-quick-tap;
       flavor = "balanced";
       bindings = <&kp>, <&kp>;
-      hold-trigger-key-positions = <po_RIGHT>;
+      hold-trigger-key-positions = <po_LEFT>;
       hold-trigger-on-release;
     };
 
