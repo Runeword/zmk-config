@@ -146,7 +146,7 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
 / {
 
   behaviors {
-    mo_tog: ht_mo {
+    ht_mo: hold_tap_momentary_layer {
       compatible = "zmk,behavior-hold-tap";
       label = "ht_mo";
       #binding-cells = <2>;
