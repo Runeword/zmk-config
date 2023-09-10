@@ -164,7 +164,7 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
       bindings = <&mo>, <&skq>;
     };
 
-    ht_mod_l: hold_tap_modifier_left { d
+    ht_mod_l: hold_tap_modifier_left {
       compatible = "zmk,behavior-hold-tap";
       label = "hold_tap_modifier_left";
       #binding-cells = <2>;
