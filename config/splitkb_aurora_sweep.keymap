@@ -173,7 +173,7 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
       #binding-cells = <2>;
       tapping-term-ms = <250>;
       quick-tap-ms = <150>;
-      global-quick-tap;
+      // global-quick-tap;
       flavor = "balanced";
       bindings = <&kp>, <&kp>;
       hold-trigger-key-positions = <po_RIGHT>;
@@ -186,7 +186,7 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
       #binding-cells = <2>;
       tapping-term-ms = <250>;
       quick-tap-ms = <150>;
-      global-quick-tap;
+      // global-quick-tap;
       flavor = "balanced";
       bindings = <&kp>, <&kp>;
       hold-trigger-key-positions = <po_LEFT>;
@@ -321,7 +321,7 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
     // cb_esc_l { layers = <la_DEF>; timeout-ms = <30>; key-positions = <21 22>; bindings = <&kp ESC>; };
     // cb_esc_r { layers = <la_DEF>; timeout-ms = <30>; key-positions = <27 28>; bindings = <&kp ESC>; };
     // cb_tab { layers = <la_DEF la_RMOD>; timeout-ms = <30>; key-positions = <11 12>; bindings = <&kp TAB>; };
-    cb_tab { layers = <la_DEF la_RMOD>; timeout-ms = <30>; key-positions = <12 13>; bindings = <&kp TAB>; };
+    // cb_tab { layers = <la_DEF la_RMOD>; timeout-ms = <30>; key-positions = <12 13>; bindings = <&kp TAB>; };
     cb_bspc { layers = <la_DEF la_NAV la_RMOD>; timeout-ms = <30>; key-positions = <21 22>; bindings = <&kp BSPC>; };
     cb_repeat { layers = <la_DEF>; timeout-ms = <30>; key-positions = <2 3>; bindings = <&key_repeat>; };
     cb_enter_l { layers = <la_DEF la_RMOD la_NAV>; timeout-ms = <70>; key-positions = <11 12 13>; bindings = <&kp ENTER>; };
@@ -331,6 +331,8 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
     cb_caps { layers = <la_DEF>; timeout-ms = <40>; key-positions = <26 27>; bindings = <&caps_word>; };
     cb_boot_l { layers = <la_DEF>; timeout-ms = <30>; key-positions = <po_T1 24>; bindings = <&bootloader>; };
     cb_boot_r { layers = <la_DEF>; timeout-ms = <30>; key-positions = <po_T2 25>; bindings = <&bootloader>; };
+
+    cb_tab { layers = <la_DEF la_RMOD>; timeout-ms = <30>; key-positions = <12 13>; bindings = <&ht_mod_l LS(LCTRL) TAB>; };
 
     // french special characters
     cb_special_a { layers = <la_DEF>; timeout-ms = <100>; key-positions = <11 1>; bindings = <&td_special_a>; };
