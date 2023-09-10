@@ -160,8 +160,8 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
       label = "LEFT_POSITIONAL_HOLD_TAP";
       #binding-cells = <2>;
       tapping-term-ms = <200>;
-      # quick-tap-ms = <125>;
-      # global-quick-tap;
+      // quick-tap-ms = <125>;
+      // global-quick-tap;
       quick-tap-ms = <0>;
       flavor = "balanced";
       bindings = <&kp>, <&kp>;
@@ -173,8 +173,8 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
       label = "RIGHT_POSITIONAL_HOLD_TAP";
       #binding-cells = <2>;
       tapping-term-ms = <200>;
-      # quick-tap-ms = <125>;
-      # global-quick-tap;
+      // quick-tap-ms = <125>;
+      // global-quick-tap;
       quick-tap-ms = <0>;
       flavor = "balanced";
       bindings = <&kp>, <&kp>;
