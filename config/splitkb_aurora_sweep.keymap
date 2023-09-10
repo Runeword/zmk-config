@@ -161,7 +161,7 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
       #binding-cells = <2>;
       flavor = "hold-preferred";
       tapping-term-ms = <200>;
-      bindings = <&mo>, <&sk>;
+      bindings = <&mo>, <&skq>;
     };
 
     lh_pht: left_hand_positional_hold_tap {
