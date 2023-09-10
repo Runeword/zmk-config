@@ -309,7 +309,8 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
     // cb_tab { layers = <la_DEF la_RMOD>; timeout-ms = <30>; key-positions = <12 13>; bindings = <&kp TAB>; };
     // cb_esc_l { layers = <la_DEF>; timeout-ms = <30>; key-positions = <21 22>; bindings = <&kp ESC>; };
     // cb_esc_r { layers = <la_DEF>; timeout-ms = <30>; key-positions = <27 28>; bindings = <&kp ESC>; };
-    cb_bspc { layers = <la_DEF la_NAV la_RMOD>; timeout-ms = <30>; key-positions = <11 12>; bindings = <&kp BSPC>; };
+    cb_tab { layers = <la_DEF la_NAV la_RMOD>; timeout-ms = <30>; key-positions = <11 12>; bindings = <&kp TAB>; };
+    cb_bspc { layers = <la_DEF>; timeout-ms = <30>; key-positions = <21 22>; bindings = <&kp BSPC>; };
     cb_repeat { layers = <la_DEF>; timeout-ms = <30>; key-positions = <2 3>; bindings = <&key_repeat>; };
     cb_enter_l { layers = <la_DEF la_RMOD la_NAV>; timeout-ms = <70>; key-positions = <11 12 13>; bindings = <&kp ENTER>; };
     cb_enter_r { layers = <la_DEF la_LMOD>; timeout-ms = <70>; key-positions = <16 17 18>; bindings = <&kp ENTER>; };
