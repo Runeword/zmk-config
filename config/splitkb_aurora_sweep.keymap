@@ -333,6 +333,7 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
     cb_boot_r { layers = <la_DEF>; timeout-ms = <30>; key-positions = <po_T2 25>; bindings = <&bootloader>; };
 
     cb_tab { layers = <la_DEF la_RMOD>; timeout-ms = <30>; key-positions = <12 13>; bindings = <&ht_mod_l LS(LCTRL) TAB>; };
+    cb_esc { layers = <la_DEF>; timeout-ms = <30>; key-positions = <11 12>; bindings = <&ht_mod_l LS(LGUI) ESC>; };
 
     // french special characters
     cb_special_a { layers = <la_DEF>; timeout-ms = <100>; key-positions = <11 1>; bindings = <&td_special_a>; };
@@ -414,7 +415,7 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
       &kp SQT &kp COMMA &kp DOT &kp P &kp Y                                       &kp F &kp G &kp C &kp R &kp L
       &ht_mod_l LALT A &ht_mod_l LGUI O &ht_mod_l LSFT E &ht_mod_l LCTL U &kp I   &kp D &ht_mod_r RCTL H &ht_mod_r RSFT T &ht_mod_r RGUI N &ht_mod_r RALT S
       &kp SEMI &kp Q &kp J &kp K &kp X                                            &kp B &kp M &kp W &kp V &kp Z
-      &ht_mo la_NUM ENTER &ht_mo la_SYM ESC &ht_mo_sk la_NAV RSFT &kp SPACE
+      &sl la_NUM &sl la_SYM ht_mo_sk la_NAV RSFT &kp SPACE
       >;
     };
 
