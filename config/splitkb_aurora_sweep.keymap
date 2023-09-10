@@ -399,7 +399,7 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
       &kp SQT &kp COMMA &kp DOT &kp P &kp Y                             &kp F &kp G &kp C &kp R &kp L
       &lh_pht LALT A &lh_pht LGUI O &lh_pht LSFT E &lh_pht LCTL U &kp I &kp D &rh_pht RCTL H &rh_pht RSFT T &rh_pht RGUI N &rh_pht RALT S
       &kp SEMI &kp Q &kp J &kp K &kp X                                  &kp B &kp M &kp W &kp V &kp Z
-      &ht_mo la_NUM ESC &ht_mo la_SYM TAB &ht_mo la_NAV ENTER &kp SPACE
+      &ht_mo la_NUM ENTER &ht_mo la_SYM ESC &ht_mo la_NAV TAB &kp SPACE
       >;
     };
 
