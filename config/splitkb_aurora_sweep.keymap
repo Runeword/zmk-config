@@ -146,6 +146,15 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
 / {
 
   behaviors {
+    mo_tog: ht_mo {
+      compatible = "zmk,behavior-hold-tap";
+      label = "ht_mo";
+      #binding-cells = <2>;
+      flavor = "hold-preferred";
+      tapping-term-ms = <200>;
+      bindings = <&mo>, <&kp>;
+    };
+
     lh_pht: left_hand_positional_hold_tap {
       compatible = "zmk,behavior-hold-tap";
       label = "LEFT_POSITIONAL_HOLD_TAP";
@@ -295,9 +304,9 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
   combos {
     compatible = "zmk,combos";
 
-    cb_tab { layers = <la_DEF la_RMOD>; timeout-ms = <30>; key-positions = <12 13>; bindings = <&kp TAB>; };
-    cb_esc_l { layers = <la_DEF>; timeout-ms = <30>; key-positions = <21 22>; bindings = <&kp ESC>; };
-    cb_esc_r { layers = <la_DEF>; timeout-ms = <30>; key-positions = <27 28>; bindings = <&kp ESC>; };
+    // cb_tab { layers = <la_DEF la_RMOD>; timeout-ms = <30>; key-positions = <12 13>; bindings = <&kp TAB>; };
+    // cb_esc_l { layers = <la_DEF>; timeout-ms = <30>; key-positions = <21 22>; bindings = <&kp ESC>; };
+    // cb_esc_r { layers = <la_DEF>; timeout-ms = <30>; key-positions = <27 28>; bindings = <&kp ESC>; };
     cb_bspc { layers = <la_DEF la_NAV la_RMOD>; timeout-ms = <30>; key-positions = <11 12>; bindings = <&kp BSPC>; };
     cb_repeat { layers = <la_DEF>; timeout-ms = <30>; key-positions = <2 3>; bindings = <&key_repeat>; };
     cb_enter_l { layers = <la_DEF la_RMOD la_NAV>; timeout-ms = <70>; key-positions = <11 12 13>; bindings = <&kp ENTER>; };
@@ -388,7 +397,7 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
       &kp SQT &kp COMMA &kp DOT &kp P &kp Y                             &kp F &kp G &kp C &kp R &kp L
       &lh_pht LALT A &lh_pht LGUI O &lh_pht LSFT E &lh_pht LCTL U &kp I &kp D &rh_pht RCTL H &rh_pht RSFT T &rh_pht RGUI N &rh_pht RALT S
       &kp SEMI &kp Q &kp J &kp K &kp X                                  &kp B &kp M &kp W &kp V &kp Z
-      &sl la_NUM &sl la_SYM &sl la_NAV &kp SPACE
+      &ht_mo la_NUM ESC &ht_mo la_SYM TAB &ht_mo la_NAV ENTER &kp SPACE
       >;
     };
 
