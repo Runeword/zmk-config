@@ -166,6 +166,7 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
     HM(hm_mod_l, &kp, &kp, po_RIGHT)
     HM(hm_mod_r, &kp, &kp, po_LEFT)
     HM(hm_mo_r, &mo, &kp, po_LEFT)
+    HM(hm_mo_l, &mo, &kp, po_RIGHT)
 
     ht_mo: hold_tap_momentary_layer {
       compatible = "zmk,behavior-hold-tap";
@@ -401,9 +402,9 @@ COMBO(cb_L##MOD##_Z,     50, po_T1 po_L##MOD 29, <&kp L##MOD(Z)>)
     default {
       bindings = <
       &kp SQT &kp COMMA &kp DOT &kp P &kp Y                                       &kp F &kp G &kp C &kp R &kp L
-      &hm_mod_l LALT A &hm_mod_l LGUI O &hm_mod_l LSFT E &hm_mod_l LCTL U &kp I   &kp D &hm_mod_r RCTL H &hm_mo_r la_NAV T &hm_mod_r RGUI N &hm_mod_r RALT S
+      &hm_mod_l LALT A &hm_mod_l LGUI O &hm_mo_l la_NUM E &hm_mo_l la_SYM U &kp I   &kp D &hm_mo_r la_SYM H &hm_mo_r la_NAV T &hm_mod_r RGUI N &hm_mod_r RALT S
       &kp SEMI &kp Q &kp J &kp K &kp X                                            &kp B &kp M &kp W &kp V &kp Z
-      &sl la_NUM &sl la_SYM &sk LSFT &kp SPACE
+      &kp BSPC &sk LSFT &sk RCTL &kp SPACE
       >;
     };
 
