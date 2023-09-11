@@ -27,6 +27,20 @@
 #define po_RIGHT 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29
 #define po_LEFT 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24
 
+#define HM(NAME, HOLD, TAP, TRIGGER_POS) \
+NAME: NAME { \
+  label = #NAME; \
+  compatible = "zmk,behavior-hold-tap"; \
+  #binding-cells = <2>; \
+  tapping-term-ms = <270>; \
+  quick-tap-ms = <170>; \
+  global-quick-tap; \
+  flavor = "balanced"; \
+  bindings = <HOLD>, <TAP>; \
+  hold-trigger-key-positions = <TRIGGER_POS>; \
+  hold-trigger-on-release; \
+};
+
 // hold-tap behavior that take two macros, one activated on hold, one activated on tap
 #define HOLDTAP_MACRO(NAME, MACRO_HOLD, MACRO_TAP) \
 NAME: NAME { \
