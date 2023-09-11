@@ -24,8 +24,8 @@
 #define po_RG 18
 #define po_RA 19
 
-#define po_RIGHT 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29
-#define po_LEFT 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24
+#define po_RIGHT 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 30 31 32 33
+#define po_LEFT 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 33
 
 #define HM(NAME, HOLD, TAP, TRIGGER_POS) \
 NAME: NAME { \
@@ -313,8 +313,9 @@ NAME: NAME { \
     compatible = "zmk,combos";
 
     cb_tab { layers = <la_DEF la_RMOD>; timeout-ms = <30>; key-positions = <12 13>; bindings = <&kp TAB>; };
-    cb_esc { layers = <la_DEF>; timeout-ms = <30>; key-positions = <11 12>; bindings = <&hm_mod_l LS(LGUI) ESC>; };
-    cb_bspc { layers = <la_DEF la_NAV la_RMOD>; timeout-ms = <30>; key-positions = <21 22>; bindings = <&kp BSPC>; };
+    cb_bspc { layers = <la_DEF la_NAV la_RMOD>; timeout-ms = <30>; key-positions = <11 12>; bindings = <&kp BSPC>; };
+    cb_esc { layers = <la_DEF>; timeout-ms = <30>; key-positions = <21 22>; bindings = <&kp ESC>; };
+    // cb_esc { layers = <la_DEF>; timeout-ms = <30>; key-positions = <11 12>; bindings = <&hm_mod_l LS(LGUI) ESC>; };
     cb_repeat { layers = <la_DEF>; timeout-ms = <30>; key-positions = <2 3>; bindings = <&key_repeat>; };
     cb_enter_l { layers = <la_DEF la_RMOD la_NAV>; timeout-ms = <70>; key-positions = <11 12 13>; bindings = <&kp ENTER>; };
     cb_enter_r { layers = <la_DEF la_LMOD>; timeout-ms = <70>; key-positions = <16 17 18>; bindings = <&kp ENTER>; };
@@ -401,10 +402,10 @@ NAME: NAME { \
 
     default {
       bindings = <
-      &kp SQT &kp COMMA &kp DOT &kp P &kp Y                                       &kp F &kp G &kp C &kp R &kp L
-      &hm_mod_l LALT A &hm_mod_l LGUI O &hm_mo_l la_NUM E &hm_mo_l la_SYM U &kp I   &kp D &hm_mo_r la_SYM H &hm_mo_r la_NAV T &hm_mod_r RGUI N &hm_mod_r RALT S
-      &kp SEMI &kp Q &kp J &kp K &kp X                                            &kp B &kp M &kp W &kp V &kp Z
-      &kp BSPC &sk LSFT &sk RCTL &kp SPACE
+      &kp SQT &kp COMMA &kp DOT &kp P &kp Y                             &kp F &kp G &kp C &kp R &kp L
+      &kp A &kp O &hm_mo_l la_NUM E &hm_mo_l la_SYM U &kp I             &kp D &hm_mo_r la_SYM H &hm_mo_r la_NAV T &kp N &kp S
+      &kp SEMI &kp Q &kp J &kp K &kp X                                  &kp B &kp M &kp W &kp V &kp Z
+      &hm_mod_l LALT ENTER &sk LSFT &sk RCTL &hm_mod_r RGUI SPACE
       >;
     };
 
