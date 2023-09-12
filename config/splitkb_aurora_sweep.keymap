@@ -460,9 +460,9 @@ NAME: NAME { \
 
     special {
       bindings = <
-        &trans &trans &cb_special_e &trans &trans                                 &trans &trans &cb_cedilla_c &trans &trans
-        &cb_special_a &cb_circumflex_o &cb_acute_e &cb_special_u &cb_special_i    &trans &trans &trans &trans &trans
-        &trans &trans &cb_grave_e &trans &trans                                   &trans &trans &trans &trans &trans
+        &trans &trans &td_special_e &trans &trans                                 &trans &trans &mc_cedilla_c &trans &trans
+        &td_special_a &mc_circumflex_o &mc_acute_e &td_special_u &td_special_i    &trans &trans &trans &trans &trans
+        &trans &trans &mc_grave_e &trans &trans                                   &trans &trans &trans &trans &trans
         &trans &trans &trans &trans
         >;
     };
