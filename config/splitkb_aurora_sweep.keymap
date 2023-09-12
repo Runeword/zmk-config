@@ -458,6 +458,15 @@ NAME: NAME { \
         >;
     };
 
+    special {
+      bindings = <
+        &trans &trans &cb_special_e &trans &trans                                 &trans &trans &cb_cedilla_c &trans &trans
+        &cb_special_a &cb_circumflex_o &cb_acute_e &cb_special_u &cb_special_i    &trans &trans &trans &trans &trans
+        &trans &trans &cb_grave_e &trans &trans                                   &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans
+        >;
+    };
+
     // mods_left {
     //   bindings = <
     //     &none &none &none &none &none                    &trans &trans &trans &trans &trans
