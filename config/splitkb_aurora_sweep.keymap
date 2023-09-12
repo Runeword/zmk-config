@@ -7,6 +7,7 @@
 #define la_SYM 2
 #define la_NAV 3
 #define la_MED 4
+#define la_SPE 5
 // #define la_LMOD 4
 // #define la_RMOD 5
 
@@ -416,7 +417,7 @@ NAME: NAME { \
     default {
       bindings = <
       &kp SQT &kp COMMA &kp DOT &kp P &kp Y                               &kp F &kp G &kp C &kp R &kp L
-      &kp A &hm_mo_l la_MED O &hm_mo_l la_SYM E &hm_mo_l la_NUM U &kp I   &kp D &hm_mo_r la_NAV H &hm_mo_r la_SYM T &kp N &kp S
+      &kp A &hm_mo_l la_MED O &hm_mo_l la_SYM E &hm_mo_l la_NUM U &kp I   &kp D &hm_mo_r la_NAV H &hm_mo_r la_SYM T &hm_mo_r la_SPE N &kp S
       &kp SEMI &kp Q &kp J &kp K &kp X                                    &kp B &kp M &kp W &kp V &kp Z
       &hm_mod_l LGUI ENTER &sk LCTL &sk RSFT &hm_mod_r RALT SPACE
       >;
@@ -461,8 +462,8 @@ NAME: NAME { \
     special {
       bindings = <
         &mc_circumflex_a &mc_circumflex_o &mc_circumflex_e &mc_circumflex_u &mc_circumflex_i   &trans &trans &mc_cedilla_c &trans &trans
-        &mc_grave_a &mc_grave_e &mc_acute_e &mc_grave_u &trans          &trans &trans &trans &trans &trans
-        &trans &trans &mc_trema_e &mc_trema_u &mc_trema_i                                     &trans &trans &trans &trans &trans
+        &mc_grave_a &mc_grave_e &mc_acute_e &mc_grave_u &trans                                 &trans &trans &trans &trans &trans
+        &trans &trans &mc_trema_e &mc_trema_u &mc_trema_i                                      &trans &trans &trans &trans &trans
         &trans &trans &trans &trans
         >;
     };
