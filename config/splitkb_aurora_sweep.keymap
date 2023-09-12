@@ -6,6 +6,7 @@
 #define la_NUM 1
 #define la_SYM 2
 #define la_NAV 3
+#define la_MED 4
 // #define la_LMOD 4
 // #define la_RMOD 5
 
@@ -414,9 +415,9 @@ NAME: NAME { \
 
     default {
       bindings = <
-      &kp SQT &kp COMMA &kp DOT &kp P &kp Y                             &kp F &kp G &kp C &kp R &kp L
-      &kp A &kp O &hm_mo_l la_SYM E &hm_mo_l la_NUM U &kp I             &kp D &hm_mo_r la_NAV H &hm_mo_r la_SYM T &kp N &kp S
-      &kp SEMI &kp Q &kp J &kp K &kp X                                  &kp B &kp M &kp W &kp V &kp Z
+      &kp SQT &kp COMMA &kp DOT &kp P &kp Y                               &kp F &kp G &kp C &kp R &kp L
+      &kp A &hm_mo_l la_MED O &hm_mo_l la_SYM E &hm_mo_l la_NUM U &kp I   &kp D &hm_mo_r la_NAV H &hm_mo_r la_SYM T &kp N &kp S
+      &kp SEMI &kp Q &kp J &kp K &kp X                                    &kp B &kp M &kp W &kp V &kp Z
       &hm_mod_l LGUI ENTER &sk LCTL &sk RSFT &hm_mod_r RALT SPACE
       >;
     };
