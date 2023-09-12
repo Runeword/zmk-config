@@ -403,13 +403,13 @@ NAME: NAME { \
     // COMBO_HOLDTAP(cb_num_LA, 30, po_T0 po_LA, ht_num_LA)
   };
 
-  conditional_layers {
-    compatible = "zmk,conditional-layers";
-    tri_layer {
-      if-layers = <la_SYM la_NAV>;
-      then-layer = <6>;
-    };
-  };
+  // conditional_layers {
+  //   compatible = "zmk,conditional-layers";
+  //   tri_layer {
+  //     if-layers = <la_SYM la_NAV>;
+  //     then-layer = <6>;
+  //   };
+  // };
 
   keymap {
     compatible = "zmk,keymap";
@@ -486,13 +486,13 @@ NAME: NAME { \
     //     >;
     // };
 
-    tri {
-      bindings = <
-        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &none &kp F5 &kp F6 &kp F7 &kp F8
-        &kp LALT &kp LGUI &kp LSHFT &kp LCTRL &bt BT_CLR                     &none &kp F1 &kp F2 &kp F3 &kp F4
-        &none &none &none &none &none                                        &none &kp F9 &kp F10 &kp F11 &kp F12
-        &trans &trans &trans &trans
-        >;
-    };
+    // tri {
+    //   bindings = <
+    //     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &none &kp F5 &kp F6 &kp F7 &kp F8
+    //     &kp LALT &kp LGUI &kp LSHFT &kp LCTRL &bt BT_CLR                     &none &kp F1 &kp F2 &kp F3 &kp F4
+    //     &none &none &none &none &none                                        &none &kp F9 &kp F10 &kp F11 &kp F12
+    //     &trans &trans &trans &trans
+    //     >;
+    // };
   };
 };
