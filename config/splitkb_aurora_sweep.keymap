@@ -229,12 +229,12 @@ NAME: NAME { \
     // SKQ_MACRO(skqm_tap_num_LG, &mc_hold_num_LG)
     // SKQ_MACRO(skqm_tap_num_LA, &mc_hold_num_LA)
 
-    // TAPDANCE(NAME, TAP_1, TAP_2)
+    // // TAPDANCE(NAME, TAP_1, TAP_2)
 
-    TAPDANCE(td_special_a,   &mc_grave_a,      &mc_circumflex_a)
-    TAPDANCE(td_special_i,   &mc_circumflex_i, &mc_trema_i)
-    TAPDANCE(td_special_e,   &mc_circumflex_e, &mc_trema_e)
-    TAPDANCE_3(td_special_u, &mc_grave_u,      &mc_circumflex_u, &mc_trema_u)
+    // TAPDANCE(td_special_a,   &mc_grave_a,      &mc_circumflex_a)
+    // TAPDANCE(td_special_i,   &mc_circumflex_i, &mc_trema_i)
+    // TAPDANCE(td_special_e,      &mc_circumflex_e, &mc_trema_e)
+    // TAPDANCE_3(td_special_u, &mc_circumflex_u, &mc_trema_u)
 
     // // HOLDTAP_MACRO(NAME, MACRO_HOLD, MACRO_TAP)
 
@@ -338,15 +338,15 @@ NAME: NAME { \
     cb_boot_l { layers = <la_DEF>; timeout-ms = <30>; key-positions = <po_T1 24>; bindings = <&bootloader>; };
     cb_boot_r { layers = <la_DEF>; timeout-ms = <30>; key-positions = <po_T2 25>; bindings = <&bootloader>; };
 
-    // french special characters
-    cb_special_a { layers = <la_DEF>; timeout-ms = <100>; key-positions = <11 1>; bindings = <&td_special_a>; };
-    cb_acute_e { layers = <la_DEF>; timeout-ms = <100>; key-positions = <12 2>; bindings = <&mc_acute_e>; };
-    cb_grave_e { layers = <la_DEF>; timeout-ms = <100>; key-positions = <13 3>; bindings = <&mc_grave_e>; };
-    cb_circumflex_o { layers = <la_DEF>; timeout-ms = <100>; key-positions = <21 11>; bindings = <&mc_circumflex_o>; };
-    cb_special_e { layers = <la_DEF>; timeout-ms = <100>; key-positions = <22 12>; bindings = <&td_special_e>; };
-    cb_special_u { layers = <la_DEF>; timeout-ms = <100>; key-positions = <23 13>; bindings = <&td_special_u>; };
-    cb_special_i { layers = <la_DEF>; timeout-ms = <100>; key-positions = <24 14>; bindings = <&td_special_i>; };
-    cb_cedilla_c { layers = <la_DEF>; timeout-ms = <100>; key-positions = <17 7>; bindings = <&mc_cedilla_c>; };
+    // // french special characters
+    // cb_special_a { layers = <la_DEF>; timeout-ms = <100>; key-positions = <11 1>; bindings = <&td_special_a>; };
+    // cb_acute_e { layers = <la_DEF>; timeout-ms = <100>; key-positions = <12 2>; bindings = <&mc_acute_e>; };
+    // cb_grave_e { layers = <la_DEF>; timeout-ms = <100>; key-positions = <13 3>; bindings = <&mc_grave_e>; };
+    // cb_circumflex_o { layers = <la_DEF>; timeout-ms = <100>; key-positions = <21 11>; bindings = <&mc_circumflex_o>; };
+    // cb_special_e { layers = <la_DEF>; timeout-ms = <100>; key-positions = <22 12>; bindings = <&td_special_e>; };
+    // cb_special_u { layers = <la_DEF>; timeout-ms = <100>; key-positions = <23 13>; bindings = <&td_special_u>; };
+    // cb_special_i { layers = <la_DEF>; timeout-ms = <100>; key-positions = <24 14>; bindings = <&td_special_i>; };
+    // cb_cedilla_c { layers = <la_DEF>; timeout-ms = <100>; key-positions = <17 7>; bindings = <&mc_cedilla_c>; };
 
     // // la_DEF STICKY MODIFIERS
     // // COMBO_HOLDTAP(NAME, TIMEOUT, POSITION, HOLDTAP)
@@ -460,9 +460,9 @@ NAME: NAME { \
 
     special {
       bindings = <
-        &trans &trans &td_special_e &trans &trans                                 &trans &trans &mc_cedilla_c &trans &trans
-        &td_special_a &mc_circumflex_o &mc_acute_e &td_special_u &td_special_i    &trans &trans &trans &trans &trans
-        &trans &trans &mc_grave_e &trans &trans                                   &trans &trans &trans &trans &trans
+        &mc_circumflex_a &mc_circumflex_o &mc_circumflex_e &mc_circumflex_u &mc_circumflex_i   &trans &trans &mc_cedilla_c &trans &trans
+        &mc_grave_a &mc_grave_e &mc_acute_e &mc_grave_u &trans          &trans &trans &trans &trans &trans
+        &trans &trans &mc_trema_e &mc_trema_u &mc_trema_i                                     &trans &trans &trans &trans &trans
         &trans &trans &trans &trans
         >;
     };
