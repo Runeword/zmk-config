@@ -8,6 +8,8 @@
 #define la_NAV 3
 #define la_MED 4
 #define la_SPE 5
+#define la_FUN 6
+#define la_HAR 7
 // #define la_LMOD 4
 // #define la_RMOD 5
 
@@ -416,9 +418,9 @@ NAME: NAME { \
 
     default {
       bindings = <
-      &kp SQT &kp COMMA &kp DOT &kp P &kp Y                               &kp F &kp G &kp C &kp R &kp L
-      &kp A &hm_mo_l la_MED O &hm_mo_l la_SYM E &hm_mo_l la_NUM U &kp I   &kp D &hm_mo_r la_NAV H &hm_mo_r la_SYM T &hm_mo_r la_SPE N &kp S
-      &kp SEMI &kp Q &kp J &kp K &kp X                                    &kp B &kp M &kp W &kp V &kp Z
+      &kp SQT &kp COMMA &kp DOT &kp P &kp Y                                           &kp F &kp G &kp C &kp R &kp L
+      &hm_mo_l la_FUN A &hm_mo_l la_MED O &hm_mo_l la_SYM E &hm_mo_l la_NUM U &kp I   &kp D &hm_mo_r la_NAV H &hm_mo_r la_SYM T &hm_mo_r la_SPE N &hm_mo_r la_HAR S
+      &kp SEMI &kp Q &kp J &kp K &kp X                                                &kp B &kp M &kp W &kp V &kp Z
       &hm_mod_l LGUI ENTER &sk LCTL &sk RSFT &hm_mod_r RALT SPACE
       >;
     };
@@ -464,6 +466,24 @@ NAME: NAME { \
         &mc_circumflex_a &mc_circumflex_o &mc_circumflex_e &mc_circumflex_u &mc_circumflex_i   &trans &trans &mc_cedilla_c &trans &trans
         &mc_grave_a &mc_grave_e &mc_acute_e &mc_grave_u &trans                                 &trans &trans &trans &trans &trans
         &trans &trans &mc_trema_e &mc_trema_u &mc_trema_i                                      &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans
+        >;
+    };
+
+    functions {
+      bindings = <
+        &trans &trans &trans &trans &trans     &trans &kp F5 &kp F6 &kp F7 &kp F8
+        &trans &trans &trans &trans &trans     &trans &kp F1 &kp F2 &kp F3 &kp F4
+        &trans &trans &trans &trans &trans     &trans &kp F9 &kp F10 &kp F11 &kp F12
+        &trans &trans &trans &trans
+        >;
+    };
+
+    hardware {
+      bindings = <
+        &none &bt BT_CLR &bt BT_PRV &bt BT_NXT &none                         &none &none &none &none &none
+        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &none &none &none &none &none
+        &none &none &none &none &none                                        &none &none &none &none &none
         &trans &trans &trans &trans
         >;
     };
