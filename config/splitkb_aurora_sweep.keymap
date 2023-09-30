@@ -7,10 +7,9 @@
 #define la_SYM_l 2
 #define la_SYM_r 3
 #define la_NAV 4
-#define la_MED 5
-#define la_SPE 6
-#define la_FUN 7
-#define la_HAR 8
+#define la_SPE 5
+#define la_FUN 6
+#define la_HAR 7
 // #define la_LMOD 4
 // #define la_RMOD 5
 
@@ -469,18 +468,9 @@ NAME: NAME { \
 
     navigation {
       bindings = <
-        &kp HOME &kp END &kp PG_DN &kp PG_UP &trans      &trans &trans &trans &trans &trans
+        &kp HOME &kp END &kp PG_DN &kp PG_UP &trans      &kp C_PLAY_PAUSE &kp C_PREV &kp C_NEXT &kp C_REWIND &kp C_FAST_FORWARD
         &kp LEFT &kp RIGHT &kp DOWN &kp UP &trans        &trans &trans &trans &trans &trans
-        &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans
-        &trans &trans &trans &trans
-        >;
-    };
-
-    media {
-      bindings = <
-        &trans &trans &trans &trans &trans               &kp C_PLAY_PAUSE &kp C_PREV &kp C_NEXT &kp C_REWIND &kp C_FAST_FORWARD
-        &trans &trans &trans &trans &trans               &trans &kp C_BRI_UP &kp C_BRI_DN &trans &trans
-        &trans &trans &trans &trans &trans               &kp C_MUTE &kp C_VOL_UP &kp C_VOL_DN &trans &trans
+        &trans &trans &trans &trans &trans               &kp C_MUTE &kp C_VOL_UP &kp C_VOL_DN &kp C_BRI_UP &kp C_BRI_DN
         &trans &trans &trans &trans
         >;
     };
