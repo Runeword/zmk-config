@@ -335,9 +335,11 @@ NAME: NAME { \
 
     cb_tab { layers = <la_DEF la_NAV>; timeout-ms = <30>; key-positions = <12 13>; bindings = <&kp TAB>; };
     cb_bspc { layers = <la_DEF la_NAV>; timeout-ms = <30>; key-positions = <11 12>; bindings = <&kp BSPC>; };
-    cb_esc { layers = <la_DEF>; timeout-ms = <30>; key-positions = <21 22>; bindings = <&kp ESC>; };
+    cb_repeat_l { layers = <la_DEF>; timeout-ms = <30>; key-positions = <21 22>; bindings = <&key_repeat>; };
+    cb_repeat_r { layers = <la_DEF>; timeout-ms = <30>; key-positions = <27 28>; bindings = <&key_repeat>; };
+    // cb_esc { layers = <la_DEF>; timeout-ms = <30>; key-positions = <21 22>; bindings = <&kp ESC>; };
     // cb_esc { layers = <la_DEF>; timeout-ms = <30>; key-positions = <11 12>; bindings = <&hm_mod_l LS(LGUI) ESC>; };
-    cb_repeat { layers = <la_DEF>; timeout-ms = <30>; key-positions = <2 3>; bindings = <&key_repeat>; };
+    // cb_repeat { layers = <la_DEF>; timeout-ms = <30>; key-positions = <2 3>; bindings = <&key_repeat>; };
     cb_enter_l { layers = <la_DEF la_NAV>; timeout-ms = <70>; key-positions = <11 12 13>; bindings = <&kp ENTER>; };
     cb_enter_r { layers = <la_DEF>; timeout-ms = <70>; key-positions = <16 17 18>; bindings = <&kp ENTER>; };
     cb_del_l { layers = <la_DEF la_NAV>; timeout-ms = <70>; key-positions = <21 22 23>; bindings = <&kp DEL>; };
@@ -426,18 +428,9 @@ NAME: NAME { \
       &kp SQT &kp COMMA &kp DOT &kp P &kp Y                                           &kp F &kp G &kp C &kp R &kp L
       &hm_mod_l LALT A &hm_mod_l LGUI O &hm_mod_l LCTL E &hm_mo_l la_SYM_r U &kp I    &kp D &hm_mo_r la_SYM_l H &hm_mod_r RCTL T &hm_mod_r RGUI N &hm_mod_r LALT S
       &kp SEMI &kp Q &kp J &kp K &kp X                                                &kp B &kp M &kp W &kp V &kp Z
-      &hm_mo_l la_NUM ENTER &sk LSFT &hm_mo_r la_NAV ESC &hm_mo_r la_SPE SPACE
+      &hm_mo_l la_NUM ENTER &hm_mo_l la_NAV ESC &sk RSFT &hm_mo_r la_SPE SPACE
       >;
     };
-
-// default {
-//   bindings = <
-//   &kp SQT &kp COMMA &kp DOT &kp P &kp Y                                           &kp F &kp G &kp C &kp R &kp L
-//   &hm_mo_l la_FUN A &hm_mo_l la_MED O &hm_mo_l la_SYM E &hm_mo_l la_NUM U &kp I   &kp D &hm_mo_r la_NAV H &hm_mo_r la_SYM T &hm_mo_r la_SPE N &hm_mo_r la_HAR S
-//   &kp SEMI &kp Q &kp J &kp K &kp X                                                &kp B &kp M &kp W &kp V &kp Z
-//   &hm_mod_l LGUI ENTER &sk LCTL &sk RSFT &hm_mod_r LALT SPACE
-//   >;
-// };
 
     numbers {
       bindings = <
@@ -466,11 +459,20 @@ NAME: NAME { \
         >;
     };
 
+    // navigation {
+    //   bindings = <
+    //     &kp HOME &kp END &kp PG_DN &kp PG_UP &trans      &kp C_PLAY_PAUSE &kp C_PREV &kp C_NEXT &kp C_REWIND &kp C_FAST_FORWARD
+    //     &kp LEFT &kp RIGHT &kp DOWN &kp UP &trans        &trans &trans &trans &trans &trans
+    //     &trans &trans &trans &trans &trans               &kp C_MUTE &kp C_VOL_UP &kp C_VOL_DN &kp C_BRI_UP &kp C_BRI_DN
+    //     &trans &trans &trans &trans
+    //     >;
+    // };
+
     navigation {
       bindings = <
-        &kp HOME &kp END &kp PG_DN &kp PG_UP &trans      &kp C_PLAY_PAUSE &kp C_PREV &kp C_NEXT &kp C_REWIND &kp C_FAST_FORWARD
-        &kp LEFT &kp RIGHT &kp DOWN &kp UP &trans        &trans &trans &trans &trans &trans
-        &trans &trans &trans &trans &trans               &kp C_MUTE &kp C_VOL_UP &kp C_VOL_DN &kp C_BRI_UP &kp C_BRI_DN
+        &kp C_REWIND &kp C_FAST_FORWARD &kp C_PREV &kp C_NEXT &kp C_PLAY_PAUSE &trans &kp PG_UP &kp PG_DN &kp HOME &kp END
+        &trans &trans &trans &trans &trans                                     &trans &kp UP &kp DOWN &kp LEFT &kp RIGHT
+        &kp C_BRI_DN &kp C_BRI_UP &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE         &trans &trans &trans &trans &trans
         &trans &trans &trans &trans
         >;
     };
