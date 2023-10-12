@@ -333,7 +333,7 @@ NAME: NAME { \
   combos {
     compatible = "zmk,combos";
 
-    cb_tab { layers = <la_DEF la_NAV>; timeout-ms = <30>; key-positions = <12 13>; bindings = <&kp TAB>; };
+    cb_tab { layers = <la_DEF la_NAV>; timeout-ms = <30>; require-prior-idle-ms = <150>; key-positions = <12 13>; bindings = <&kp TAB>; };
     cb_bspc { layers = <la_DEF la_NAV>; timeout-ms = <30>; key-positions = <11 12>; bindings = <&kp BSPC>; };
     cb_repeat_l { layers = <la_DEF>; timeout-ms = <30>; key-positions = <21 22>; bindings = <&key_repeat>; };
     cb_repeat_r { layers = <la_DEF>; timeout-ms = <30>; key-positions = <27 28>; bindings = <&key_repeat>; };
