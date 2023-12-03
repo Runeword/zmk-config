@@ -446,7 +446,7 @@ NAME: NAME { \
       &kp SQT &kp COMMA &kp DOT &kp P &kp Y                                           &kp F &kp G &kp C &kp R &kp L
       &hm_mod_l LALT A &hm_mod_l LGUI O &hm_mod_l LCTL E &hm_mo_l la_SYM_r U &kp I    &kp D &hm_mo_r la_SYM_l H &hm_mod_r RCTL T &hm_mod_r RGUI N &hm_mod_r LALT S
       &kp SEMI &kp Q &kp J &kp K &kp X                                                &kp B &kp M &kp W &kp V &kp Z
-      &none &hm_mo_l la_NUM ENTER &ht_mo la_NAV TAB &none &ht_mod LSHFT ESC &hm_mo_r la_SPE SPACE
+      &none &hm_mo_l la_NUM ENTER &ht_mo la_NAV TAB &ht_mod LSHFT ESC &hm_mo_r la_SPE SPACE &none
       >;
     };
 
@@ -455,7 +455,7 @@ NAME: NAME { \
         &trans &trans &trans &trans &trans                  &kp NUMBER_9 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8
         &trans &trans &trans &trans &trans                  &kp NUMBER_0 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4
         &trans &trans &trans &trans &trans                  &kp EQUAL &kp PLUS &kp MINUS &kp SLASH &kp STAR
-        &none &trans &trans &none &trans &trans
+        &none &trans &trans trans &trans &none
         >;
     };
 
@@ -464,7 +464,7 @@ NAME: NAME { \
         &kp GRAVE &kp MINUS &kp EQUAL &kp PLUS &mc_pound    &trans &trans &trans &trans &trans
         &kp EXCL &kp QUESTION &kp STAR &kp HASH &mc_euro    &trans &trans &trans &trans &trans
         &kp AMPS &kp PIPE &kp UNDER &kp PRCNT &mc_degree    &trans &trans &trans &trans &trans
-        &none &trans &trans &none &trans &trans
+        &none &trans &trans trans &trans &none
         >;
     };
 
@@ -473,7 +473,7 @@ NAME: NAME { \
         &trans &trans &trans &trans &trans                  &kp AT &kp LBKT &kp RBKT &kp SLASH &kp BSLH
         &trans &trans &trans &trans &trans                  &kp TILDE &kp LPAR &kp RPAR &kp CARET &kp DLLR
         &trans &trans &trans &trans &trans                  &none &kp LBRC &kp RBRC &mc_trademark &mc_copyright
-        &none &trans &trans &none &trans &trans
+        &none &trans &trans trans &trans &none
         >;
     };
 
@@ -492,6 +492,7 @@ NAME: NAME { \
         &trans &trans &trans &trans &trans                                     &trans &kp UP &kp DOWN &kp LEFT &kp RIGHT
         &kp C_BRI_DN &kp C_BRI_UP &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE         &trans &trans &trans &trans &trans
         &none &trans &trans &none &trans &kp LS(SPACE)
+        &none &trans &trans &trans &kp LS(SPACE) &none
         >;
     };
 
@@ -500,7 +501,7 @@ NAME: NAME { \
         &mc_circumflex_a &mc_circumflex_o &mc_circumflex_e &mc_circumflex_u &mc_circumflex_i   &trans &trans &mc_cedilla_c &trans &trans
         &mc_grave_a &mc_grave_e &mc_acute_e &mc_grave_u &trans                                 &trans &trans &trans &trans &trans
         &trans &trans &mc_trema_e &mc_trema_u &mc_trema_i                                      &trans &trans &trans &trans &trans
-        &none &trans &trans &none &trans &trans
+        &none &trans &trans trans &trans &none
         >;
     };
 
@@ -509,7 +510,7 @@ NAME: NAME { \
         &trans &trans &trans &trans &trans     &trans &kp F5 &kp F6 &kp F7 &kp F8
         &trans &trans &trans &trans &trans     &trans &kp F1 &kp F2 &kp F3 &kp F4
         &trans &trans &trans &trans &trans     &trans &kp F9 &kp F10 &kp F11 &kp F12
-        &none &trans &trans &none &trans &trans
+        &none &trans &trans trans &trans &none
         >;
     };
 
@@ -518,7 +519,7 @@ NAME: NAME { \
         &none &none &bt BT_PRV &bt BT_NXT &bt BT_CLR                         &none &none &none &none &none
         &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &none &none &none &none &none
         &none &none &none &none &none                                        &none &none &none &none &none
-        &none &trans &trans &none &trans &trans
+        &none &trans &trans trans &trans &none
         >;
     };
 
