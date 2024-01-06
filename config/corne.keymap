@@ -157,9 +157,15 @@ NAME: NAME { \
       compatible = "zmk,behavior-hold-tap";
       label = "ht_mo";
       #binding-cells = <2>;
-      flavor = "hold-preferred";
+      flavor = "balanced";
+      // flavor = "hold-preferred";
       tapping-term-ms = <200>;
       bindings = <&mo>, <&kp>;
+      // tapping-term-ms = <270>; \
+      // quick-tap-ms = <170>; \
+      // global-quick-tap; \
+      // hold-trigger-key-positions = <TRIGGER_POS>; \
+      // hold-trigger-on-release; \
     };
 
     ht_mod: hold_tap_modifier {
