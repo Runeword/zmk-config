@@ -159,10 +159,8 @@ NAME: NAME { \
       #binding-cells = <2>;
       flavor = "balanced";
       tapping-term-ms = <270>;
-      quick-tap-ms = <170>;
-      global-quick-tap;
+      quick-tap-ms = <200>;
       bindings = <&mo>, <&kp>;
-      hold-trigger-on-release;
     };
 
     ht_mod: hold_tap_modifier {
